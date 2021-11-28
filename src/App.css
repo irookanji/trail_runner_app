@@ -18,11 +18,12 @@ a {
 }
 
 .App {
+  max-width: 1440px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   min-width: 100%;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 @media screen and (max-width: 48em) {

@@ -15,7 +15,7 @@
 }
 
 .header_text h1 {
-  font-family: Roboto;
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -24,7 +24,7 @@
 }
 
 .header_text p {
-  font-family: Roboto;
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -41,7 +41,8 @@
   width: 180px;
   height: 48px;
   color: var(--color-main);
-  border: none;
+  border: 0;
+  outline: none;
   cursor: pointer;
 }
 

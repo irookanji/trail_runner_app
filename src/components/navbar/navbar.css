@@ -46,7 +46,7 @@
 .navbar__products-links {
   display: flex;
   flex-direction: row;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .navbar__products-links p {
