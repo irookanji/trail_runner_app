@@ -1,10 +1,13 @@
 .header {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  position: relative;
   width: 100%;
-  background: url("../../assets/Rectangle.png") 0 0/100% 100% no-repeat;
+  background: url("../../assets/cover.jpg") 0 0/100% 100% no-repeat;
+  background-size: cover;
   height: 740px;
   color: var(--color-bg);
+  object-fit: cover;
 }
 
 .header_poster {
