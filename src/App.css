@@ -10,6 +10,7 @@ body {
   background: var(--color-bg);
   height: 100%;
   width: 100%;
+  min-width: 100%;
 }
 
 a {
@@ -26,7 +27,7 @@ a {
   /* width: 100vw; */
 }
 
-@media screen and (max-width: 48em) {
+/* @media screen and (max-width: 48em) {
   .section__padding {
     padding: 4rem;
   }
@@ -44,12 +45,12 @@ a {
   .section__margin {
     margin: 4rem 2rem;
   }
-}
+} */
 
-.first_part {
+/* .first_part {
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 70%;
   position: relative;
-}
+} */

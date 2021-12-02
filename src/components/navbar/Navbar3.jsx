@@ -5,8 +5,6 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  IconButton,
-  Icon,
   Container,
 } from "@mui/material";
 import logo from "../../assets/logo.svg";
@@ -18,7 +16,7 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 function Navbar() {
   return (
     <AppBar
-      position="static"
+      position="sticky"
       style={{ background: "white", color: "#212A2F", minheight: "60px" }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -73,6 +71,7 @@ function Navbar() {
             </Typography>
           ))}
         </Container>
+        
         <Container
           sx={{
             display: "flex",

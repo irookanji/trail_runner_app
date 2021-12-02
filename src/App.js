@@ -9,13 +9,13 @@ import {
   ThirdPage,
 } from "./containers";
 import { Collections, Favorites, NewArrivals, Stories } from "./components";
-import Navbar from "./components/navbar/Navbar";
+import NavbarMUI from "./components/navbar/NavbarMUI";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
+      <NavbarMUI />
       <Header />
       <Favorites />
 
