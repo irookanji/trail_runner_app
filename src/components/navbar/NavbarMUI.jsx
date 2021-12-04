@@ -37,14 +37,14 @@ const ResponsiveAppBar = () => {
       position="sticky"
       sx={{ background: "white", color: "#212A2F", minheight: "60px" }}
     >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{ justifyContent: "flex-start" }}>
+      <Container maxWidth="100%">
+        <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           <Box
             sx={{
               flexWrap: "nowrap",
-              flexGrow: 1,
+              flexGrow: 0,
               display: { xs: "none", md: "flex" },
-              mr: "10rem",
+              pr: "7rem"
             }}
           >
             {pages.map((page) => (
@@ -59,7 +59,11 @@ const ResponsiveAppBar = () => {
             ))}
           </Box>
 
-          <Paper sx={{ mx: "12rem", display: { xs: "none", md: "flex" } }}>
+          <Paper
+            sx={{
+              display: { xs: "none", md: "flex" }
+            }}
+          >
             <img src={logo} alt="Logo" />
           </Paper>
 
@@ -67,7 +71,8 @@ const ResponsiveAppBar = () => {
             sx={{
               flexGrow: 0,
               display: { xs: "none", md: "flex" },
-              mr: "5rem",
+              mr: "1rem",
+              alignItems: "center",
             }}
           >
             {additionals.map((additional) => (
@@ -80,15 +85,7 @@ const ResponsiveAppBar = () => {
                 {additional}
               </Button>
             ))}
-          </Box>
 
-          <Box
-            sx={{
-              flexGrow: 0,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "center",
-            }}
-          >
             <Tooltip title="LOGIN">
               <PersonOutlineOutlinedIcon
                 sx={{ marginLeft: 3, cursor: "pointer" }}
