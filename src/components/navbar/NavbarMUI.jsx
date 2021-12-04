@@ -35,16 +35,24 @@ const ResponsiveAppBar = () => {
   return (
     <AppBar
       position="sticky"
-      sx={{ background: "white", color: "#212A2F", minheight: "60px" }}
+      sx={{
+        background: "white",
+        color: "#212A2F",
+        minheight: "60px",
+        width: "100%",
+      }}
     >
       <Container maxWidth="100%">
-        <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
+        <Toolbar
+          disableGutters
+          sx={{ justifyContent: "space-between", width: "100%" }}
+        >
           <Box
             sx={{
               flexWrap: "nowrap",
               flexGrow: 0,
               display: { xs: "none", md: "flex" },
-              pr: "7rem"
+              pr: "7rem",
             }}
           >
             {pages.map((page) => (
@@ -61,7 +69,7 @@ const ResponsiveAppBar = () => {
 
           <Paper
             sx={{
-              display: { xs: "none", md: "flex" }
+              display: { xs: "none", md: "flex" },
             }}
           >
             <img src={logo} alt="Logo" />
@@ -108,7 +116,13 @@ const ResponsiveAppBar = () => {
             </Tooltip>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              display: { xs: "flex", md: "none" },
+              justifyContent: "space-between",
+              width: "100%"
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -162,11 +176,10 @@ const ResponsiveAppBar = () => {
                 </MenuItem>
               ))} */}
             </Menu>
+            <Paper sx={{ ml: 2, display: { xs: "flex", md: "none" } }}>
+              <img src={logo} alt="Logo" />
+            </Paper>
           </Box>
-
-          <Paper sx={{ mr: 2, display: { xs: "flex", md: "none" } }}>
-            <img src={logo} alt="Logo" />
-          </Paper>
         </Toolbar>
       </Container>
     </AppBar>

@@ -3,7 +3,7 @@ import React from "react";
 import {
   Footer,
   FourthPage,
-  Header,
+  HeaderMUI,
   LastPage,
   SecondPage,
   ThirdPage,
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className="App">
       <NavbarMUI />
-      <Header />
+      <HeaderMUI />
       <Favorites />
 
       <SecondPage />
