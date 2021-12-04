@@ -61,13 +61,6 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-
 export default function Favorites() {
   const [value, setValue] = React.useState(0);
 
@@ -103,21 +96,140 @@ export default function Favorites() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab
-            sx={{ fontSize: 16, mr: 10 }}
-            label="EVERYDAY"
-            {...a11yProps(0)}
-          />
-          <Tab
-            sx={{ fontSize: 16, mr: 10 }}
-            label="RUNNING"
-            {...a11yProps(1)}
-          />
-          <Tab sx={{ fontSize: 16 }} label="TRAVEL" {...a11yProps(2)} />
+          <Tab key="EVERYDAY" sx={{ fontSize: 16, mr: 10 }} label="EVERYDAY" />
+          <Tab key="RUNNING" sx={{ fontSize: 16, mr: 10 }} label="RUNNING" />
+          <Tab key="TRAVEL" sx={{ fontSize: 16 }} label="TRAVEL" />
         </Tabs>
       </Box>
 
       <TabPanel value={value} index={0}>
+        <ImageList cols={3} rowHeight={400}>
+          {itemData.map((item) => (
+            <Box sx={{ margin: "1rem" }}>
+              {/* Images */}
+              <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
+                <img
+                  src={item.img}
+                  srcSet={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+
+              {/* Image text */}
+              <Typography
+                key={item.title}
+                textAlign="center"
+                sx={{
+                  m: "10px",
+                  fontSize: 22,
+                  borderBottom: 1,
+                }}
+              >
+                {item.title}
+              </Typography>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                <Icon
+                  key={item.icon}
+                  sx={{ marginLeft: 3 }}
+                  style={{ fontSize: 30 }}
+                >
+                  <img
+                    src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
+                    srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                  />
+                </Icon>
+
+                <Typography
+                  key={item.description}
+                  textAlign="center"
+                  sx={{
+                    m: "10px",
+                    fontSize: 14,
+                  }}
+                >
+                  {item.description}
+                </Typography>
+              </Box>
+            </Box>
+          ))}
+        </ImageList>
+      </TabPanel>
+
+      <TabPanel value={value} index={1}>
+        <ImageList cols={3} rowHeight={400}>
+          {itemData
+            .slice(0)
+            .reverse()
+            .map((item) => (
+              <Box sx={{ margin: "1rem" }}>
+                {/* Images */}
+                <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
+                  <img
+                    src={`${item.img}?w=396&h=396&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+
+                {/* Image text */}
+                <Typography
+                  key={item.title}
+                  textAlign="center"
+                  sx={{
+                    m: "10px",
+                    fontSize: 22,
+                    borderBottom: 1,
+                  }}
+                >
+                  {item.title}
+                </Typography>
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <Icon
+                    key={item.icon}
+                    sx={{ marginLeft: 3 }}
+                    style={{ fontSize: 30 }}
+                  >
+                    <img
+                      src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
+                      srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                      alt={item.title}
+                    />
+                  </Icon>
+
+                  <Typography
+                    key={item.description}
+                    textAlign="center"
+                    sx={{
+                      m: "10px",
+                      fontSize: 14,
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+        </ImageList>
+      </TabPanel>
+
+      <TabPanel value={value} index={2}>
         <ImageList cols={3} rowHeight={400}>
           {itemData.map((item) => (
             <Box sx={{ margin: "1rem" }}>
@@ -144,7 +256,13 @@ export default function Favorites() {
                 {item.title}
               </Typography>
 
-              <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
                 <Icon
                   key={item.icon}
                   sx={{ marginLeft: 3 }}
@@ -154,7 +272,6 @@ export default function Favorites() {
                     src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
                     srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
                     alt={item.title}
-                    loading="lazy"
                   />
                 </Icon>
 
@@ -172,13 +289,6 @@ export default function Favorites() {
             </Box>
           ))}
         </ImageList>
-      </TabPanel>
-
-      <TabPanel value={value} index={1}>
-        RUNNING
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        TRAVEL
       </TabPanel>
     </Box>
   );
