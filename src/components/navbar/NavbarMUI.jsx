@@ -42,7 +42,7 @@ const ResponsiveAppBar = () => {
         width: "100%",
       }}
     >
-      <Container maxWidth="100%">
+      <Container maxWidth="100%" sx={{mx:"auto"}}>
         <Toolbar
           disableGutters
           sx={{ justifyContent: "space-between", width: "100%" }}

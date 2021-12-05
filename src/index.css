@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap");
 
 :root {
-    --font-family: 'Roboto', sans-serif;
+  --font-family: "Roboto", sans-serif;
 
-    --color-bg: white;
-    --color-main: #212A2F;
-    --color-subtext: #000000;
+  --color-bg: white;
+  --color-main: #212a2f;
+  --color-subtext: #000000;
+
+  margin: 0 auto;
 }

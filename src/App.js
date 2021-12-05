@@ -5,11 +5,10 @@ import {
   FourthPage,
   HeaderMUI,
   LastPage,
-  SecondPage,
+  SecondSection,
   ThirdPage,
 } from "./containers";
-import { Collections, Favorites, NewArrivals, Stories } from "./components";
-import NavbarMUI from "./components/navbar/NavbarMUI";
+import { NavbarMUI, Collections, Favorites, NewArrivals, Stories } from "./components";
 import "./App.css";
 
 const App = () => {
@@ -19,7 +18,7 @@ const App = () => {
       <HeaderMUI />
       <Favorites />
 
-      <SecondPage />
+      <SecondSection />
       <Collections />
       <ThirdPage />
       <NewArrivals />

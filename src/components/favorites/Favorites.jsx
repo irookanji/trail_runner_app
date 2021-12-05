@@ -85,7 +85,7 @@ export default function Favorites() {
           mr: 2,
           display: "flex",
           fontSize: 34,
-          mt: "4rem",
+          mt: "3rem",
         }}
       >
         Our Favorites
@@ -167,7 +167,7 @@ export default function Favorites() {
                 >
                   <Icon
                     key={item.icon}
-                    sx={{ marginLeft: 3 }}
+                    sx={{ marginLeft: 3, display: "flex" }}
                     style={{ fontSize: 30 }}
                   >
                     <img
@@ -235,7 +235,7 @@ export default function Favorites() {
                 >
                   <Icon
                     key={item.icon}
-                    sx={{ marginLeft: 3 }}
+                    sx={{ marginLeft: 3, display: "flex" }}
                     style={{ fontSize: 30 }}
                   >
                     <img
@@ -310,7 +310,7 @@ export default function Favorites() {
                   >
                     <Icon
                       key={item.icon}
-                      sx={{ marginLeft: 3 }}
+                      sx={{ marginLeft: 3, display: "flex" }}
                       style={{ fontSize: 30 }}
                     >
                       <img
@@ -384,7 +384,7 @@ export default function Favorites() {
                   >
                     <Icon
                       key={item.icon}
-                      sx={{ marginLeft: 3 }}
+                      sx={{ marginLeft: 3, display: "flex" }}
                       style={{ fontSize: 30 }}
                     >
                       <img
@@ -452,7 +452,7 @@ export default function Favorites() {
                 >
                   <Icon
                     key={item.icon}
-                    sx={{ marginLeft: 3 }}
+                    sx={{ marginLeft: 3, display: "flex" }}
                     style={{ fontSize: 30 }}
                   >
                     <img
@@ -520,7 +520,7 @@ export default function Favorites() {
                 >
                   <Icon
                     key={item.icon}
-                    sx={{ marginLeft: 3 }}
+                    sx={{ marginLeft: 3, display: "flex" }}
                     style={{ fontSize: 30 }}
                   >
                     <img
