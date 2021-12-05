@@ -83,14 +83,20 @@ export default function Favorites() {
         component="div"
         sx={{
           mr: 2,
-          display: { xs: "none", md: "flex" },
+          display: "flex",
           fontSize: 34,
           mt: "4rem",
         }}
       >
         Our Favorites
       </Typography>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+      <Box
+        sx={{
+          borderBottom: 1,
+          borderColor: "divider",
+          display: { xs: "none", md: "flex" },
+        }}
+      >
         <Tabs
           value={value}
           onChange={handleChange}
@@ -102,74 +108,317 @@ export default function Favorites() {
         </Tabs>
       </Box>
 
-      <TabPanel value={value} index={0}>
-        <ImageList cols={3} rowHeight={400}>
-          {itemData.map((item) => (
-            <Box sx={{ margin: "1rem" }}>
-              {/* Images */}
-              <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
-                <img
-                  src={item.img}
-                  srcSet={item.img}
-                  alt={item.title}
-                  loading="lazy"
-                />
-              </ImageListItem>
+      <Box
+        sx={{
+          borderBottom: 1,
+          borderColor: "divider",
+          display: { xs: "flex", md: "none" },
+        }}
+      >
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
+          <Tab key="EVERYDAY" sx={{ fontSize: 14, mr: 5 }} label="EVERYDAY" />
+          <Tab key="RUNNING" sx={{ fontSize: 14, mr: 5 }} label="RUNNING" />
+          <Tab key="TRAVEL" sx={{ fontSize: 14 }} label="TRAVEL" />
+        </Tabs>
+      </Box>
 
-              {/* Image text */}
-              <Typography
-                key={item.title}
-                textAlign="center"
-                sx={{
-                  m: "10px",
-                  fontSize: 22,
-                  borderBottom: 1,
-                }}
-              >
-                {item.title}
-              </Typography>
-
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <Icon
-                  key={item.icon}
-                  sx={{ marginLeft: 3 }}
-                  style={{ fontSize: 30 }}
-                >
+      <Box
+        sx={{
+          display: { xs: "none", md: "flex" },
+        }}
+      >
+        <TabPanel value={value} index={0}>
+          <ImageList cols={3} rowHeight={400}>
+            {itemData.map((item) => (
+              <Box sx={{ margin: "1rem" }}>
+                {/* Images */}
+                <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
                   <img
-                    src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
-                    srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                    src={item.img}
+                    srcSet={item.img}
                     alt={item.title}
+                    loading="lazy"
                   />
-                </Icon>
+                </ImageListItem>
 
+                {/* Image text */}
                 <Typography
-                  key={item.description}
+                  key={item.title}
                   textAlign="center"
                   sx={{
                     m: "10px",
-                    fontSize: 14,
+                    fontSize: 22,
+                    borderBottom: 1,
                   }}
                 >
-                  {item.description}
+                  {item.title}
                 </Typography>
-              </Box>
-            </Box>
-          ))}
-        </ImageList>
-      </TabPanel>
 
-      <TabPanel value={value} index={1}>
-        <ImageList cols={3} rowHeight={400}>
-          {itemData
-            .slice(0)
-            .reverse()
-            .map((item) => (
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <Icon
+                    key={item.icon}
+                    sx={{ marginLeft: 3 }}
+                    style={{ fontSize: 30 }}
+                  >
+                    <img
+                      src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
+                      srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                      alt={item.title}
+                    />
+                  </Icon>
+
+                  <Typography
+                    key={item.description}
+                    textAlign="center"
+                    sx={{
+                      m: "10px",
+                      fontSize: 14,
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+          </ImageList>
+        </TabPanel>
+      </Box>
+
+      <Box
+        sx={{
+          display: { xs: "flex", md: "none" },
+        }}
+      >
+        <TabPanel value={value} index={0}>
+          <ImageList cols={1} rowHeight={400}>
+            {itemData.map((item) => (
+              <Box sx={{ margin: "1rem" }}>
+                {/* Images */}
+                <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
+                  <img
+                    src={item.img}
+                    srcSet={item.img}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+
+                {/* Image text */}
+                <Typography
+                  key={item.title}
+                  textAlign="center"
+                  sx={{
+                    m: "10px",
+                    fontSize: 22,
+                    borderBottom: 1,
+                  }}
+                >
+                  {item.title}
+                </Typography>
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <Icon
+                    key={item.icon}
+                    sx={{ marginLeft: 3 }}
+                    style={{ fontSize: 30 }}
+                  >
+                    <img
+                      src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
+                      srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                      alt={item.title}
+                    />
+                  </Icon>
+
+                  <Typography
+                    key={item.description}
+                    textAlign="center"
+                    sx={{
+                      m: "10px",
+                      fontSize: 14,
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+          </ImageList>
+        </TabPanel>
+      </Box>
+
+      {/* Tab 2 */}
+      <Box
+        sx={{
+          display: { xs: "none", md: "flex" },
+        }}
+      >
+        <TabPanel value={value} index={1}>
+          <ImageList cols={3} rowHeight={400}>
+            {itemData
+              .slice(0)
+              .reverse()
+              .map((item) => (
+                <Box sx={{ margin: "1rem" }}>
+                  {/* Images */}
+                  <ImageListItem
+                    key={item.img}
+                    sx={{ width: 396, height: 396 }}
+                  >
+                    <img
+                      src={`${item.img}?w=396&h=396&fit=crop&auto=format`}
+                      srcSet={`${item.img}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                      alt={item.title}
+                      loading="lazy"
+                    />
+                  </ImageListItem>
+
+                  {/* Image text */}
+                  <Typography
+                    key={item.title}
+                    textAlign="center"
+                    sx={{
+                      m: "10px",
+                      fontSize: 22,
+                      borderBottom: 1,
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Icon
+                      key={item.icon}
+                      sx={{ marginLeft: 3 }}
+                      style={{ fontSize: 30 }}
+                    >
+                      <img
+                        src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
+                        srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                      />
+                    </Icon>
+
+                    <Typography
+                      key={item.description}
+                      textAlign="center"
+                      sx={{
+                        m: "10px",
+                        fontSize: 14,
+                      }}
+                    >
+                      {item.description}
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
+          </ImageList>
+        </TabPanel>
+      </Box>
+
+      <Box
+        sx={{
+          display: { xs: "flex", md: "none" },
+        }}
+      >
+        <TabPanel value={value} index={1}>
+          <ImageList cols={1} rowHeight={400}>
+            {itemData
+              .slice(0)
+              .reverse()
+              .map((item) => (
+                <Box sx={{ margin: "1rem" }}>
+                  {/* Images */}
+                  <ImageListItem
+                    key={item.img}
+                    sx={{ width: 396, height: 396 }}
+                  >
+                    <img
+                      src={`${item.img}?w=396&h=396&fit=crop&auto=format`}
+                      srcSet={`${item.img}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                      alt={item.title}
+                      loading="lazy"
+                    />
+                  </ImageListItem>
+
+                  {/* Image text */}
+                  <Typography
+                    key={item.title}
+                    textAlign="center"
+                    sx={{
+                      m: "10px",
+                      fontSize: 22,
+                      borderBottom: 1,
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Icon
+                      key={item.icon}
+                      sx={{ marginLeft: 3 }}
+                      style={{ fontSize: 30 }}
+                    >
+                      <img
+                        src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
+                        srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                      />
+                    </Icon>
+
+                    <Typography
+                      key={item.description}
+                      textAlign="center"
+                      sx={{
+                        m: "10px",
+                        fontSize: 14,
+                      }}
+                    >
+                      {item.description}
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
+          </ImageList>
+        </TabPanel>
+      </Box>
+      {/* Tab 3 */}
+      <Box
+        sx={{
+          display: { xs: "none", md: "flex" },
+        }}
+      >
+        <TabPanel value={value} index={2}>
+          <ImageList cols={3} rowHeight={400}>
+            {itemData.map((item) => (
               <Box sx={{ margin: "1rem" }}>
                 {/* Images */}
                 <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
@@ -226,70 +475,77 @@ export default function Favorites() {
                 </Box>
               </Box>
             ))}
-        </ImageList>
-      </TabPanel>
+          </ImageList>
+        </TabPanel>
+      </Box>
 
-      <TabPanel value={value} index={2}>
-        <ImageList cols={3} rowHeight={400}>
-          {itemData.map((item) => (
-            <Box sx={{ margin: "1rem" }}>
-              {/* Images */}
-              <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
-                <img
-                  src={`${item.img}?w=396&h=396&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                />
-              </ImageListItem>
-
-              {/* Image text */}
-              <Typography
-                key={item.title}
-                textAlign="center"
-                sx={{
-                  m: "10px",
-                  fontSize: 22,
-                  borderBottom: 1,
-                }}
-              >
-                {item.title}
-              </Typography>
-
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <Icon
-                  key={item.icon}
-                  sx={{ marginLeft: 3 }}
-                  style={{ fontSize: 30 }}
-                >
+      <Box
+        sx={{
+          display: { xs: "flex", md: "none" },
+        }}
+      >
+        <TabPanel value={value} index={2}>
+          <ImageList cols={1} rowHeight={400}>
+            {itemData.map((item) => (
+              <Box sx={{ margin: "1rem" }}>
+                {/* Images */}
+                <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
                   <img
-                    src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
-                    srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=396&h=396&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
                     alt={item.title}
+                    loading="lazy"
                   />
-                </Icon>
+                </ImageListItem>
 
+                {/* Image text */}
                 <Typography
-                  key={item.description}
+                  key={item.title}
                   textAlign="center"
                   sx={{
                     m: "10px",
-                    fontSize: 14,
+                    fontSize: 22,
+                    borderBottom: 1,
                   }}
                 >
-                  {item.description}
+                  {item.title}
                 </Typography>
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <Icon
+                    key={item.icon}
+                    sx={{ marginLeft: 3 }}
+                    style={{ fontSize: 30 }}
+                  >
+                    <img
+                      src={`${item.icon}?w=396&h=396&fit=crop&auto=format`}
+                      srcSet={`${item.icon}?w=396&h=396&fit=crop&auto=format&dpr=2 2x`}
+                      alt={item.title}
+                    />
+                  </Icon>
+
+                  <Typography
+                    key={item.description}
+                    textAlign="center"
+                    sx={{
+                      m: "10px",
+                      fontSize: 14,
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                </Box>
               </Box>
-            </Box>
-          ))}
-        </ImageList>
-      </TabPanel>
+            ))}
+          </ImageList>
+        </TabPanel>
+      </Box>
     </Box>
   );
 }

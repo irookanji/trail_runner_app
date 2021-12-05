@@ -12,6 +12,10 @@ const HeaderMUI = () => {
       <Box
         sx={{
           display: { xs: "flex", md: "none" },
+          background: "#D2BA9A",
+          borderRadius: "1rem",
+          textAlign: "center",
+          padding: "1rem",
           flexDirection: "column", mt: "2rem", justifyContent: "center", mx: "1rem"
         }}
       >
@@ -21,9 +25,8 @@ const HeaderMUI = () => {
             fontFamily: "Roboto",
             fontStyle: "normal",
             fontWeight: "bold",
-            fontSize: "3rem",
+            fontSize: "2rem",
             lineHeight: "4rem",
-            letterSpacing: "0.1rem",
           }}
         >
           The Trail Runner SWT Is Here.
@@ -37,14 +40,13 @@ const HeaderMUI = () => {
             fontWeight: "bold",
             fontSize: "1.5rem",
             lineHeight: "2.5rem",
-            letterSpacing: "0.1rem",
             margin: "0.5rem 0",
           }}
         >
           Durable. Comfortable. Ready to get dirty.
         </Typography>
 
-        <Box sx={{ mt: "2rem", display: "flex", mb: "2rem" }}>
+        <Box sx={{ display: "flex", m: "2rem", justifyContent: "center" }}>
           <Button
             variant="contained"
             sx={{
@@ -71,7 +73,6 @@ const HeaderMUI = () => {
             sx={{
               background: "white",
               borderRadius: "2px",
-              marginRight: "24px",
               padding: "17px auto",
               width: "180px",
               height: "48px",
