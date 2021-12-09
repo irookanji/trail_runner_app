@@ -13,10 +13,9 @@ const SecondSection = () => {
         sx={{
           display: { xs: "flex", md: "none" },
           background: "#D2BA9A",
-          borderRadius: "1rem",
           textAlign: "center",
           padding: "1.5rem",
-          flexDirection: "column", my: "2rem", justifyContent: "center", mx: "1rem"
+          flexDirection: "column", my: "2rem", justifyContent: "center"
         }}
       >
         <Typography

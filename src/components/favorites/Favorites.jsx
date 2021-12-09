@@ -13,6 +13,7 @@ import Cloud from "../../assets/cloud.svg";
 import Breezy from "../../assets/breezy.svg";
 import Rainy from "../../assets/rainy.svg";
 import Icon from "@mui/material/Icon";
+import Button from "@mui/material/Button";
 
 const itemData = [
   {
@@ -120,8 +121,8 @@ export default function Favorites() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab key="EVERYDAY" sx={{ fontSize: 14, mr: 5 }} label="EVERYDAY" />
-          <Tab key="RUNNING" sx={{ fontSize: 14, mr: 5 }} label="RUNNING" />
+          <Tab key="EVERYDAY" sx={{ fontSize: 14, mr: 1 }} label="EVERYDAY" />
+          <Tab key="RUNNING" sx={{ fontSize: 14, mr: 1 }} label="RUNNING" />
           <Tab key="TRAVEL" sx={{ fontSize: 14 }} label="TRAVEL" />
         </Tabs>
       </Box>
@@ -134,7 +135,15 @@ export default function Favorites() {
         <TabPanel value={value} index={0}>
           <ImageList cols={3} rowHeight={400}>
             {itemData.map((item) => (
-              <Box sx={{ margin: "1rem" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  margin: "1rem",
+                  position: "relative",
+                  alignItems: "center",
+                }}
+              >
                 {/* Images */}
                 <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
                   <img
@@ -144,6 +153,57 @@ export default function Favorites() {
                     loading="lazy"
                   />
                 </ImageListItem>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    mt: "2rem",
+                    position: "absolute",
+                    top: "25%",
+                  }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      background: "white",
+                      borderRadius: "2px",
+                      padding: "17px auto",
+                      width: "276px",
+                      height: "48px",
+                      color: "#212A2F",
+                      border: " 0",
+                      outline: "none",
+                      cursor: "pointer",
+                      ":hover": {
+                        background: "rgb(219, 215, 215)",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    SHOP MEN
+                  </Button>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      background: "white",
+                      borderRadius: "2px",
+                      padding: "17px auto",
+                      width: "276px",
+                      height: "48px",
+                      mt: "1rem",
+                      color: "#212A2F",
+                      border: " 0",
+                      outline: "none",
+                      cursor: "pointer",
+                      ":hover": {
+                        background: "rgb(219, 215, 215)",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    SHOP WOMEN
+                  </Button>
+                </Box>
 
                 {/* Image text */}
                 <Typography
@@ -202,7 +262,15 @@ export default function Favorites() {
         <TabPanel value={value} index={0}>
           <ImageList cols={1} rowHeight={400}>
             {itemData.map((item) => (
-              <Box sx={{ margin: "1rem" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  margin: "1rem",
+                  position: "relative",
+                  alignItems: "center",
+                }}
+              >
                 {/* Images */}
                 <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
                   <img
@@ -212,6 +280,57 @@ export default function Favorites() {
                     loading="lazy"
                   />
                 </ImageListItem>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    mt: "2rem",
+                    position: "absolute",
+                    top: "25%",
+                  }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      background: "white",
+                      borderRadius: "2px",
+                      padding: "17px auto",
+                      minWidth: "276px",
+                      height: "48px",
+                      color: "#212A2F",
+                      border: " 0",
+                      outline: "none",
+                      cursor: "pointer",
+                      ":hover": {
+                        background: "rgb(219, 215, 215)",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    SHOP MEN
+                  </Button>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      background: "white",
+                      borderRadius: "2px",
+                      padding: "17px auto",
+                      width: "276px",
+                      height: "48px",
+                      mt: "1rem",
+                      color: "#212A2F",
+                      border: " 0",
+                      outline: "none",
+                      cursor: "pointer",
+                      ":hover": {
+                        background: "rgb(219, 215, 215)",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    SHOP WOMEN
+                  </Button>
+                </Box>
 
                 {/* Image text */}
                 <Typography
@@ -231,11 +350,12 @@ export default function Favorites() {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   <Icon
                     key={item.icon}
-                    sx={{ marginLeft: 3, display: "flex" }}
+                    sx={{ display: "flex" }}
                     style={{ fontSize: 30 }}
                   >
                     <img
@@ -274,7 +394,15 @@ export default function Favorites() {
               .slice(0)
               .reverse()
               .map((item) => (
-                <Box sx={{ margin: "1rem" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    margin: "1rem",
+                    position: "relative",
+                    alignItems: "center",
+                  }}
+                >
                   {/* Images */}
                   <ImageListItem
                     key={item.img}
@@ -287,6 +415,57 @@ export default function Favorites() {
                       loading="lazy"
                     />
                   </ImageListItem>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      mt: "2rem",
+                      position: "absolute",
+                      top: "25%",
+                    }}
+                  >
+                    <Button
+                      variant="contained"
+                      sx={{
+                        background: "white",
+                        borderRadius: "2px",
+                        padding: "17px auto",
+                        width: "276px",
+                        height: "48px",
+                        color: "#212A2F",
+                        border: " 0",
+                        outline: "none",
+                        cursor: "pointer",
+                        ":hover": {
+                          background: "rgb(219, 215, 215)",
+                          color: "white",
+                        },
+                      }}
+                    >
+                      SHOP MEN
+                    </Button>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        background: "white",
+                        borderRadius: "2px",
+                        padding: "17px auto",
+                        width: "276px",
+                        height: "48px",
+                        mt: "1rem",
+                        color: "#212A2F",
+                        border: " 0",
+                        outline: "none",
+                        cursor: "pointer",
+                        ":hover": {
+                          background: "rgb(219, 215, 215)",
+                          color: "white",
+                        },
+                      }}
+                    >
+                      SHOP WOMEN
+                    </Button>
+                  </Box>
 
                   {/* Image text */}
                   <Typography
@@ -348,7 +527,15 @@ export default function Favorites() {
               .slice(0)
               .reverse()
               .map((item) => (
-                <Box sx={{ margin: "1rem" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    margin: "1rem",
+                    position: "relative",
+                    alignItems: "center",
+                  }}
+                >
                   {/* Images */}
                   <ImageListItem
                     key={item.img}
@@ -361,6 +548,57 @@ export default function Favorites() {
                       loading="lazy"
                     />
                   </ImageListItem>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      mt: "2rem",
+                      position: "absolute",
+                      top: "25%",
+                    }}
+                  >
+                    <Button
+                      variant="contained"
+                      sx={{
+                        background: "white",
+                        borderRadius: "2px",
+                        padding: "17px auto",
+                        width: "276px",
+                        height: "48px",
+                        color: "#212A2F",
+                        border: " 0",
+                        outline: "none",
+                        cursor: "pointer",
+                        ":hover": {
+                          background: "rgb(219, 215, 215)",
+                          color: "white",
+                        },
+                      }}
+                    >
+                      SHOP MEN
+                    </Button>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        background: "white",
+                        borderRadius: "2px",
+                        padding: "17px auto",
+                        width: "276px",
+                        height: "48px",
+                        mt: "1rem",
+                        color: "#212A2F",
+                        border: " 0",
+                        outline: "none",
+                        cursor: "pointer",
+                        ":hover": {
+                          background: "rgb(219, 215, 215)",
+                          color: "white",
+                        },
+                      }}
+                    >
+                      SHOP WOMEN
+                    </Button>
+                  </Box>
 
                   {/* Image text */}
                   <Typography
@@ -380,11 +618,12 @@ export default function Favorites() {
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
+                      justifyContent: "center",
                     }}
                   >
                     <Icon
                       key={item.icon}
-                      sx={{ marginLeft: 3, display: "flex" }}
+                      sx={{ display: "flex" }}
                       style={{ fontSize: 30 }}
                     >
                       <img
@@ -419,7 +658,15 @@ export default function Favorites() {
         <TabPanel value={value} index={2}>
           <ImageList cols={3} rowHeight={400}>
             {itemData.map((item) => (
-              <Box sx={{ margin: "1rem" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  margin: "1rem",
+                  position: "relative",
+                  alignItems: "center",
+                }}
+              >
                 {/* Images */}
                 <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
                   <img
@@ -429,6 +676,57 @@ export default function Favorites() {
                     loading="lazy"
                   />
                 </ImageListItem>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    mt: "2rem",
+                    position: "absolute",
+                    top: "25%",
+                  }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      background: "white",
+                      borderRadius: "2px",
+                      padding: "17px auto",
+                      width: "276px",
+                      height: "48px",
+                      color: "#212A2F",
+                      border: " 0",
+                      outline: "none",
+                      cursor: "pointer",
+                      ":hover": {
+                        background: "rgb(219, 215, 215)",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    SHOP MEN
+                  </Button>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      background: "white",
+                      borderRadius: "2px",
+                      padding: "17px auto",
+                      width: "276px",
+                      height: "48px",
+                      mt: "1rem",
+                      color: "#212A2F",
+                      border: " 0",
+                      outline: "none",
+                      cursor: "pointer",
+                      ":hover": {
+                        background: "rgb(219, 215, 215)",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    SHOP WOMEN
+                  </Button>
+                </Box>
 
                 {/* Image text */}
                 <Typography
@@ -487,7 +785,15 @@ export default function Favorites() {
         <TabPanel value={value} index={2}>
           <ImageList cols={1} rowHeight={400}>
             {itemData.map((item) => (
-              <Box sx={{ margin: "1rem" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  margin: "1rem",
+                  position: "relative",
+                  alignItems: "center",
+                }}
+              >
                 {/* Images */}
                 <ImageListItem key={item.img} sx={{ width: 396, height: 396 }}>
                   <img
@@ -497,6 +803,57 @@ export default function Favorites() {
                     loading="lazy"
                   />
                 </ImageListItem>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    mt: "2rem",
+                    position: "absolute",
+                    top: "25%",
+                  }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      background: "white",
+                      borderRadius: "2px",
+                      padding: "17px auto",
+                      width: "276px",
+                      height: "48px",
+                      color: "#212A2F",
+                      border: " 0",
+                      outline: "none",
+                      cursor: "pointer",
+                      ":hover": {
+                        background: "rgb(219, 215, 215)",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    SHOP MEN
+                  </Button>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      background: "white",
+                      borderRadius: "2px",
+                      padding: "17px auto",
+                      width: "276px",
+                      height: "48px",
+                      mt: "1rem",
+                      color: "#212A2F",
+                      border: " 0",
+                      outline: "none",
+                      cursor: "pointer",
+                      ":hover": {
+                        background: "rgb(219, 215, 215)",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    SHOP WOMEN
+                  </Button>
+                </Box>
 
                 {/* Image text */}
                 <Typography
@@ -516,11 +873,12 @@ export default function Favorites() {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   <Icon
                     key={item.icon}
-                    sx={{ marginLeft: 3, display: "flex" }}
+                    sx={{ display: "flex" }}
                     style={{ fontSize: 30 }}
                   >
                     <img
