@@ -1,7 +1,6 @@
 import React from 'react';
-import './fourthPage.css';
 
-const FourthPage = () => {
+const FourthSection = () => {
     return (
         <div>
             Reversing Climate Change Through Better Business
@@ -9,4 +8,4 @@ const FourthPage = () => {
     )
 }
 
-export default FourthPage
+export default FourthSection

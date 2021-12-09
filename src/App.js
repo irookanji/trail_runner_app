@@ -2,11 +2,11 @@ import React from "react";
 
 import {
   Footer,
-  FourthPage,
+  FourthSection,
   HeaderMUI,
-  LastPage,
+  LastSection,
   SecondSection,
-  ThirdPage,
+  ThirdSection,
 } from "./containers";
 import { NavbarMUI, Collections, Favorites, NewArrivals, Stories } from "./components";
 import "./App.css";
@@ -20,11 +20,11 @@ const App = () => {
 
       <SecondSection />
       <Collections />
-      <ThirdPage />
+      <ThirdSection />
       <NewArrivals />
-      <FourthPage />
+      <FourthSection />
       <Stories />
-      <LastPage />
+      <LastSection />
       <Footer />
     </div>
   );

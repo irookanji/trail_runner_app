@@ -70,6 +70,7 @@ const ResponsiveAppBar = () => {
           <Paper
             sx={{
               display: { xs: "none", md: "flex" },
+              boxShadow: "none",
             }}
           >
             <img src={logo} alt="Logo" />

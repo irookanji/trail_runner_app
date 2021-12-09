@@ -1,7 +1,6 @@
 import React from 'react';
-import './thirdPage.css'
 
-const ThirdPage = () => {
+const ThirdSection = () => {
     return (
         <div>
             Made From Nature, For Nature
@@ -9,4 +8,4 @@ const ThirdPage = () => {
     )
 }
 
-export default ThirdPage
+export default ThirdSection

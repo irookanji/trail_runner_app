@@ -1,7 +1,6 @@
 import React from 'react';
-import './lastPage.css'
 
-const LastPage = () => {
+const LastSection = () => {
     return (
         <div>
             Want First Dibs?
@@ -9,4 +8,4 @@ const LastPage = () => {
     )
 }
 
-export default LastPage
+export default LastSection
