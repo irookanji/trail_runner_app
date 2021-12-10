@@ -1,6 +1,18 @@
 import * as React from "react";
 
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, Tooltip, MenuItem, Paper } from "@mui/material"
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  Container,
+  Button,
+  Tooltip,
+  MenuItem,
+  Paper,
+} from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -8,7 +20,6 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 
 import logo from "../../assets/logo.svg";
-
 
 const pages = ["MEN", "WOMEN", "NEW ARRIVALS"];
 const additionals = ["SUSTAINABILITY", "STORES"];
@@ -36,7 +47,7 @@ const ResponsiveAppBar = () => {
         width: "100%",
       }}
     >
-      <Container maxWidth="100%" sx={{mx:"auto"}}>
+      <Container maxWidth="100%" sx={{ mx: "auto" }}>
         <Toolbar
           disableGutters
           sx={{ justifyContent: "space-between", width: "100%" }}
@@ -115,7 +126,7 @@ const ResponsiveAppBar = () => {
             sx={{
               display: { xs: "flex", md: "none" },
               justifyContent: "space-between",
-              width: "100%"
+              width: "100%",
             }}
           >
             <IconButton
@@ -163,15 +174,14 @@ const ResponsiveAppBar = () => {
                   <Typography>{iText}</Typography>
                 </MenuItem>
               ))}
-
-              {/* почему не работает?
-              {pages.concat(additionals).map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography>{page}</Typography>
-                </MenuItem>
-              ))} */}
             </Menu>
-            <Paper sx={{ ml: 2, display: { xs: "flex", md: "none" } }}>
+            <Paper
+              sx={{
+                ml: 2,
+                display: { xs: "flex", md: "none" },
+                boxShadow: "none",
+              }}
+            >
               <img src={logo} alt="Logo" />
             </Paper>
           </Box>
