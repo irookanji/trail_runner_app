@@ -17,8 +17,8 @@ const App = () => {
       <NavbarMUI />
       <HeaderMUI />
       <Favorites />
-
       <SecondSection />
+      
       <Collections />
       <ThirdSection />
       <NewArrivals />

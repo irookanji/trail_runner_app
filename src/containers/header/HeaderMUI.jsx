@@ -14,8 +14,8 @@ const HeaderMUI = () => {
           display: { xs: "flex", md: "none" },
           background: "#D2BA9A",
           textAlign: "center",
-          padding: "1.5rem",
-          flexDirection: "column", mt: "2rem", justifyContent: "center"
+          padding: "3.5rem",
+          flexDirection: "column", justifyContent: "center"
         }}
       >
         <Typography
