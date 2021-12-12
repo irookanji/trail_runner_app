@@ -1,10 +1,7 @@
 import React from "react";
-
-import Paper from "@mui/material/Paper";
 import cover from "../../assets/cover.jpg";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+
+import { Paper, Box, Typography, Button } from "@mui/material";
 
 const HeaderMUI = () => {
   return (

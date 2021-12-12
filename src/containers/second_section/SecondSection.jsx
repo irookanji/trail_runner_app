@@ -1,10 +1,7 @@
 import React from "react";
 import cover from "../../assets/SecondCover.jpg";
 
-import Paper from "@mui/material/Paper";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import { Paper, Box, Typography, Button } from "@mui/material";
 
 const SecondSection = () => {
   return (
