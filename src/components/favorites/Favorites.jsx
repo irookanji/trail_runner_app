@@ -1,36 +1,17 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { itemData } from "./FavoritesTabsData";
 
-import { Tabs, Tab, Typography, Box, ImageList, ImageListItem, Icon, Button } from "@mui/material";
-
-import Wool_Runner from "../../assets/Wool_Runner.png";
-import Tree_Runner from "../../assets/Tree_Runner.png";
-import Wool_Runner_Mizzle from "../../assets/Wool_Runner_Mizzle.png";
-import Cloud from "../../assets/cloud.svg";
-import Breezy from "../../assets/breezy.svg";
-import Rainy from "../../assets/rainy.svg";
-
-
-const itemData = [
-  {
-    img: Wool_Runner,
-    title: "Wool Runner",
-    icon: Cloud,
-    description: "Cozy Sneaker",
-  },
-  {
-    img: Tree_Runner,
-    title: "Tree Runner",
-    icon: Breezy,
-    description: "Light and Breezy Sneaker",
-  },
-  {
-    img: Wool_Runner_Mizzle,
-    title: "Wool Runner Mizzle",
-    icon: Rainy,
-    description: "Rain Ready Sneaker",
-  },
-];
+import {
+  Tabs,
+  Tab,
+  Typography,
+  Box,
+  ImageList,
+  ImageListItem,
+  Icon,
+  Button,
+} from "@mui/material";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
