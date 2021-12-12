@@ -9,7 +9,7 @@ const SecondSection = () => {
       <Box
         sx={{
           display: { xs: "flex", md: "none" },
-          background: "#D2BA9A",
+          background: "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
           textAlign: "center",
           padding: "1.5rem",
           flexDirection: "column", my: "2rem", justifyContent: "center"
@@ -132,7 +132,8 @@ const SecondSection = () => {
             fontWeight: "bold",
             fontSize: "1.5rem",
             lineHeight: "2.5rem",
-            mt: "4rem"
+            mt: "4rem",
+            letterSpacing: "0.5px"
           }}
         >
           Soft and cozy wool shoes to keep you comfortable all year round.

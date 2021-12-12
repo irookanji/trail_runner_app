@@ -9,7 +9,7 @@ const HeaderMUI = () => {
       <Box
         sx={{
           display: { xs: "flex", md: "none" },
-          background: "#D2BA9A",
+          background: "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
           textAlign: "center",
           padding: "3.5rem",
           flexDirection: "column", justifyContent: "center"

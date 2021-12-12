@@ -4,7 +4,7 @@ import './collections.css';
 const Collections = () => {
     return (
         <div>
-            Shop The Collections
+            Carousel
         </div>
     )
 }
