@@ -1,19 +1,15 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
+
+import { Tabs, Tab, Typography, Box, ImageList, ImageListItem, Icon, Button } from "@mui/material";
+
 import Wool_Runner from "../../assets/Wool_Runner.png";
 import Tree_Runner from "../../assets/Tree_Runner.png";
 import Wool_Runner_Mizzle from "../../assets/Wool_Runner_Mizzle.png";
 import Cloud from "../../assets/cloud.svg";
 import Breezy from "../../assets/breezy.svg";
 import Rainy from "../../assets/rainy.svg";
-import Icon from "@mui/material/Icon";
-import Button from "@mui/material/Button";
+
 
 const itemData = [
   {
