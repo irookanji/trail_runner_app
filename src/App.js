@@ -8,7 +8,13 @@ import {
   SecondSection,
   ThirdSection,
 } from "./containers";
-import { NavbarMUI, Collections, Favorites, NewArrivals, Stories } from "./components";
+import {
+  NavbarMUI,
+  Collections,
+  Favorites,
+  NewArrivals,
+  Stories,
+} from "./components";
 import "./App.css";
 
 const App = () => {
@@ -18,7 +24,7 @@ const App = () => {
       <HeaderMUI />
       <Favorites />
       <SecondSection />
-      
+
       <Collections />
       <ThirdSection />
       <NewArrivals />
