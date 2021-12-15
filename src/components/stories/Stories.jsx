@@ -1,10 +1,9 @@
 import React from 'react';
-import './stories.css';
 
 const Stories = () => {
     return (
         <div>
-            Stories
+            Stories carousel
         </div>
     )
 }
