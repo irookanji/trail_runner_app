@@ -1,0 +1,12 @@
+button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .stories_img {
+    width: 95%;
+    object-fit: cover;
+    object-position: center;
+  }
+  

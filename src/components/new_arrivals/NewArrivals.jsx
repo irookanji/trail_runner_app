@@ -137,6 +137,7 @@ const NewArrivals = () => {
                 sx={{
                   mt: { xs: "1rem", sm: "1rem" },
                   fontSize: { xs: "14px", md: "20px" },
+                  fontWeight: "bold"
                 }}
               >
                 {slide.title}
