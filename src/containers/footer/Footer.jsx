@@ -231,6 +231,7 @@ const Footer = () => {
               fontSize: "12px",
               lineHeight: "18px",
               letterSpacing: "0.5px",
+              mt: "5rem"
             }}
           >
             © 2021 Allbirds, Inc. All Rights Reserved.Terms, Privacy &

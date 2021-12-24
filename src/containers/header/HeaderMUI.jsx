@@ -1,5 +1,6 @@
 import React from "react";
 import cover from "../../assets/cover.jpg";
+import CustomButton from '../../components/atoms/Button/CustomButton';
 
 import { Paper, Box, Typography, Button } from "@mui/material";
 
@@ -160,6 +161,9 @@ const HeaderMUI = () => {
             >
               SHOP MEN
             </Button>
+
+            <CustomButton />  
+
             <Button
               variant="contained"
               sx={{
