@@ -162,7 +162,7 @@ const HeaderMUI = () => {
               SHOP MEN
             </Button>
 
-            <CustomButton />  
+            <CustomButton textColor="white" bgColor="black" link="/" text="Reusable text"/>  
 
             <Button
               variant="contained"

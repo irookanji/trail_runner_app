@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledButton = styled.a`
-    background: white;
+    background: ${props => props.bgColor || "white"};
     border-radius: 2px;
     margin-right: 24px;
     padding: 16px 34px;
@@ -15,7 +15,7 @@ const StyledButton = styled.a`
     text-transform: uppercase;
     width: 180px;
     height: 48px;
-    color: #212A2F;
+    color: ${props => props.textColor || "#212A2F"};
     border: 0;
     outline: none;
     cursor: pointer;
