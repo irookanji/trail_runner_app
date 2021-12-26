@@ -50,6 +50,7 @@ const Footer = () => {
               fontSize: "12px",
               lineHeight: "12px",
               letterSpacing: "0.5px",
+              mb: "1rem"
             }}
           >
             <Typography>1-888-963-8944</Typography>
@@ -87,6 +88,7 @@ const Footer = () => {
               fontSize: "12px",
               lineHeight: "12px",
               letterSpacing: "0.5px",
+              mb: "1rem"
             }}
           >
             <Typography>Men's Shoes</Typography>
@@ -200,7 +202,8 @@ const Footer = () => {
               display: "flex",
               flexDirection: "row",
               justifyContent: "flex-end",
-              mr: "10rem"
+              mr: "10rem",
+              cursor: "pointer"
             }}
           >
             {footerData.map((item) => (
