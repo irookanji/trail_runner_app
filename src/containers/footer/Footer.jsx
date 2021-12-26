@@ -179,6 +179,7 @@ const Footer = () => {
             color="inherit"
             component="div"
             sx={{
+              display: { xs: "none", md: "flex" },
               fontFamily: "Roboto",
               fontStyle: "normal",
               fontWeight: "normal",
