@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { itemData } from "./FavoritesTabsData";
+import CustomButton from "../../components/atoms/Button/CustomButton";
 
 import {
   Tabs,
@@ -10,7 +11,6 @@ import {
   ImageList,
   ImageListItem,
   Icon,
-  Button,
 } from "@mui/material";
 
 function TabPanel(props) {
@@ -149,57 +149,8 @@ export default function Favorites() {
                     top: "25%",
                   }}
                 >
-                  <Button
-                    variant="contained"
-                    sx={{
-                      background: "white",
-                      borderRadius: "2px",
-                      padding: "17px auto",
-                      width: {
-                        xs: "180px",
-                        sm: "210px",
-                        md: "240px",
-                        lg: "276px",
-                      },
-                      height: "48px",
-                      color: "#212A2F",
-                      border: " 0",
-                      outline: "none",
-                      cursor: "pointer",
-                      ":hover": {
-                        background: "rgb(219, 215, 215)",
-                        color: "white",
-                      },
-                    }}
-                  >
-                    SHOP MEN
-                  </Button>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      background: "white",
-                      borderRadius: "2px",
-                      padding: "17px auto",
-                      width: {
-                        xs: "180px",
-                        sm: "210px",
-                        md: "240px",
-                        lg: "276px",
-                      },
-                      height: "48px",
-                      mt: "1rem",
-                      color: "#212A2F",
-                      border: " 0",
-                      outline: "none",
-                      cursor: "pointer",
-                      ":hover": {
-                        background: "rgb(219, 215, 215)",
-                        color: "white",
-                      },
-                    }}
-                  >
-                    SHOP WOMEN
-                  </Button>
+                  <CustomButton link="/" text="SHOP MEN" />
+                  <CustomButton mTop="1rem" link="/" text="SHOP MEN" />
                 </Box>
 
                 {/* Image text */}
@@ -310,57 +261,8 @@ export default function Favorites() {
                       top: "25%",
                     }}
                   >
-                    <Button
-                      variant="contained"
-                      sx={{
-                        background: "white",
-                        borderRadius: "2px",
-                        padding: "17px auto",
-                        width: {
-                          xs: "180px",
-                          sm: "210px",
-                          md: "240px",
-                          lg: "276px",
-                        },
-                        height: "48px",
-                        color: "#212A2F",
-                        border: " 0",
-                        outline: "none",
-                        cursor: "pointer",
-                        ":hover": {
-                          background: "rgb(219, 215, 215)",
-                          color: "white",
-                        },
-                      }}
-                    >
-                      SHOP MEN
-                    </Button>
-                    <Button
-                      variant="contained"
-                      sx={{
-                        background: "white",
-                        borderRadius: "2px",
-                        padding: "17px auto",
-                        width: {
-                          xs: "180px",
-                          sm: "210px",
-                          md: "240px",
-                          lg: "276px",
-                        },
-                        height: "48px",
-                        mt: "1rem",
-                        color: "#212A2F",
-                        border: " 0",
-                        outline: "none",
-                        cursor: "pointer",
-                        ":hover": {
-                          background: "rgb(219, 215, 215)",
-                          color: "white",
-                        },
-                      }}
-                    >
-                      SHOP WOMEN
-                    </Button>
+                    <CustomButton link="/" text="SHOP MEN" />
+                    <CustomButton mTop="1rem" link="/" text="SHOP MEN" />
                   </Box>
 
                   {/* Image text */}
@@ -470,57 +372,8 @@ export default function Favorites() {
                     top: "25%",
                   }}
                 >
-                  <Button
-                    variant="contained"
-                    sx={{
-                      background: "white",
-                      borderRadius: "2px",
-                      padding: "17px auto",
-                      width: {
-                        xs: "180px",
-                        sm: "210px",
-                        md: "240px",
-                        lg: "276px",
-                      },
-                      height: "48px",
-                      color: "#212A2F",
-                      border: " 0",
-                      outline: "none",
-                      cursor: "pointer",
-                      ":hover": {
-                        background: "rgb(219, 215, 215)",
-                        color: "white",
-                      },
-                    }}
-                  >
-                    SHOP MEN
-                  </Button>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      background: "white",
-                      borderRadius: "2px",
-                      padding: "17px auto",
-                      width: {
-                        xs: "180px",
-                        sm: "210px",
-                        md: "240px",
-                        lg: "276px",
-                      },
-                      height: "48px",
-                      mt: "1rem",
-                      color: "#212A2F",
-                      border: " 0",
-                      outline: "none",
-                      cursor: "pointer",
-                      ":hover": {
-                        background: "rgb(219, 215, 215)",
-                        color: "white",
-                      },
-                    }}
-                  >
-                    SHOP WOMEN
-                  </Button>
+                  <CustomButton link="/" text="SHOP MEN" />
+                  <CustomButton mTop="1rem" link="/" text="SHOP MEN" />
                 </Box>
 
                 {/* Image text */}
