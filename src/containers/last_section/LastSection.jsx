@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, TextField, Button } from "@mui/material";
+import { Box, Typography, TextField } from "@mui/material";
 import CustomButton from "../../components/atoms/Button/CustomButton";
 
 const LastSection = () => {
@@ -54,28 +54,7 @@ const LastSection = () => {
             variant="standard"
             sx={{ width: "auto" }}
           />
-          {/* <Button
-            variant="contained"
-            sx={{
-              background: "#212A2F",
-              borderRadius: "2px",
-              marginRight: "24px",
-              padding: "17px auto",
-              width: "111px",
-              height: "48px",
-              color: "white",
-              border: " 0",
-              outline: "none",
-              mt: "1rem",
-              cursor: "pointer",
-              ":hover": {
-                background: "grey",
-                color: "white",
-              },
-            }}
-          >
-            SIGN IN
-          </Button> */}
+
           <CustomButton
             textColor="white"
             bgColor="#212A2F"
@@ -96,7 +75,7 @@ const LastSection = () => {
             fontSize: "14px",
             lineHeight: "14px",
             textAlign: "center",
-            color: "#74797C"
+            color: "#74797C",
           }}
         >
           Note: You can opt-out at any time. See our Privacy Policy and Terms
@@ -154,27 +133,16 @@ const LastSection = () => {
             variant="standard"
             sx={{ width: "588px" }}
           />
-          <Button
-            variant="contained"
-            sx={{
-              background: "#212A2F",
-              borderRadius: "2px",
-              marginRight: "24px",
-              padding: "17px auto",
-              width: "111px",
-              height: "48px",
-              color: "white",
-              border: " 0",
-              outline: "none",
-              cursor: "pointer",
-              ":hover": {
-                background: "grey",
-                color: "white",
-              },
-            }}
-          >
-            SIGN IN
-          </Button>
+
+          <CustomButton
+            textColor="white"
+            bgColor="#212A2F"
+            hoverColor="grey"
+            customWidth="111px"
+            mTop="40px"
+            link="/"
+            text="SIGN IN"
+          />
         </Box>
         <Typography
           variant="h7"
@@ -186,7 +154,7 @@ const LastSection = () => {
             fontSize: "14px",
             lineHeight: "14px",
             textAlign: "center",
-            color: "#74797C"
+            color: "#74797C",
           }}
         >
           Note: You can opt-out at any time. See our Privacy Policy and Terms
