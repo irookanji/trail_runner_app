@@ -60,7 +60,7 @@ const LastSection = () => {
             bgColor="#212A2F"
             hoverColor="grey"
             customWidth="111px"
-            mTop="40px"
+            mTop="1rem"
             link="/"
             text="SIGN IN"
           />
@@ -139,7 +139,6 @@ const LastSection = () => {
             bgColor="#212A2F"
             hoverColor="grey"
             customWidth="111px"
-            mTop="40px"
             link="/"
             text="SIGN IN"
           />
