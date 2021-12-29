@@ -1,11 +1,12 @@
 import React from 'react'
+import { Box } from "@mui/material"
 
-const men = () => {
+const Men = () => {
     return (
-        <div>
+        <Box>
             Men Goods
-        </div>
+        </Box>
     )
 }
 
-export default men
+export default Men

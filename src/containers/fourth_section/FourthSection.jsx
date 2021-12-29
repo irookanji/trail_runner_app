@@ -1,7 +1,8 @@
 import React from "react";
 import cover from "../../assets/FourthCover.jpg";
 
-import { Paper, Box, Typography, Button } from "@mui/material";
+import { Paper, Box, Typography } from "@mui/material";
+import CustomButton from "../../components/atoms/Button/CustomButton";
 
 const FourthSection = () => {
   return (
@@ -9,7 +10,8 @@ const FourthSection = () => {
       <Box
         sx={{
           display: { xs: "flex", md: "none" },
-          background: "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
+          background:
+            "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
           textAlign: "center",
           padding: "1.5rem",
           flexDirection: "column",
@@ -41,7 +43,10 @@ const FourthSection = () => {
             lineHeight: "1.7rem",
           }}
         >
-          Reducing our environmental impact has been a top priority since day one. But now, we’re taking things further. Explore our overall sustainability approach, our progress thus far, and our bold list of commitments for 2025.
+          Reducing our environmental impact has been a top priority since day
+          one. But now, we’re taking things further. Explore our overall
+          sustainability approach, our progress thus far, and our bold list of
+          commitments for 2025.
         </Typography>
 
         <Box
@@ -52,27 +57,13 @@ const FourthSection = () => {
             justifyContent: "center",
           }}
         >
-          <Button
-            variant="contained"
-            sx={{
-              background: "#212A2F",
-              borderRadius: "2px",
-              marginRight: "24px",
-              padding: "17px auto",
-              width: "180px",
-              height: "48px",
-              color: "white",
-              border: " 0",
-              outline: "none",
-              cursor: "pointer",
-              ":hover": {
-                background: "grey",
-                color: "white",
-              },
-            }}
-          >
-            OUR SUSTAINABLE PRACTICES
-          </Button>
+          <CustomButton
+            textColor="white"
+            bgColor="#212A2F"
+            hoverColor="grey"
+            link="/"
+            text="OUR SUSTAINABLE PRACTICES"
+          />
         </Box>
       </Box>
       {/* Desktop Screen */}
@@ -138,32 +129,22 @@ const FourthSection = () => {
               letterSpacing: "0.5px",
             }}
           >
-            Reducing our environmental impact has been a top priority since day one. But now, we’re taking things further. Explore our overall sustainability approach, our progress thus far, and our bold list of commitments for 2025.
+            Reducing our environmental impact has been a top priority since day
+            one. But now, we’re taking things further. Explore our overall
+            sustainability approach, our progress thus far, and our bold list of
+            commitments for 2025.
           </Typography>
         </Box>
 
         <Box sx={{ display: "flex", m: "2rem", justifyContent: "center" }}>
-          <Button
-            variant="contained"
-            sx={{
-              background: "#212A2F",
-              borderRadius: "2px",
-              marginRight: "24px",
-              padding: "17px auto",
-              width: "384px",
-              height: "48px",
-              color: "white",
-              border: " 0",
-              outline: "none",
-              cursor: "pointer",
-              ":hover": {
-                background: "grey",
-                color: "white",
-              },
-            }}
-          >
-            OUR SUSTAINABLE PRACTICES
-          </Button>
+          <CustomButton
+            textColor="white"
+            bgColor="#212A2F"
+            hoverColor="grey"
+            customWidth="384px"
+            link="/"
+            text="OUR SUSTAINABLE PRACTICES"
+          />
         </Box>
       </Box>
     </>

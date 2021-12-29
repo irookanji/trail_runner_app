@@ -1,8 +1,8 @@
 import React from "react";
 import cover from "../../assets/cover.jpg";
-import CustomButton from '../../components/atoms/Button/CustomButton';
+import CustomButton from "../../components/atoms/Button/CustomButton";
 
-import { Paper, Box, Typography, Button } from "@mui/material";
+import { Paper, Box, Typography } from "@mui/material";
 
 const HeaderMUI = () => {
   return (
@@ -10,10 +10,12 @@ const HeaderMUI = () => {
       <Box
         sx={{
           display: { xs: "flex", md: "none" },
-          background: "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
+          background:
+            "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
           textAlign: "center",
           padding: "3.5rem",
-          flexDirection: "column", justifyContent: "center"
+          flexDirection: "column",
+          justifyContent: "center",
         }}
       >
         <Typography
@@ -43,48 +45,9 @@ const HeaderMUI = () => {
           Durable. Comfortable. Ready to get dirty.
         </Typography>
 
-        <Box sx={{ display: "flex", m: "1rem", justifyContent: "center" }}>
-          <Button
-            variant="contained"
-            sx={{
-              background: "white",
-              borderRadius: "2px",
-              marginRight: "24px",
-              padding: "17px auto",
-              width: "180px",
-              height: "48px",
-              color: "#212A2F",
-              border: " 0",
-              outline: "none",
-              cursor: "pointer",
-              ":hover": {
-                background: "grey",
-                color: "white",
-              },
-            }}
-          >
-            SHOP MEN
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              background: "white",
-              borderRadius: "2px",
-              padding: "17px auto",
-              width: "180px",
-              height: "48px",
-              color: "#212A2F",
-              border: " 0",
-              outline: "none",
-              cursor: "pointer",
-              ":hover": {
-                background: "grey",
-                color: "white",
-              },
-            }}
-          >
-            SHOP WOMEN
-          </Button>
+        <Box sx={{ display: "flex", m: "0.5rem", justifyContent: "center" }}>
+          <CustomButton link="/" text="Shop Men" />
+          <CustomButton link="/" text="Shop Women" />
         </Box>
       </Box>
 
@@ -140,51 +103,10 @@ const HeaderMUI = () => {
           </Typography>
 
           <Box sx={{ mt: "2rem" }}>
-            <Button
-              variant="contained"
-              sx={{
-                background: "white",
-                borderRadius: "2px",
-                marginRight: "24px",
-                padding: "17px auto",
-                width: "180px",
-                height: "48px",
-                color: "#212A2F",
-                border: " 0",
-                outline: "none",
-                cursor: "pointer",
-                ":hover": {
-                  background: "rgb(219, 215, 215)",
-                  color: "white",
-                },
-              }}
-            >
-              SHOP MEN
-            </Button>
+            <CustomButton link="/" text="Shop Men" />
+            <CustomButton link="/" text="Shop Women" />
 
-            <CustomButton textColor="white" bgColor="black" link="/" text="Reusable text"/>  
-
-            <Button
-              variant="contained"
-              sx={{
-                background: "white",
-                borderRadius: "2px",
-                marginRight: "24px",
-                padding: "17px auto",
-                width: "180px",
-                height: "48px",
-                color: "#212A2F",
-                border: " 0",
-                outline: "none",
-                cursor: "pointer",
-                ":hover": {
-                  background: "rgb(219, 215, 215)",
-                  color: "white",
-                },
-              }}
-            >
-              SHOP WOMEN
-            </Button>
+            {/* <CustomButton textColor="white" bgColor="black" link="/" text="Reusable text"/>   */}
           </Box>
         </Box>
       </Paper>

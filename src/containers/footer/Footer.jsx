@@ -1,11 +1,6 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
 
+import { AppBar, Box, Typography, Grid, Icon } from "@mui/material";
 import { footerData } from "./FooterData";
 
 const Footer = () => {
@@ -50,7 +45,7 @@ const Footer = () => {
               fontSize: "12px",
               lineHeight: "12px",
               letterSpacing: "0.5px",
-              mb: "1rem"
+              mb: "1rem",
             }}
           >
             <Typography>1-888-963-8944</Typography>
@@ -88,7 +83,7 @@ const Footer = () => {
               fontSize: "12px",
               lineHeight: "12px",
               letterSpacing: "0.5px",
-              mb: "1rem"
+              mb: "1rem",
             }}
           >
             <Typography>Men's Shoes</Typography>
@@ -203,7 +198,7 @@ const Footer = () => {
               flexDirection: "row",
               justifyContent: "flex-end",
               mr: "10rem",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
           >
             {footerData.map((item) => (
@@ -235,7 +230,7 @@ const Footer = () => {
               fontSize: "12px",
               lineHeight: "18px",
               letterSpacing: "0.5px",
-              mt: "5rem"
+              mt: "5rem",
             }}
           >
             © 2021 Allbirds, Inc. All Rights Reserved.Terms, Privacy &

@@ -1,7 +1,8 @@
 import React from "react";
 import cover from "../../assets/ThirdCover.jpg";
 
-import { Paper, Box, Typography, Button } from "@mui/material";
+import { Paper, Box, Typography } from "@mui/material";
+import CustomButton from "../../components/atoms/Button/CustomButton";
 
 const ThirdSection = () => {
   return (
@@ -9,7 +10,8 @@ const ThirdSection = () => {
       <Box
         sx={{
           display: { xs: "flex", md: "none" },
-          background: "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
+          background:
+            "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
           textAlign: "center",
           padding: "1.5rem",
           flexDirection: "column",
@@ -54,27 +56,13 @@ const ThirdSection = () => {
             justifyContent: "center",
           }}
         >
-          <Button
-            variant="contained"
-            sx={{
-              background: "#212A2F",
-              borderRadius: "2px",
-              marginRight: "24px",
-              padding: "17px auto",
-              width: "180px",
-              height: "48px",
-              color: "white",
-              border: " 0",
-              outline: "none",
-              cursor: "pointer",
-              ":hover": {
-                background: "grey",
-                color: "white",
-              },
-            }}
-          >
-            SEE HOW
-          </Button>
+          <CustomButton
+            textColor="white"
+            bgColor="#212A2F"
+            hoverColor="grey"
+            link="/"
+            text="See How"
+          />
         </Box>
       </Box>
       {/* Desktop Screen */}
@@ -147,27 +135,14 @@ const ThirdSection = () => {
         </Box>
 
         <Box sx={{ display: "flex", m: "2rem", justifyContent: "center" }}>
-          <Button
-            variant="contained"
-            sx={{
-              background: "#212A2F",
-              borderRadius: "2px",
-              marginRight: "24px",
-              padding: "17px auto",
-              width: "384px",
-              height: "48px",
-              color: "white",
-              border: " 0",
-              outline: "none",
-              cursor: "pointer",
-              ":hover": {
-                background: "grey",
-                color: "white",
-              },
-            }}
-          >
-            SEE HOW
-          </Button>
+          <CustomButton
+            textColor="white"
+            bgColor="#212A2F"
+            hoverColor="grey"
+            customWidth="384px"
+            link="/"
+            text="See How"
+          />
         </Box>
       </Box>
     </>

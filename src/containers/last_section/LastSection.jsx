@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, TextField, Button } from "@mui/material";
+import CustomButton from "../../components/atoms/Button/CustomButton";
 
 const LastSection = () => {
   return (
@@ -53,7 +54,7 @@ const LastSection = () => {
             variant="standard"
             sx={{ width: "auto" }}
           />
-          <Button
+          {/* <Button
             variant="contained"
             sx={{
               background: "#212A2F",
@@ -74,7 +75,16 @@ const LastSection = () => {
             }}
           >
             SIGN IN
-          </Button>
+          </Button> */}
+          <CustomButton
+            textColor="white"
+            bgColor="#212A2F"
+            hoverColor="grey"
+            customWidth="111px"
+            mTop="40px"
+            link="/"
+            text="SIGN IN"
+          />
         </Box>
         <Typography
           variant="h7"
