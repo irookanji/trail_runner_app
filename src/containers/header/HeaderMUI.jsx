@@ -2,54 +2,26 @@ import React from "react";
 import cover from "../../assets/cover.jpg";
 import CustomButton from "../../components/atoms/Button/CustomButton";
 
-import { Paper, Box, Typography } from "@mui/material";
+import { Paper, Box } from "@mui/material";
+import { Container, Title, SubTitle, ButtonContainer } from "./styles";
 
 const HeaderMUI = () => {
   return (
     <>
-      <Box
-        sx={{
-          display: { xs: "flex", md: "none" },
-          background:
-            "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
-          textAlign: "center",
-          padding: "3.5rem",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
-        <Typography
-          variant="h2"
-          sx={{
-            fontFamily: "Roboto",
-            fontStyle: "normal",
-            fontWeight: "bold",
-            fontSize: "1.5rem",
-            lineHeight: "1.7rem",
-          }}
-        >
-          The Trail Runner SWT Is Here.
-        </Typography>
+      <Container>
+        <Title variant="h2">The Trail Runner SWT Is Here.</Title>
 
-        <Typography
-          variant="h5"
-          sx={{
-            fontFamily: "Roboto",
-            fontStyle: "normal",
-            fontWeight: "bold",
-            fontSize: "1rem",
-            lineHeight: "1.7rem",
-            margin: "0.5rem 0",
-          }}
-        >
+        <SubTitle variant="h5">
           Durable. Comfortable. Ready to get dirty.
-        </Typography>
+        </SubTitle>
 
-        <Box sx={{ display: "flex", m: "0.5rem", justifyContent: "center" }}>
-          <CustomButton link="/" text="Shop Men" />
-          <CustomButton link="/" text="Shop Women" />
-        </Box>
-      </Box>
+        <ButtonContainer>
+          <CustomButton link="/men" text="Shop Men" />
+          <CustomButton link="/women" mTop="1rem" text="Shop Women" />
+        </ButtonContainer>
+      </Container>
+
+      {/* Desktop view */}
 
       <Paper
         sx={{
@@ -73,38 +45,27 @@ const HeaderMUI = () => {
             margin: "0 54px",
           }}
         >
-          <Typography
+          <Title
+            fontSizeTitle="3rem"
+            lineHeightTitle="4rem"
+            letterSpacingTitle="0.2rem"
             variant="h2"
-            sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "bold",
-              fontSize: "3rem",
-              lineHeight: "4rem",
-              letterSpacing: "0.2rem",
-            }}
           >
             The Trail Runner SWT Is Here.
-          </Typography>
+          </Title>
 
-          <Typography
+          <SubTitle
+            fontSizeTitle="1.5rem"
+            lineHeightTitle="1.5rem"
+            letterSpacingTitle="0.1rem"
             variant="h5"
-            sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-              lineHeight: "1.5rem",
-              letterSpacing: "0.1rem",
-              margin: "0.5rem 0",
-            }}
           >
             Durable. Comfortable. Ready to get dirty.
-          </Typography>
+          </SubTitle>
 
           <Box sx={{ mt: "2rem" }}>
-            <CustomButton link="/" text="Shop Men" />
-            <CustomButton link="/" text="Shop Women" />
+            <CustomButton link="/men" text="Shop Men" />
+            <CustomButton link="/women" text="Shop Women" />
 
             {/* <CustomButton textColor="white" bgColor="black" link="/" text="Reusable text"/>   */}
           </Box>

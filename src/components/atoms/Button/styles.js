@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Button } from "@mui/material";
-import breakpoint from "./breakpoints";
+import breakpoint from "../../../breakpoints";
 
 const StyledButton = styled(Button)`
   background: ${(props) => props.bgColor || "white"};
@@ -18,7 +18,6 @@ const StyledButton = styled(Button)`
   width: ${(props) => props.customWidth || "180px"};
   height: 48px;
   color: ${(props) => props.textColor || "#212A2F"};
-  margin-top: ${(props) => props.mTop || "0"};
   border: 0;
   outline: none;
   cursor: pointer;
@@ -28,12 +27,14 @@ const StyledButton = styled(Button)`
   }
   @media only screen and ${breakpoint.device.xs} {
     width: ${(props) => props.customWidth || "180px"};
+    margin-top: ${(props) => props.mTop || "0"};
   }
   @media only screen and ${breakpoint.device.sm} {
     width: ${(props) => props.customWidth || "210px"};
+    margin-top: "0";
   }
   @media only screen and ${breakpoint.device.md} {
-    width: ${(props) => props.customWidth || "240px"};;
+    width: ${(props) => props.customWidth || "240px"};
   }
   @media only screen and ${breakpoint.device.lg} {
     width: ${(props) => props.customWidth || "276px"};
