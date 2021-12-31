@@ -16,8 +16,8 @@ const HeaderMUI = () => {
         </SubTitle>
 
         <ButtonContainer>
-          <CustomButton link="/men" text="Shop Men" />
-          <CustomButton link="/women" mTop="1rem" text="Shop Women" />
+          <CustomButton link="/men" mBottom="1rem" text="Shop Men" />
+          <CustomButton link="/women" mBottom="1rem" text="Shop Women" />
         </ButtonContainer>
       </Container>
 

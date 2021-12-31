@@ -7,6 +7,7 @@ export default function CustomButton(props) {
       textColor={props.textColor}
       customWidth={props.customWidth}
       mTop={props.mTop}
+      mBottom={props.mBottom}
       bgColor={props.bgColor}
       hoverColor={props.hoverColor}
     >
