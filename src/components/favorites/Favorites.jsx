@@ -127,6 +127,7 @@ export default function Favorites() {
                   margin: { xs: "0.5rem", md: "1rem" },
                   position: "relative",
                   alignItems: "center",
+                  boxShadow: "rgb(211 212 213) 0px 6px 24px 0px"
                 }}
               >
                 {/* Images */}
@@ -241,6 +242,7 @@ export default function Favorites() {
                     margin: { xs: "0.5rem", md: "1rem" },
                     position: "relative",
                     alignItems: "center",
+                    boxShadow: "rgb(211 212 213) 0px 6px 24px 0px"
                   }}
                 >
                   {/* Images */}
@@ -350,6 +352,7 @@ export default function Favorites() {
                   margin: { xs: "0.5rem", md: "1rem" },
                   position: "relative",
                   alignItems: "center",
+                  boxShadow: "rgb(211 212 213) 0px 6px 24px 0px"
                 }}
               >
                 {/* Images */}

@@ -14,6 +14,8 @@ import {
   Paper,
 } from "@mui/material";
 
+import { Link } from "react-router-dom";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -21,7 +23,20 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 
 import logo from "../../assets/logo.svg";
 
-const pages = ["MEN", "WOMEN", "NEW ARRIVALS"];
+const pages = [
+  {
+    name: "MEN",
+    link: "/men",
+  },
+  {
+    name: "WOMEN",
+    link: "/women",
+  },
+  {
+    name: "NEW ARRIVALS",
+    link: "/new-arrivals",
+  },
+];
 const additionals = ["SUSTAINABILITY", "STORES"];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const iconText = ["ABOUT", "MY CART", "LOGIN"];
@@ -60,26 +75,28 @@ const ResponsiveAppBar = () => {
               pr: "7rem",
             }}
           >
-            {pages.map((page) => (
-              <Button
-                href="#pages"
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "#212A2F", display: "block" }}
-              >
-                {page}
-              </Button>
+            {pages.map(({ name, link }) => (
+              <Link to={link}>
+                <Button
+                  key={name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "#212A2F", display: "block" }}
+                >
+                  {name}
+                </Button>
+              </Link>
             ))}
           </Box>
-
-          <Paper
-            sx={{
-              display: { xs: "none", md: "flex" },
-              boxShadow: "none",
-            }}
-          >
-            <img src={logo} alt="Logo" />
-          </Paper>
+          <Link to="/">
+            <Paper
+              sx={{
+                display: { xs: "none", md: "flex" },
+                boxShadow: "none",
+              }}
+            >
+              <img src={logo} alt="Logo" />
+            </Paper>
+          </Link>
 
           <Box
             sx={{
@@ -158,8 +175,8 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography>{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Typography>{page.name}</Typography>
                 </MenuItem>
               ))}
 
