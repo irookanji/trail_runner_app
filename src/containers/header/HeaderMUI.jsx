@@ -3,7 +3,13 @@ import cover from "../../assets/cover.jpg";
 import CustomButton from "../../components/atoms/Button/CustomButton";
 
 import { Paper, Box } from "@mui/material";
-import { Container, Title, SubTitle, ButtonContainer } from "./styles";
+import {
+  Container,
+  Title,
+  SubTitle,
+  ButtonContainer,
+  ImageCover,
+} from "./styles";
 
 const HeaderMUI = () => {
   return (

@@ -3,10 +3,29 @@ import cover from "../../assets/SecondCover.jpg";
 
 import { Paper, Box, Typography } from "@mui/material";
 import CustomButton from "../../components/atoms/Button/CustomButton";
+// import { CustomText } from "../../components/atoms/Text/CustomText";
+import CustomText from "../../components/atoms/Texts/CustomText";
 
 const SecondSection = () => {
   return (
     <>
+      {/* <CustomText>
+        <CustomButton
+          textColor="white"
+          bgColor="#212A2F"
+          hoverColor="grey"
+          link="/"
+          text="Shop Men"
+        />
+
+        <CustomButton
+          textColor="white"
+          bgColor="#212A2F"
+          hoverColor="grey"
+          link="/"
+          text="Shop Women"
+        />
+      </CustomText> */}
       <Box
         sx={{
           display: { xs: "flex", md: "none" },
@@ -95,6 +114,7 @@ const SecondSection = () => {
             flexDirection: "column",
           }}
         ></Paper>
+
         <Typography
           variant="h2"
           sx={{
