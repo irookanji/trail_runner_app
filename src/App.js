@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Men from "./pages/Men";
 import Women from "./pages/Women";
 import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 import NewArrivals from "./pages/NewArrivals";
 import Footer from "./containers/footer/Footer";
 
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/women" element={<Women />} />
         <Route path="/new-arrivals" element={<NewArrivals />} />
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-in" element={<SignIn />} />
       </Routes>
       <Footer />
     </div>
