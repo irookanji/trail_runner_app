@@ -4,7 +4,7 @@ import cover from "../../assets/SecondCover.jpg";
 import { Paper, Box, Typography } from "@mui/material";
 import CustomButton from "../../components/atoms/Button/CustomButton";
 // import { CustomText } from "../../components/atoms/Text/CustomText";
-import CustomText from "../../components/atoms/Texts/CustomText";
+// import CustomText from "../../components/atoms/Texts/CustomText";
 
 const SecondSection = () => {
   return (

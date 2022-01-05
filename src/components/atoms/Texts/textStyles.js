@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Paper, Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import breakpoint from "../../../breakpoints";
 
 export const Container = styled(Box)`

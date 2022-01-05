@@ -8,7 +8,6 @@ import {
   Title,
   SubTitle,
   ButtonContainer,
-  ImageCover,
 } from "./styles";
 
 const HeaderMUI = () => {

@@ -3,6 +3,7 @@ import React from "react";
 import Home from "./pages/Home";
 import Men from "./pages/Men";
 import Women from "./pages/Women";
+import SignUp from "./pages/SignUp";
 import NewArrivals from "./pages/NewArrivals";
 import Footer from "./containers/footer/Footer";
 
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
         <Route path="/new-arrivals" element={<NewArrivals />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Routes>
       <Footer />
     </div>
