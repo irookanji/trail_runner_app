@@ -39,7 +39,21 @@ const pages = [
 ];
 const additionals = ["SUSTAINABILITY", "STORES"];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
-const iconText = ["ABOUT", "MY CART", "LOGIN"];
+// const iconText = ["ABOUT", "MY CART", "LOGIN"];
+const iconText = [
+  {
+    name: "ABOUT",
+    link: "/about",
+  },
+  {
+    name: "MY CART",
+    link: "/cart",
+  },
+  {
+    name: "SIGN IN",
+    link: "/sign-in",
+  },
+];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -117,11 +131,13 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
 
-            <Tooltip title="LOGIN">
-              <PersonOutlineOutlinedIcon
-                sx={{ marginLeft: 3, cursor: "pointer" }}
-                style={{ fontSize: 30 }}
-              />
+            <Tooltip title="SIGN IN">
+              <Link to="/sign-in">
+                <PersonOutlineOutlinedIcon
+                  sx={{ marginLeft: 3, cursor: "pointer" }}
+                  style={{ fontSize: 30 }}
+                />
+              </Link>
             </Tooltip>
 
             <Tooltip title="ABOUT">
@@ -186,10 +202,12 @@ const ResponsiveAppBar = () => {
                 </MenuItem>
               ))}
 
-              {iconText.map((iText) => (
-                <MenuItem key={iText} onClick={handleCloseNavMenu}>
-                  <Typography>{iText}</Typography>
-                </MenuItem>
+              {iconText.map(({ name, link }) => (
+                <Link to={link}>
+                  <MenuItem key={name} onClick={handleCloseNavMenu}>
+                    <Typography>{name}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
             <Paper

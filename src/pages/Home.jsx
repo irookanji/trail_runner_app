@@ -7,8 +7,9 @@ import {
   SecondSection,
   ThirdSection,
 } from "../containers";
-import { Collections, Favorites, NewArrivals, Stories } from "../components";
-
+import { Favorites, NewArrivals, Stories } from "../components";
+import { slides } from "../components/atoms/Carousel/CollectionsData";
+import CustomCarousel from "../components/atoms/Carousel/CustomCarousel";
 
 const Home = () => {
   return (
@@ -18,7 +19,10 @@ const Home = () => {
       {/* <Link to="/men">Link to Men</Link> */}
 
       <SecondSection />
-      <Collections />
+      <CustomCarousel
+        slides={slides}
+        titleText="Shop The Collections"
+      ></CustomCarousel>
       <ThirdSection />
       <NewArrivals />
       <FourthSection />
