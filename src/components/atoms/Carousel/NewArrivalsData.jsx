@@ -1,8 +1,8 @@
-import image1 from "../../assets/Carousel_2_1.png";
-import image2 from "../../assets/Carousel_2_2.png";
-import image3 from "../../assets/Carousel_2_3.png";
+import image1 from "../../../assets/Carousel_1_1.png";
+import image2 from "../../../assets/Carousel_2_2.png";
+import image3 from "../../../assets/Carousel_2_3.png";
 
-export const slides = [
+export const slidesNewArrival = [
   {
     image: image1,
     title: "Men's Trail Runner SWT",

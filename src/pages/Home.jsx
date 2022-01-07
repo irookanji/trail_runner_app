@@ -7,8 +7,9 @@ import {
   SecondSection,
   ThirdSection,
 } from "../containers";
-import { Favorites, NewArrivals, Stories } from "../components";
-import { slides } from "../components/atoms/Carousel/CollectionsData";
+import { Favorites, Stories } from "../components";
+import { slidesCollections } from "../components/atoms/Carousel/CollectionsData";
+import { slidesNewArrival } from "../components/atoms/Carousel/NewArrivalsData";
 import CustomCarousel from "../components/atoms/Carousel/CustomCarousel";
 
 const Home = () => {
@@ -20,11 +21,14 @@ const Home = () => {
 
       <SecondSection />
       <CustomCarousel
-        slides={slides}
+        slides={slidesCollections}
         titleText="Shop The Collections"
       ></CustomCarousel>
       <ThirdSection />
-      <NewArrivals />
+      <CustomCarousel
+        slides={slidesNewArrival}
+        titleText="New Arrivals"
+      ></CustomCarousel>
       <FourthSection />
       <Stories />
       <LastSection />
