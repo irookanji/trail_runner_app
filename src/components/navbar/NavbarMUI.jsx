@@ -38,8 +38,7 @@ const pages = [
   },
 ];
 const additionals = ["SUSTAINABILITY", "STORES"];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
-// const iconText = ["ABOUT", "MY CART", "LOGIN"];
+
 const iconText = [
   {
     name: "ABOUT",
@@ -210,15 +209,17 @@ const ResponsiveAppBar = () => {
                 </Link>
               ))}
             </Menu>
-            <Paper
-              sx={{
-                ml: 2,
-                display: { xs: "flex", md: "none" },
-                boxShadow: "none",
-              }}
-            >
-              <img src={logo} alt="Logo" />
-            </Paper>
+            <Link to="/">
+              <Paper
+                sx={{
+                  ml: 2,
+                  display: { xs: "flex", md: "none" },
+                  boxShadow: "none",
+                }}
+              >
+                <img src={logo} alt="Logo" />
+              </Paper>
+            </Link>
           </Box>
         </Toolbar>
       </Container>

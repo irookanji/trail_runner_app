@@ -18,8 +18,6 @@ const Home = () => {
     <>
       <HeaderMUI />
       <Favorites />
-      {/* <Link to="/men">Link to Men</Link> */}
-
       <SecondSection />
       <CustomCarousel
         slides={slidesCollections}
