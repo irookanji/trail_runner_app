@@ -5,7 +5,7 @@ import CustomButton from "../Button/CustomButton.jsx";
 export default function CustomSection(props) {
   return (
     <>
-      <ImageCover $cover={props.coverImage}></ImageCover>
+      <ImageCover $cover={props.coverImage} />
       <Title
         textColor={props.textColor}
         customWidth={props.customWidth}

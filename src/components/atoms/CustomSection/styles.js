@@ -2,29 +2,6 @@ import styled, { css } from "styled-components";
 import { Paper, Box, Typography } from "@mui/material";
 import breakpoint from "../../../breakpoints";
 
-// export const Container = styled(Box)`
-//   @media only screen and ${breakpoint.device.xs} {
-//     display: flex;
-//     background: radial-gradient(
-//       circle at 38% 50%,
-//       rgba(183, 154, 145, 1) 0%,
-//       rgba(207, 157, 83, 1) 100%
-//     );
-//     padding: 1.5rem;
-//     margin: 2rem 0;
-//   }
-
-//   @media only screen and ${breakpoint.device.md} {
-//     display: none;
-//     min-width: 100%;
-//     margin-top: 6rem;
-//   }
-
-//   text-align: center;
-//   flex-direction: column;
-//   justify-content: center;
-// `;
-
 export const Title = styled(Typography)`
   font-family: Roboto;
   font-style: normal;
