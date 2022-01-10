@@ -32,7 +32,6 @@ const StyledButton = styled(Button)`
   }
   @media only screen and ${breakpoint.device.sm} {
     width: ${(props) => props.customWidth || "210px"};
-    margin-top: "0";
   }
   @media only screen and ${breakpoint.device.md} {
     width: ${(props) => props.customWidth || "240px"};

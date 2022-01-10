@@ -1,10 +1,11 @@
 import React from 'react'
 import { Box } from "@mui/material"
+import Cart from "../components/shoppingCart/cart/Cart"
 
 const Men = () => {
     return (
         <Box>
-            Men Goods
+            <Cart></Cart>
         </Box>
     )
 }
