@@ -1,6 +1,6 @@
-import image1 from "../../../assets/Carousel_1_1.png";
-import image2 from "../../../assets/Carousel_1_2.png";
-import image3 from "../../../assets/Carousel_1_3.png";
+import image1 from "../../../../assets/Carousel_1_1.png";
+import image2 from "../../../../assets/Carousel_1_2.png";
+import image3 from "../../../../assets/Carousel_1_3.png";
 
 export const slidesCollections = [
   {

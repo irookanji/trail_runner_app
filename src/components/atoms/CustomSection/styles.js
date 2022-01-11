@@ -6,6 +6,7 @@ export const Title = styled(Typography)`
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
+  text-align: center;
   font-size: ${(props) => props.fontSizeTitle || "1.5rem"};
   line-height: ${(props) => props.lineHeightTitle || "2rem"};
   margin-bottom: 1rem;
@@ -18,6 +19,7 @@ export const SubTitle = styled(Typography)`
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
+  text-align: center;
   font-size: ${(props) => props.fontSizeSubTitle || "1rem"};
   line-height: ${(props) => props.lineHeightSubTitle || "1.7rem"};
   margin: 0.5rem 0;
@@ -65,7 +67,9 @@ export const ImageCover = styled(Paper)`
             background-image: url(${(props) => props.$cover});
           `
         : null}
-
+    margin-top: 6rem;
     height: 542px;
+    background-size: cover;
+    width: 100%;
   }
 `;

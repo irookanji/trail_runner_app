@@ -27,7 +27,13 @@ export default function CustomCarousel(props) {
             resolve: arrowsPlugin,
             options: {
               arrowLeft: (
-                <button>
+                <button
+                  style={{
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                >
                   <img
                     src={arrowToLeft}
                     alt="Arrow To Left"
@@ -36,7 +42,13 @@ export default function CustomCarousel(props) {
                 </button>
               ),
               arrowRight: (
-                <button>
+                <button
+                  style={{
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                >
                   <img
                     src={arrowToRight}
                     alt="Arrow To Right"
@@ -75,7 +87,13 @@ export default function CustomCarousel(props) {
                 resolve: arrowsPlugin,
                 options: {
                   arrowLeft: (
-                    <button>
+                    <button
+                      style={{
+                        background: "none",
+                        border: "none",
+                        cursor: "pointer",
+                      }}
+                    >
                       <img
                         src={arrowToLeft}
                         alt="Arrow To Left"
@@ -84,7 +102,13 @@ export default function CustomCarousel(props) {
                     </button>
                   ),
                   arrowRight: (
-                    <button>
+                    <button
+                      style={{
+                        background: "none",
+                        border: "none",
+                        cursor: "pointer",
+                      }}
+                    >
                       <img
                         src={arrowToRight}
                         alt="Arrow To Right"

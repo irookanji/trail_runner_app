@@ -13,6 +13,7 @@ export const SlideContainer = styled(Box)`
 
 export const Title = styled(Typography)`
   display: flex;
+  justify-content: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;

@@ -7,6 +7,8 @@ export default function CustomSection(props) {
     <>
       <ImageCover $cover={props.coverImage} />
       <Title
+        fontSizeTitle={props.fontSizeTitle}
+        lineHeightTitle={props.lineHeightTitle}
         textColor={props.textColor}
         customWidth={props.customWidth}
         mTop={props.mTop}
@@ -16,7 +18,12 @@ export default function CustomSection(props) {
       >
         {props.titleText}
       </Title>
-      <SubTitle>{props.subTitleText}</SubTitle>
+      <SubTitle
+        fontSizeSubTitle={props.fontSizeSubTitle}
+        lineHeightSubTitle={props.lineHeightSubTitle}
+      >
+        {props.subTitleText}
+      </SubTitle>
 
       <ButtonContainer>
         <CustomButton
