@@ -89,9 +89,8 @@ const ResponsiveAppBar = () => {
             }}
           >
             {pages.map(({ name, link }) => (
-              <Link to={link}>
+              <Link to={link} key={name}>
                 <Button
-                  key={name}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "#212A2F", display: "block" }}
                 >

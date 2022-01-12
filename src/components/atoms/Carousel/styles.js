@@ -9,6 +9,7 @@ export const Container = styled(Box)`
 export const SlideContainer = styled(Box)`
   display: flex;
   flex-direction: column;
+  margin: 1.5rem;
 `;
 
 export const Title = styled(Typography)`
