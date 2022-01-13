@@ -139,10 +139,12 @@ const ResponsiveAppBar = () => {
             </Tooltip>
 
             <Tooltip title="ABOUT">
-              <HelpOutlineOutlinedIcon
-                sx={{ marginLeft: 3, cursor: "pointer" }}
-                style={{ fontSize: 30 }}
-              />
+              <Link to="/about">
+                <HelpOutlineOutlinedIcon
+                  sx={{ marginLeft: 3, cursor: "pointer" }}
+                  style={{ fontSize: 30 }}
+                />
+              </Link>
             </Tooltip>
 
             <Tooltip title="MY CART">
@@ -201,8 +203,8 @@ const ResponsiveAppBar = () => {
               ))}
 
               {iconText.map(({ name, link }) => (
-                <Link to={link}>
-                  <MenuItem key={name} onClick={handleCloseNavMenu}>
+                <Link to={link} key={name}>
+                  <MenuItem onClick={handleCloseNavMenu}>
                     <Typography>{name}</Typography>
                   </MenuItem>
                 </Link>
