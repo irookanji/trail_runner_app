@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, TextField } from '@mui/material';
 import CustomButton from '../../components/atoms/Button/CustomButton';
+import { Link } from 'react-router-dom';
 
 const LastSection = () => {
   return (
@@ -49,15 +50,17 @@ const LastSection = () => {
         <Box sx={{ mt: '2rem' }}>
           <TextField id="standard-basic" label="Enter Your Email" variant="standard" sx={{ width: 'auto' }} />
 
-          <CustomButton
-            textColor="white"
-            bgColor="#212A2F"
-            hoverColor="grey"
-            customWidth="111px"
-            mTop="1rem"
-            link="/"
-            text="SIGN IN"
-          />
+          <Link to="/sign-in">
+            <CustomButton
+              textColor="white"
+              bgColor="#212A2F"
+              hoverColor="grey"
+              customWidth="111px"
+              mTop="1rem"
+              link="/"
+              text="SIGN IN"
+            />
+          </Link>
         </Box>
         <Typography
           variant="h7"
@@ -123,14 +126,16 @@ const LastSection = () => {
         <Box sx={{ mt: '2rem' }}>
           <TextField id="standard-basic" label="Enter Your Email Address" variant="standard" sx={{ width: '588px' }} />
 
-          <CustomButton
-            textColor="white"
-            bgColor="#212A2F"
-            hoverColor="grey"
-            customWidth="111px"
-            link="/"
-            text="SIGN IN"
-          />
+          <Link to="/sign-in">
+            <CustomButton
+              textColor="white"
+              bgColor="#212A2F"
+              hoverColor="grey"
+              customWidth="111px"
+              link="/"
+              text="SIGN IN"
+            />
+          </Link>
         </Box>
         <Typography
           variant="h7"
