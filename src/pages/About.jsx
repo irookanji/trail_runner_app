@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import CustomButton from "../components/atoms/Button/CustomButton";
 
 function About() {

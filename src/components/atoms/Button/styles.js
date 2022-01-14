@@ -26,7 +26,7 @@ const StyledButton = styled(Button)`
     color: white;
   }
   @media only screen and ${breakpoint.device.xs} {
-    width: ${(props) => props.customWidth || "180px"};
+    width: ${(props) => props.customWidth || "111px"};
     margin-top: ${(props) => props.mTop || 0};
     margin-bottom: ${(props) => props.mBottom || 0};
   }
@@ -34,10 +34,7 @@ const StyledButton = styled(Button)`
     width: ${(props) => props.customWidth || "210px"};
   }
   @media only screen and ${breakpoint.device.md} {
-    width: ${(props) => props.customWidth || "240px"};
-  }
-  @media only screen and ${breakpoint.device.lg} {
-    width: ${(props) => props.customWidth || "276px"};
+    width: ${(props) => props.customWidth || "180px"};
   }
 `;
 

@@ -51,6 +51,7 @@ export const ImageCover = styled(Paper)`
   flex-direction: column;
 
   @media only screen and ${breakpoint.device.xs} {
+    display: none;
     height: 400px;
     padding: 2rem;
     background: radial-gradient(
@@ -61,6 +62,7 @@ export const ImageCover = styled(Paper)`
   }
 
   @media only screen and ${breakpoint.device.md} {
+    display: flex;
     ${(props) =>
       props.$cover
         ? css`

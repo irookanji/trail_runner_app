@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { itemData } from "./FavoritesTabsData";
 import CustomButton from "../../components/atoms/Button/CustomButton";
+import { Link } from "react-router-dom";
 
 import {
   Tabs,
@@ -127,7 +128,7 @@ export default function Favorites() {
                   margin: { xs: "0.5rem", md: "1rem" },
                   position: "relative",
                   alignItems: "center",
-                  boxShadow: "rgb(211 212 213) 0px 6px 24px 0px"
+                  boxShadow: "rgb(211 212 213) 0px 6px 24px 0px",
                 }}
               >
                 {/* Images */}
@@ -150,8 +151,21 @@ export default function Favorites() {
                     top: "25%",
                   }}
                 >
-                  <CustomButton link="/" text="SHOP MEN" />
-                  <CustomButton mTop="1rem" link="/" text="SHOP MEN" />
+                  <Link to="/men">
+                    <CustomButton
+                      link="/"
+                      text="SHOP MEN"
+                      customWidth="210px"
+                    />
+                  </Link>
+                  <Link to="/women">
+                    <CustomButton
+                      mTop="1rem"
+                      link="/"
+                      text="SHOP MEN"
+                      customWidth="210px"
+                    />
+                  </Link>
                 </Box>
 
                 {/* Image text */}
@@ -242,7 +256,7 @@ export default function Favorites() {
                     margin: { xs: "0.5rem", md: "1rem" },
                     position: "relative",
                     alignItems: "center",
-                    boxShadow: "rgb(211 212 213) 0px 6px 24px 0px"
+                    boxShadow: "rgb(211 212 213) 0px 6px 24px 0px",
                   }}
                 >
                   {/* Images */}
@@ -263,8 +277,21 @@ export default function Favorites() {
                       top: "25%",
                     }}
                   >
-                    <CustomButton link="/" text="SHOP MEN" />
-                    <CustomButton mTop="1rem" link="/" text="SHOP MEN" />
+                    <Link to="/men">
+                      <CustomButton
+                        link="/"
+                        text="SHOP MEN"
+                        customWidth="210px"
+                      />
+                    </Link>
+                    <Link to="/women">
+                      <CustomButton
+                        mTop="1rem"
+                        link="/"
+                        text="SHOP MEN"
+                        customWidth="210px"
+                      />
+                    </Link>
                   </Box>
 
                   {/* Image text */}
@@ -352,7 +379,7 @@ export default function Favorites() {
                   margin: { xs: "0.5rem", md: "1rem" },
                   position: "relative",
                   alignItems: "center",
-                  boxShadow: "rgb(211 212 213) 0px 6px 24px 0px"
+                  boxShadow: "rgb(211 212 213) 0px 6px 24px 0px",
                 }}
               >
                 {/* Images */}
@@ -375,8 +402,21 @@ export default function Favorites() {
                     top: "25%",
                   }}
                 >
-                  <CustomButton link="/" text="SHOP MEN" />
-                  <CustomButton mTop="1rem" link="/" text="SHOP MEN" />
+                  <Link to="/men">
+                    <CustomButton
+                      link="/"
+                      text="SHOP MEN"
+                      customWidth="210px"
+                    />
+                  </Link>
+                  <Link to="/women">
+                    <CustomButton
+                      mTop="1rem"
+                      link="/"
+                      text="SHOP MEN"
+                      customWidth="210px"
+                    />
+                  </Link>
                 </Box>
 
                 {/* Image text */}
