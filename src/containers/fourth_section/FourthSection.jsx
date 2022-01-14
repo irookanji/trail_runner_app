@@ -1,33 +1,32 @@
-import React from "react";
-import cover from "../../assets/FourthCover.jpg";
+import React from 'react';
+import cover from '../../assets/FourthCover.jpg';
 
-import { Paper, Box, Typography } from "@mui/material";
-import CustomButton from "../../components/atoms/Button/CustomButton";
+import { Paper, Box, Typography } from '@mui/material';
+import CustomButton from '../../components/atoms/Button/CustomButton';
 
 const FourthSection = () => {
   return (
     <>
       <Box
         sx={{
-          display: { xs: "flex", md: "none" },
-          background:
-            "radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)",
-          textAlign: "center",
-          padding: "1.5rem",
-          flexDirection: "column",
-          my: "2rem",
-          justifyContent: "center",
+          display: { xs: 'flex', md: 'none' },
+          background: 'radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%)',
+          textAlign: 'center',
+          padding: '1.5rem',
+          flexDirection: 'column',
+          my: '2rem',
+          justifyContent: 'center',
         }}
       >
         <Typography
           variant="h2"
           sx={{
-            fontFamily: "Roboto",
-            fontStyle: "normal",
-            fontWeight: "bold",
-            fontSize: "1.5rem",
-            lineHeight: "2rem",
-            mb: "1rem",
+            fontFamily: 'Roboto',
+            fontStyle: 'normal',
+            fontWeight: 'bold',
+            fontSize: '1.5rem',
+            lineHeight: '2rem',
+            mb: '1rem',
           }}
         >
           Reversing Climate Change Through Better Business
@@ -36,25 +35,23 @@ const FourthSection = () => {
         <Typography
           variant="h5"
           sx={{
-            fontFamily: "Roboto",
-            fontStyle: "normal",
-            fontWeight: "bold",
-            fontSize: "1rem",
-            lineHeight: "1.7rem",
+            fontFamily: 'Roboto',
+            fontStyle: 'normal',
+            fontWeight: 'bold',
+            fontSize: '1rem',
+            lineHeight: '1.7rem',
           }}
         >
-          Reducing our environmental impact has been a top priority since day
-          one. But now, we’re taking things further. Explore our overall
-          sustainability approach, our progress thus far, and our bold list of
-          commitments for 2025.
+          Reducing our environmental impact has been a top priority since day one. But now, we’re taking things further.
+          Explore our overall sustainability approach, our progress thus far, and our bold list of commitments for 2025.
         </Typography>
 
         <Box
           sx={{
-            display: "flex",
-            mx: "1.5rem",
-            mt: "1rem",
-            justifyContent: "center",
+            display: 'flex',
+            mx: '1.5rem',
+            mt: '1rem',
+            justifyContent: 'center',
           }}
         >
           <CustomButton
@@ -69,47 +66,47 @@ const FourthSection = () => {
       {/* Desktop Screen */}
       <Box
         sx={{
-          display: { xs: "none", md: "flex" },
-          textAlign: "center",
-          flexDirection: "column",
-          mt: "6rem",
-          justifyContent: "center",
-          alignItems: "center",
-          minWidth: "100%",
+          display: { xs: 'none', md: 'flex' },
+          textAlign: 'center',
+          flexDirection: 'column',
+          mt: '6rem',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minWidth: '100%',
         }}
       >
         <Paper
           sx={{
-            display: { xs: "none", md: "flex" },
+            display: { xs: 'none', md: 'flex' },
             backgroundImage: `url(${cover})`,
-            position: "relative",
-            backgroundSize: "cover",
-            minHeight: "700px",
-            width: "100%",
-            objectFit: "cover",
-            backgroundRepeat: "no-repeat",
-            flexDirection: "column",
+            position: 'relative',
+            backgroundSize: 'cover',
+            minHeight: '700px',
+            width: '100%',
+            objectFit: 'cover',
+            backgroundRepeat: 'no-repeat',
+            flexDirection: 'column',
           }}
         ></Paper>
 
         <Box
           sx={{
-            width: "655px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            width: '655px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Typography
             variant="h2"
             sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "bold",
-              fontSize: "2rem",
-              lineHeight: "4rem",
-              mt: "4rem",
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'bold',
+              fontSize: '2rem',
+              lineHeight: '4rem',
+              mt: '4rem',
             }}
           >
             Reversing Climate Change Through Better Business
@@ -118,25 +115,24 @@ const FourthSection = () => {
           <Typography
             variant="h5"
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "1.5rem",
-              lineHeight: "2.5rem",
-              mt: "3rem",
-              letterSpacing: "0.5px",
+              display: 'flex',
+              justifyContent: 'center',
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '1.5rem',
+              lineHeight: '2.5rem',
+              mt: '3rem',
+              letterSpacing: '0.5px',
             }}
           >
-            Reducing our environmental impact has been a top priority since day
-            one. But now, we’re taking things further. Explore our overall
-            sustainability approach, our progress thus far, and our bold list of
+            Reducing our environmental impact has been a top priority since day one. But now, we’re taking things
+            further. Explore our overall sustainability approach, our progress thus far, and our bold list of
             commitments for 2025.
           </Typography>
         </Box>
 
-        <Box sx={{ display: "flex", m: "2rem", justifyContent: "center" }}>
+        <Box sx={{ display: 'flex', m: '2rem', justifyContent: 'center' }}>
           <CustomButton
             textColor="white"
             bgColor="#212A2F"

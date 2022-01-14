@@ -1,21 +1,21 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { AppBar, Box, Typography, Grid, Icon } from "@mui/material";
-import { footerData } from "./FooterData";
+import { AppBar, Box, Typography, Grid, Icon } from '@mui/material';
+import { footerData } from './FooterData';
 
 const Footer = () => {
   return (
     <AppBar
       position="static"
       sx={{
-        background: "#212A2F",
-        mt: "2rem",
-        pl: "54px",
-        pt: "72px",
-        pb: "90px",
-        color: "#FFFFFF",
-        minHeight: "821px",
-        width: "100%",
+        background: '#212A2F',
+        mt: '2rem',
+        pl: '54px',
+        pt: '72px',
+        pb: '90px',
+        color: '#FFFFFF',
+        minHeight: '821px',
+        width: '100%',
       }}
     >
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -25,27 +25,27 @@ const Footer = () => {
             color="inherit"
             component="div"
             sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "14px",
-              lineHeight: "21px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              mb: "21px",
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '14px',
+              lineHeight: '21px',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
+              mb: '21px',
             }}
           >
             Help
           </Typography>
           <Box
             sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "12px",
-              lineHeight: "12px",
-              letterSpacing: "0.5px",
-              mb: "1rem",
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '12px',
+              lineHeight: '12px',
+              letterSpacing: '0.5px',
+              mb: '1rem',
             }}
           >
             <Typography>1-888-963-8944</Typography>
@@ -63,27 +63,27 @@ const Footer = () => {
             color="inherit"
             component="div"
             sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "14px",
-              lineHeight: "21px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              mb: "21px",
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '14px',
+              lineHeight: '21px',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
+              mb: '21px',
             }}
           >
             Shop
           </Typography>
           <Box
             sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "12px",
-              lineHeight: "12px",
-              letterSpacing: "0.5px",
-              mb: "1rem",
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '12px',
+              lineHeight: '12px',
+              letterSpacing: '0.5px',
+              mb: '1rem',
             }}
           >
             <Typography>Men's Shoes</Typography>
@@ -101,27 +101,27 @@ const Footer = () => {
             color="inherit"
             component="div"
             sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "14px",
-              lineHeight: "21px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              mb: "21px",
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '14px',
+              lineHeight: '21px',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
+              mb: '21px',
             }}
           >
             Company
           </Typography>
           <Box
             sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "12px",
-              lineHeight: "12px",
-              letterSpacing: "0.5px",
-              mb: "119px",
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '12px',
+              lineHeight: '12px',
+              letterSpacing: '0.5px',
+              mb: '119px',
             }}
           >
             <Typography>Our Stores</Typography>
@@ -143,13 +143,13 @@ const Footer = () => {
             color="inherit"
             component="div"
             sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "14px",
-              lineHeight: "21px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '14px',
+              lineHeight: '21px',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
             }}
           ></Typography>
         </Grid>
@@ -159,14 +159,14 @@ const Footer = () => {
             color="inherit"
             component="div"
             sx={{
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "14px",
-              lineHeight: "21px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              mb: "21px",
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '14px',
+              lineHeight: '21px',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
+              mb: '21px',
             }}
           >
             Follow the Flock
@@ -176,42 +176,34 @@ const Footer = () => {
             color="inherit"
             component="div"
             sx={{
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "12px",
-              lineHeight: "18px",
-              letterSpacing: "0.5px",
-              width: "293px",
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '12px',
+              lineHeight: '18px',
+              letterSpacing: '0.5px',
+              width: '293px',
             }}
           >
-            Exclusive offers, a heads up on new things, and sightings of
-            Allbirds in the wild. Oh, we have cute sheep, too. #weareallbirds
+            Exclusive offers, a heads up on new things, and sightings of Allbirds in the wild. Oh, we have cute sheep,
+            too. #weareallbirds
           </Typography>
         </Grid>
 
         <Grid item xs={12} md={6}>
           <Box
             sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "flex-end",
-              mr: "10rem",
-              cursor: "pointer",
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'flex-end',
+              mr: '10rem',
+              cursor: 'pointer',
             }}
           >
             {footerData.map((item) => (
-              <Icon
-                key={item.icon}
-                sx={{ display: "flex", mr: "1rem" }}
-                style={{ fontSize: 30 }}
-              >
-                <img
-                  src={`${item.icon}`}
-                  srcSet={`${item.icon}`}
-                  alt={item.title}
-                />
+              <Icon key={item.icon} sx={{ display: 'flex', mr: '1rem' }} style={{ fontSize: 30 }}>
+                <img src={`${item.icon}`} srcSet={`${item.icon}`} alt={item.title} />
               </Icon>
             ))}
           </Box>
@@ -222,19 +214,18 @@ const Footer = () => {
             color="inherit"
             component="div"
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              fontFamily: "Roboto",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "12px",
-              lineHeight: "18px",
-              letterSpacing: "0.5px",
-              mt: "5rem",
+              display: 'flex',
+              justifyContent: 'center',
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '12px',
+              lineHeight: '18px',
+              letterSpacing: '0.5px',
+              mt: '5rem',
             }}
           >
-            © 2021 Allbirds, Inc. All Rights Reserved.Terms, Privacy &
-            Accessibility
+            © 2021 Allbirds, Inc. All Rights Reserved.Terms, Privacy & Accessibility
           </Typography>
         </Grid>
       </Grid>

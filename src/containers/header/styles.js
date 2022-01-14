@@ -3,8 +3,6 @@ import { Paper, Box, Typography } from "@mui/material";
 import breakpoint from "../../breakpoints";
 
 export const Title = styled(Typography)`
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   @media only screen and ${breakpoint.device.xs} {
     margin-bottom: 1rem;

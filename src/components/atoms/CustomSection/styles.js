@@ -1,14 +1,12 @@
-import styled, { css } from "styled-components";
-import { Paper, Box, Typography } from "@mui/material";
-import breakpoint from "../../../breakpoints";
+import styled, { css } from 'styled-components';
+import { Paper, Box, Typography } from '@mui/material';
+import breakpoint from '../../../breakpoints';
 
 export const Title = styled(Typography)`
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   text-align: center;
-  font-size: ${(props) => props.fontSizeTitle || "1.5rem"};
-  line-height: ${(props) => props.lineHeightTitle || "2rem"};
+  font-size: ${(props) => props.fontSizeTitle || '1.5rem'};
+  line-height: ${(props) => props.lineHeightTitle || '2rem'};
   margin-bottom: 1rem;
   @media only screen and ${breakpoint.device.md} {
     margin-top: 4rem;
@@ -16,12 +14,10 @@ export const Title = styled(Typography)`
 `;
 
 export const SubTitle = styled(Typography)`
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   text-align: center;
-  font-size: ${(props) => props.fontSizeSubTitle || "1rem"};
-  line-height: ${(props) => props.lineHeightSubTitle || "1.7rem"};
+  font-size: ${(props) => props.fontSizeSubTitle || '1rem'};
+  line-height: ${(props) => props.lineHeightSubTitle || '1.7rem'};
   margin: 0.5rem 0;
   @media only screen and ${breakpoint.device.md} {
     margin-top: 4rem;
@@ -54,11 +50,7 @@ export const ImageCover = styled(Paper)`
     display: none;
     height: 400px;
     padding: 2rem;
-    background: radial-gradient(
-      circle at 38% 50%,
-      rgba(183, 154, 145, 1) 0%,
-      rgba(207, 157, 83, 1) 100%
-    );
+    background: radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%);
   }
 
   @media only screen and ${breakpoint.device.md} {

@@ -1,18 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import {
-  FourthSection,
-  HeaderMUI,
-  LastSection,
-  ThirdSection,
-} from "../containers";
-import { Favorites } from "../components";
-import { slidesCollections } from "../components/atoms/Carousel/CarouselData/CollectionsData";
-import { slidesNewArrival } from "../components/atoms/Carousel/CarouselData/NewArrivalsData";
-import { slidesStories } from "../components/atoms/Carousel/CarouselData/StoriesData";
-import CustomCarousel from "../components/atoms/Carousel/CustomCarousel";
-import CustomSection from "../components/atoms/CustomSection/CustomSection";
-import secondSectionCoverImage from "../assets/SecondCover.jpg";
+import { FourthSection, HeaderMUI, LastSection, ThirdSection } from '../containers';
+import { Favorites } from '../components';
+import { slidesCollections } from '../components/atoms/Carousel/CarouselData/CollectionsData';
+import { slidesNewArrival } from '../components/atoms/Carousel/CarouselData/NewArrivalsData';
+import { slidesStories } from '../components/atoms/Carousel/CarouselData/StoriesData';
+import CustomCarousel from '../components/atoms/Carousel/CustomCarousel';
+import CustomSection from '../components/atoms/CustomSection/CustomSection';
+import secondSectionCoverImage from '../assets/SecondCover.jpg';
 
 const Home = () => {
   return (
@@ -31,10 +26,7 @@ const Home = () => {
         subTitleText="Soft and cozy wool shoes to keep you comfortable all year round."
       />
 
-      <CustomCarousel
-        slides={slidesCollections}
-        titleText="Shop The Collections"
-      />
+      <CustomCarousel slides={slidesCollections} titleText="Shop The Collections" />
       <ThirdSection />
       <CustomCarousel slides={slidesNewArrival} titleText="New Arrivals" />
       <FourthSection />

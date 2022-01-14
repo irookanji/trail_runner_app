@@ -1,0 +1,30 @@
+{
+  "extends": ["react-app"],
+  "plugins": ["prettier"],
+  "rules": {
+    "indent": "off",
+    "function-paren-newline": "off",
+    "react/function-component-definition": "off",
+    "import/no-anonymous-default-export": "off",
+    "operator-linebreak": "off",
+    "no-confusing-arrow": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "implicit-arrow-linebreak": "off",
+    "object-curly-newline": "off",
+    "no-shadow": "off",
+    "react/jsx-props-no-spreading": "off",
+    "max-len": "off",
+    "linebreak-style": 0,
+    "react/react-in-jsx-scope": "warn",
+    "react/require-default-props": "off",
+    "no-use-before-define": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "arrow-parens": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }]
+  }
+}

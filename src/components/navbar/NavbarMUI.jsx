@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 import {
   AppBar,
@@ -12,45 +12,45 @@ import {
   Tooltip,
   MenuItem,
   Paper,
-} from "@mui/material";
+} from '@mui/material';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import MenuIcon from "@mui/icons-material/Menu";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import MenuIcon from '@mui/icons-material/Menu';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 
-import logo from "../../assets/logo.svg";
+import logo from '../../assets/logo.svg';
 
 const pages = [
   {
-    name: "MEN",
-    link: "/men",
+    name: 'MEN',
+    link: '/men',
   },
   {
-    name: "WOMEN",
-    link: "/women",
+    name: 'WOMEN',
+    link: '/women',
   },
   {
-    name: "NEW ARRIVALS",
-    link: "/new-arrivals",
+    name: 'NEW ARRIVALS',
+    link: '/new-arrivals',
   },
 ];
-const additionals = ["SUSTAINABILITY", "STORES"];
+const additionals = ['SUSTAINABILITY', 'STORES'];
 
 const iconText = [
   {
-    name: "ABOUT",
-    link: "/about",
+    name: 'ABOUT',
+    link: '/about',
   },
   {
-    name: "MY CART",
-    link: "/cart",
+    name: 'MY CART',
+    link: '/cart',
   },
   {
-    name: "SIGN IN",
-    link: "/sign-in",
+    name: 'SIGN IN',
+    link: '/sign-in',
   },
 ];
 
@@ -69,31 +69,25 @@ const ResponsiveAppBar = () => {
     <AppBar
       position="sticky"
       sx={{
-        background: "white",
-        color: "#212A2F",
-        minheight: "60px",
-        width: "100%",
+        background: 'white',
+        color: '#212A2F',
+        minheight: '60px',
+        width: '100%',
       }}
     >
-      <Container maxWidth="100%" sx={{ mx: "auto" }}>
-        <Toolbar
-          disableGutters
-          sx={{ justifyContent: "space-between", width: "100%" }}
-        >
+      <Container maxWidth="100%" sx={{ mx: 'auto' }}>
+        <Toolbar disableGutters sx={{ justifyContent: 'space-between', width: '100%' }}>
           <Box
             sx={{
-              flexWrap: "nowrap",
+              flexWrap: 'nowrap',
               flexGrow: 0,
-              display: { xs: "none", md: "flex" },
-              pr: "7rem",
+              display: { xs: 'none', md: 'flex' },
+              pr: '7rem',
             }}
           >
             {pages.map(({ name, link }) => (
               <Link to={link} key={name}>
-                <Button
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "#212A2F", display: "block" }}
-                >
+                <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: '#212A2F', display: 'block' }}>
                   {name}
                 </Button>
               </Link>
@@ -102,8 +96,8 @@ const ResponsiveAppBar = () => {
           <Link to="/">
             <Paper
               sx={{
-                display: { xs: "none", md: "flex" },
-                boxShadow: "none",
+                display: { xs: 'none', md: 'flex' },
+                boxShadow: 'none',
               }}
             >
               <img src={logo} alt="Logo" />
@@ -113,9 +107,9 @@ const ResponsiveAppBar = () => {
           <Box
             sx={{
               flexGrow: 0,
-              display: { xs: "none", md: "flex" },
-              mr: "1rem",
-              alignItems: "center",
+              display: { xs: 'none', md: 'flex' },
+              mr: '1rem',
+              alignItems: 'center',
             }}
           >
             {additionals.map((additional) => (
@@ -123,7 +117,7 @@ const ResponsiveAppBar = () => {
                 href="#additionals"
                 key={additional}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "#212A2F", display: "block" }}
+                sx={{ my: 2, color: '#212A2F', display: 'block' }}
               >
                 {additional}
               </Button>
@@ -131,35 +125,26 @@ const ResponsiveAppBar = () => {
 
             <Tooltip title="SIGN IN">
               <Link to="/sign-in">
-                <PersonOutlineOutlinedIcon
-                  sx={{ marginLeft: 3, cursor: "pointer" }}
-                  style={{ fontSize: 30 }}
-                />
+                <PersonOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer' }} style={{ fontSize: 30 }} />
               </Link>
             </Tooltip>
 
             <Tooltip title="ABOUT">
               <Link to="/about">
-                <HelpOutlineOutlinedIcon
-                  sx={{ marginLeft: 3, cursor: "pointer" }}
-                  style={{ fontSize: 30 }}
-                />
+                <HelpOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer' }} style={{ fontSize: 30 }} />
               </Link>
             </Tooltip>
 
             <Tooltip title="MY CART">
-              <ShoppingCartOutlinedIcon
-                sx={{ marginLeft: 3, cursor: "pointer" }}
-                style={{ fontSize: 30 }}
-              />
+              <ShoppingCartOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer' }} style={{ fontSize: 30 }} />
             </Tooltip>
           </Box>
 
           <Box
             sx={{
-              display: { xs: "flex", md: "none" },
-              justifyContent: "space-between",
-              width: "100%",
+              display: { xs: 'flex', md: 'none' },
+              justifyContent: 'space-between',
+              width: '100%',
             }}
           >
             <IconButton
@@ -176,18 +161,18 @@ const ResponsiveAppBar = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {pages.map((page) => (
@@ -214,8 +199,8 @@ const ResponsiveAppBar = () => {
               <Paper
                 sx={{
                   ml: 2,
-                  display: { xs: "flex", md: "none" },
-                  boxShadow: "none",
+                  display: { xs: 'flex', md: 'none' },
+                  boxShadow: 'none',
                 }}
               >
                 <img src={logo} alt="Logo" />

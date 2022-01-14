@@ -1,5 +1,5 @@
-import React from "react";
-import StyledButton from "./styles.js";
+import React from 'react';
+import StyledButton from './styles.js';
 
 export default function CustomButton(props) {
   return (

@@ -1,6 +1,6 @@
-import React from "react";
-import { ButtonContainer, Title, SubTitle, ImageCover } from "./styles";
-import CustomButton from "../Button/CustomButton.jsx";
+import React from 'react';
+import { ButtonContainer, Title, SubTitle, ImageCover } from './styles';
+import CustomButton from '../Button/CustomButton.jsx';
 
 export default function CustomSection(props) {
   return (
@@ -18,10 +18,7 @@ export default function CustomSection(props) {
       >
         {props.titleText}
       </Title>
-      <SubTitle
-        fontSizeSubTitle={props.fontSizeSubTitle}
-        lineHeightSubTitle={props.lineHeightSubTitle}
-      >
+      <SubTitle fontSizeSubTitle={props.fontSizeSubTitle} lineHeightSubTitle={props.lineHeightSubTitle}>
         {props.subTitleText}
       </SubTitle>
 
