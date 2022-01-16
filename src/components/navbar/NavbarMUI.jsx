@@ -20,8 +20,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import CustomDrawer from '../atoms/Drawer/CustomDrawer';
 
 import logo from '../../assets/logo.svg';
+
+const newArrivalsDrawerData = ['Rainy Days', 'Cold Weather', 'Warm Weather', 'Relaxing', 'Running'];
 
 const pages = [
   {
@@ -31,10 +34,6 @@ const pages = [
   {
     name: 'WOMEN',
     link: '/women',
-  },
-  {
-    name: 'NEW ARRIVALS',
-    link: '/new-arrivals',
   },
 ];
 const additionals = ['SUSTAINABILITY', 'STORES'];
@@ -92,6 +91,13 @@ const ResponsiveAppBar = () => {
                 </Button>
               </Link>
             ))}
+
+            {/* Drawer for this elememt */}
+            <CustomDrawer
+              drawerPosition="top"
+              buttonContent="New Arrivals"
+              drawerData={newArrivalsDrawerData}
+            ></CustomDrawer>
           </Box>
           <Link to="/">
             <Paper
