@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Box, Typography } from "@mui/material";
-import breakpoint from "../../../breakpoints";
+import styled from 'styled-components';
+import { Box, Typography } from '@mui/material';
+import theme from '../../../theme';
 
 export const Container = styled(Box)`
   margin: 0 2rem;
@@ -20,38 +20,38 @@ export const Title = styled(Typography)`
   line-height: 42px;
   letter-spacing: 0.5px;
   color: #212a2f;
-  @media only screen and ${breakpoint.device.xs} {
+  ${theme.breakpoints.up('xs')} {
     margin-top: 1rem;
     margin-left: orem;
     font-size: 22px;
   }
-  @media only screen and ${breakpoint.device.sm} {
+  ${theme.breakpoints.up('sm')} {
     margin-top: 2rem;
   }
 
-  @media only screen and ${breakpoint.device.md} {
+  ${theme.breakpoints.up('md')} {
     margin-top: 8rem;
     font-size: 32px;
   }
 `;
 
 export const SubTitle = styled(Typography)`
-  @media only screen and ${breakpoint.device.xs} {
+  ${theme.breakpoints.up('xs')} {
     margin-top: 1rem;
     font-size: 14px;
   }
-  @media only screen and ${breakpoint.device.md} {
+  ${theme.breakpoints.up('md')} {
     font-size: 20px;
   }
   font-weight: bold;
 `;
 
 export const Description = styled(Typography)`
-  @media only screen and ${breakpoint.device.xs} {
+  ${theme.breakpoints.up('xs')} {
     margin-top: 1rem;
     font-size: 10px;
   }
-  @media only screen and ${breakpoint.device.md} {
+  ${theme.breakpoints.up('md')} {
     font-size: 16px;
   }
   width: 85%;

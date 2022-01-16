@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Paper, Box, Typography } from '@mui/material';
-import breakpoint from '../../../breakpoints';
+import theme from '../../../theme';
 
 export const Title = styled(Typography)`
   font-weight: bold;
@@ -8,7 +8,7 @@ export const Title = styled(Typography)`
   font-size: ${(props) => props.fontSizeTitle || '1.5rem'};
   line-height: ${(props) => props.lineHeightTitle || '2rem'};
   margin-bottom: 1rem;
-  @media only screen and ${breakpoint.device.md} {
+  ${theme.breakpoints.up('md')} {
     margin-top: 4rem;
   }
 `;
@@ -19,7 +19,7 @@ export const SubTitle = styled(Typography)`
   font-size: ${(props) => props.fontSizeSubTitle || '1rem'};
   line-height: ${(props) => props.lineHeightSubTitle || '1.7rem'};
   margin: 0.5rem 0;
-  @media only screen and ${breakpoint.device.md} {
+  ${theme.breakpoints.up('md')} {
     margin-top: 4rem;
     letter-spacing: 0.5px;
   }
@@ -28,11 +28,11 @@ export const SubTitle = styled(Typography)`
 export const ButtonContainer = styled(Box)`
   display: flex;
   justify-content: center;
-  @media only screen and ${breakpoint.device.xs} {
+  ${theme.breakpoints.up('xs')} {
     margin: 0 1.5rem;
     margin-top: 1rem;
   }
-  @media only screen and ${breakpoint.device.sm} {
+  ${theme.breakpoints.up('sm')} {
     margin: 2rem;
   }
 `;
@@ -46,14 +46,14 @@ export const ImageCover = styled(Paper)`
   background-repeat: no-repeat;
   flex-direction: column;
 
-  @media only screen and ${breakpoint.device.xs} {
+  ${theme.breakpoints.up('xs')} {
     display: none;
     height: 400px;
     padding: 2rem;
     background: radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%);
   }
 
-  @media only screen and ${breakpoint.device.md} {
+  ${theme.breakpoints.up('md')} {
     display: flex;
     ${(props) =>
       props.$cover

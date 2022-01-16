@@ -1,20 +1,20 @@
-import styled, { css } from "styled-components";
-import { Paper, Box, Typography } from "@mui/material";
-import breakpoint from "../../breakpoints";
+import styled, { css } from 'styled-components';
+import { Paper, Box, Typography } from '@mui/material';
+import theme from '../../theme';
 
 export const Title = styled(Typography)`
   font-weight: bold;
-  @media only screen and ${breakpoint.device.xs} {
+  ${theme.breakpoints.up('xs')} {
     margin-bottom: 1rem;
     color: #212a2f;
     font-size: 2rem;
     line-height: 3rem;
   }
-  @media only screen and ${breakpoint.device.md} {
+  ${theme.breakpoints.up('md')} {
     color: white;
     font-size: 3rem;
     line-height: 4rem;
-    letter-spacing: 0.2rem
+    letter-spacing: 0.2rem;
   }
 `;
 
@@ -23,17 +23,17 @@ export const SubTitle = styled(Typography)`
   font-style: normal;
   font-weight: bold;
   color: white;
-  font-size: ${(props) => props.fontSizeTitle || "1rem"};
-  line-height: ${(props) => props.lineHeightTitle || "1.7rem"};
-  letter-spacing: ${(props) => props.letterSpacingTitle || "normal"};
+  font-size: ${(props) => props.fontSizeTitle || '1rem'};
+  line-height: ${(props) => props.lineHeightTitle || '1.7rem'};
+  letter-spacing: ${(props) => props.letterSpacingTitle || 'normal'};
   margin: 0.5rem 0;
-  @media only screen and ${breakpoint.device.xs} {
+  ${theme.breakpoints.up('xs')} {
     margin-bottom: 1rem;
     color: #212a2f;
     font-size: 1.5rem;
     line-height: 1.7rem;
   }
-  @media only screen and ${breakpoint.device.md} {
+  ${theme.breakpoints.up('md')} {
     color: white;
     font-size: 1.5rem;
     line-height: 1.5rem;
@@ -44,11 +44,11 @@ export const SubTitle = styled(Typography)`
 export const ButtonContainer = styled(Box)`
   margin: 0.5rem;
   justify-content: center;
-  @media only screen and ${breakpoint.device.xs} {
+  ${theme.breakpoints.up('xs')} {
     display: flex;
     margin-top: 2rem;
   }
-  @media only screen and ${breakpoint.device.sm} {
+  ${theme.breakpoints.up('sm')} {
     display: initial;
   }
 `;
@@ -62,17 +62,13 @@ export const ImageCover = styled(Paper)`
   background-repeat: no-repeat;
   flex-direction: column;
 
-  @media only screen and ${breakpoint.device.xs} {
+  ${theme.breakpoints.up('xs')} {
     height: 400px;
     padding: 2rem;
-    background: radial-gradient(
-      circle at 38% 50%,
-      rgba(183, 154, 145, 1) 0%,
-      rgba(207, 157, 83, 1) 100%
-    );
+    background: radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%);
   }
 
-  @media only screen and ${breakpoint.device.md} {
+  ${theme.breakpoints.up('md')} {
     ${(props) =>
       props.$cover
         ? css`

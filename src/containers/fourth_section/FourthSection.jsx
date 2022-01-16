@@ -55,6 +55,7 @@ const FourthSection = () => {
           }}
         >
           <CustomButton
+            customWidth="210px"
             textColor="white"
             bgColor="#212A2F"
             hoverColor="grey"
