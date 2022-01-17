@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
 import CustomButton from '../components/atoms/Button/CustomButton';
 
 function About() {
@@ -10,7 +10,7 @@ function About() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        mt: '1.5rem',
+        mt: '6rem',
       }}
     >
       <Typography
@@ -34,26 +34,28 @@ function About() {
         help@allbirds.org.eu
       </Typography>
       <CustomButton text="Get In Touch" customWidth="260px" bgColor="#212a2f" textColor="white" hoverColor="grey" />
-      <Typography gutterBottom sx={{ mt: '1.5rem' }}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, explicabo temporibus quibusdam quis ipsam
-        harum quidem. Alias explicabo incidunt dignissimos nesciunt! Explicabo quas molestias fuga neque nostrum
-        voluptatem cumque quo amet iusto sint optio, dolore quasi veniam cupiditate voluptatibus ad distinctio?
-        Doloremque quidem nobis dignissimos sed, voluptatum ut molestias? Alias eius quod in repellendus, ratione dolore
-        illo, molestias culpa, commodi voluptatibus totam maxime quam. Facere aperiam animi blanditiis cum, voluptates
-        aspernatur dolore mollitia non. Ipsum nostrum recusandae soluta corporis dolorum! Amet nemo excepturi nesciunt,
-        dolorum rerum consequatur asperiores, voluptates obcaecati autem quae mollitia repellendus sed earum rem iure
-        perferendis repudiandae magnam blanditiis cumque harum tempora minima nam quo cum. Provident sit esse, quis
-        nulla culpa totam, sequi numquam accusantium ex ab non tenetur reprehenderit, magnam voluptates labore soluta
-        vero. Molestiae culpa, sequi officiis accusamus vel tenetur cumque cum nostrum expedita impedit? Cumque natus
-        qui, libero delectus saepe expedita hic soluta culpa eum nam commodi at quod eos excepturi quam rem consectetur
-        accusamus error molestiae modi obcaecati temporibus vel, voluptatem numquam. Distinctio, perspiciatis sint omnis
-        cupiditate tempore odit doloribus eius reiciendis dolorem numquam animi incidunt soluta quidem labore. Esse
-        ratione suscipit optio animi ipsa magni? Eveniet nostrum debitis maxime, esse quidem eius tenetur repellendus!
-        Repudiandae vero doloribus distinctio dolorum sunt ipsum nulla quidem possimus, fugit minus optio, atque odio
-        laboriosam iste veniam alias mollitia eos aliquid dolorem perferendis officiis quo? Quos ex nobis harum, sequi,
-        repellat aliquid ipsa omnis corporis, quam veniam sunt consectetur itaque cumque amet ipsum officiis. Odio,
-        dolorem!
-      </Typography>
+      <Box sx={{ display: 'flex', my: '5rem' }}>
+        <Typography gutterBottom sx={{ mr: '2rem' }}>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus tempora natus blanditiis modi accusantium
+          nesciunt obcaecati non sunt. Delectus tempore atque corporis eveniet, quibusdam asperiores distinctio.
+          Reiciendis amet blanditiis corporis consequatur perferendis in, velit nulla fugit natus sunt aut distinctio
+          officia error deserunt ullam quos earum ut inventore enim quo sint obcaecati dolorum. Velit ratione vel maxime
+          animi quod sunt soluta repellat nihil consequuntur fugit. Culpa et, sit aliquam itaque pariatur cumque qui in
+          magnam tempore ad, est minus natus quasi quidem perferendis rem hic amet illo ullam dignissimos. Tenetur
+          aspernatur impedit nostrum iste architecto commodi animi! Ratione voluptatem suscipit asperiores. Ea animi
+          nobis deleniti sequi sint exercitationem neque quis excepturi repellat expedita?
+        </Typography>
+        <Typography gutterBottom>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquam sed consequatur corporis impedit quia
+          cumque omnis iusto quas. Dolor labore fugiat commodi nemo, error veritatis recusandae accusantium explicabo
+          exercitationem numquam, maiores perspiciatis soluta nam ut? Ipsum nemo eaque, sed vitae quia exercitationem
+          minima doloremque repudiandae ab assumenda saepe quo suscipit aliquam, voluptatibus iusto obcaecati atque
+          tenetur aspernatur impedit nostrum iste architecto commodi animi! Ratione voluptatem suscipit asperiores
+          commodi eos quibusdam aliquam? Incidunt suscipit doloremque tempore iusto optio, adipisci expedita hic
+          asperiores ducimus similique ab laboriosam ipsa voluptatem illum unde sit non facilis dolorem consequuntur
+          reiciendis sunt quis? Veniam, repellat ad!
+        </Typography>
+      </Box>
     </Container>
   );
 }
