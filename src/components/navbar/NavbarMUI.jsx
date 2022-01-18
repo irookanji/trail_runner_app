@@ -72,6 +72,7 @@ const ResponsiveAppBar = () => {
         color: '#212A2F',
         minheight: '60px',
         width: '100%',
+        zIndex: 1300,
       }}
     >
       <Container maxWidth="100%" sx={{ mx: 'auto' }}>

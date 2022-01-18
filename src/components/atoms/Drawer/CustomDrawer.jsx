@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
+import { StyledDrawer } from './styles';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -53,13 +53,13 @@ export default function CustomDrawer(props) {
         <Button onClick={toggleDrawer(props.drawerPosition, true)} sx={{ my: 2, color: '#212A2F', display: 'block' }}>
           {props.buttonContent}
         </Button>
-        <Drawer
+        <StyledDrawer
           anchor={props.drawerPosition}
           open={state[props.drawerPosition]}
           onClose={toggleDrawer(props.drawerPosition, false)}
         >
           {list(props.drawerPosition)}
-        </Drawer>
+        </StyledDrawer>
       </React.Fragment>
     </div>
   );
