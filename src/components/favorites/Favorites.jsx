@@ -136,7 +136,7 @@ export default function Favorites() {
                     display: 'flex',
                     flexDirection: 'column',
                     ml: '2rem',
-                    mt: { xs: '1rem', sm: '7rem', md: '3rem', lg: '8rem' },
+                    mt: { xs: '1rem', sm: '7rem', md: '3rem', lg: '6.5rem' },
                     width: '100%',
                   }}
                 >
@@ -240,7 +240,7 @@ export default function Favorites() {
                       display: 'flex',
                       flexDirection: 'column',
                       ml: '2rem',
-                      mt: { xs: '1rem', sm: '7rem', md: '3rem', lg: '8rem' },
+                      mt: { xs: '1rem', sm: '7rem', md: '3rem', lg: '6.5rem' },
                       width: '100%',
                     }}
                   >
@@ -343,7 +343,7 @@ export default function Favorites() {
                     display: 'flex',
                     flexDirection: 'column',
                     ml: '2rem',
-                    mt: { xs: '1rem', sm: '7rem', md: '3rem', lg: '8rem' },
+                    mt: { xs: '1rem', sm: '7rem', md: '3rem', lg: '6.5rem' },
                     width: '100%',
                   }}
                 >
