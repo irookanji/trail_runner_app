@@ -52,11 +52,11 @@ const LastSection = () => {
 
           <Link to="/sign-in">
             <CustomButton
-              textColor="white"
+              $textColor="white"
               bgColor="#212A2F"
-              hoverColor="grey"
-              customWidth="111px"
-              mTop="1rem"
+              $hoverColor="grey"
+              $customWidth="111px"
+              $mTop="1rem"
               link="/"
               text="SIGN IN"
             />
@@ -128,10 +128,10 @@ const LastSection = () => {
 
           <Link to="/sign-in">
             <CustomButton
-              textColor="white"
+              $textColor="white"
               bgColor="#212A2F"
-              hoverColor="grey"
-              customWidth="111px"
+              $hoverColor="grey"
+              $customWidth="111px"
               link="/"
               text="SIGN IN"
             />

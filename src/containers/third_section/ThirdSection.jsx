@@ -54,7 +54,7 @@ const ThirdSection = () => {
             justifyContent: 'center',
           }}
         >
-          <CustomButton textColor="white" bgColor="#212A2F" hoverColor="grey" link="/" text="See How" />
+          <CustomButton $textColor="white" bgColor="#212A2F" $hoverColor="grey" link="/" text="See How" />
         </Box>
       </Box>
       {/* Desktop Screen */}
@@ -127,10 +127,10 @@ const ThirdSection = () => {
 
         <Box sx={{ display: 'flex', m: '2rem', justifyContent: 'center' }}>
           <CustomButton
-            textColor="white"
+            $textColor="white"
             bgColor="#212A2F"
-            hoverColor="grey"
-            customWidth="384px"
+            $hoverColor="grey"
+            $customWidth="384px"
             link="/"
             text="See How"
           />

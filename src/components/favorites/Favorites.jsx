@@ -50,6 +50,7 @@ export default function Favorites() {
     >
       {/* Title of the Tabs */}
       <Typography
+      
         variant="h6"
         noWrap
         component="div"
@@ -123,10 +124,10 @@ export default function Favorites() {
                   }}
                 >
                   <Link to="/men">
-                    <CustomButton link="/" text="SHOP MEN" customWidth="210px" />
+                    <CustomButton link="/" text="SHOP MEN" $customWidth="210px" />
                   </Link>
                   <Link to="/women">
-                    <CustomButton mTop="1rem" link="/" text="SHOP MEN" customWidth="210px" />
+                    <CustomButton $mTop="1rem" link="/" text="SHOP MEN" $customWidth="210px" />
                   </Link>
                 </Box>
 
@@ -227,10 +228,10 @@ export default function Favorites() {
                     }}
                   >
                     <Link to="/men">
-                      <CustomButton link="/" text="SHOP MEN" customWidth="210px" />
+                      <CustomButton link="/" text="SHOP MEN" $customWidth="210px" />
                     </Link>
                     <Link to="/women">
-                      <CustomButton mTop="1rem" link="/" text="SHOP MEN" customWidth="210px" />
+                      <CustomButton $mTop="1rem" link="/" text="SHOP MEN" $customWidth="210px" />
                     </Link>
                   </Box>
 
@@ -330,10 +331,10 @@ export default function Favorites() {
                   }}
                 >
                   <Link to="/men">
-                    <CustomButton link="/" text="SHOP MEN" customWidth="210px" />
+                    <CustomButton link="/" text="SHOP MEN" $customWidth="210px" />
                   </Link>
                   <Link to="/women">
-                    <CustomButton mTop="1rem" link="/" text="SHOP MEN" customWidth="210px" />
+                    <CustomButton $mTop="1rem" link="/" text="SHOP MEN" $customWidth="210px" />
                   </Link>
                 </Box>
 

@@ -55,10 +55,10 @@ const FourthSection = () => {
           }}
         >
           <CustomButton
-            customWidth="210px"
-            textColor="white"
+            $customWidth="210px"
+            $textColor="white"
             bgColor="#212A2F"
-            hoverColor="grey"
+            $hoverColor="grey"
             link="/"
             text="OUR SUSTAINABLE PRACTICES"
           />
@@ -135,10 +135,10 @@ const FourthSection = () => {
 
         <Box sx={{ display: 'flex', m: '2rem', justifyContent: 'center' }}>
           <CustomButton
-            textColor="white"
+            $textColor="white"
             bgColor="#212A2F"
-            hoverColor="grey"
-            customWidth="384px"
+            $hoverColor="grey"
+            $customWidth="384px"
             link="/"
             text="OUR SUSTAINABLE PRACTICES"
           />
