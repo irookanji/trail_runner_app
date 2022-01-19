@@ -28,7 +28,7 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs" sx={{mb: "4rem"}}>
         <CssBaseline />
         <Box
           sx={{
@@ -38,7 +38,7 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: '#212A2F' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -88,7 +88,20 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{
+                mt: 3,
+                mb: 2,
+                bgcolor: '#212A2F',
+                '&:hover': {
+                  backgroundColor: 'rgb(219, 215, 215)',
+                  color: '#white',
+                },
+              }}
+            >
               Sign Up
             </Button>
             <Grid container justifyContent="flex-end">
