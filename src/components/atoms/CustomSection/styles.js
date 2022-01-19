@@ -2,6 +2,15 @@ import styled, { css } from 'styled-components';
 import { Paper, Box, Typography } from '@mui/material';
 import theme from '../../../theme';
 
+export const ContentContainer = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  max-width: 65%;
+`;
+
 export const Title = styled(Typography)`
   font-weight: bold;
   text-align: center;
@@ -14,7 +23,7 @@ export const Title = styled(Typography)`
 `;
 
 export const SubTitle = styled(Typography)`
-  font-weight: bold;
+  font-weight: ${(props) => props.fontWeightSubTitle || 'bold'};
   text-align: center;
   font-size: ${(props) => props.fontSizeSubTitle || '1rem'};
   line-height: ${(props) => props.lineHeightSubTitle || '1.7rem'};
@@ -29,8 +38,7 @@ export const ButtonContainer = styled(Box)`
   display: flex;
   justify-content: center;
   ${theme.breakpoints.up('xs')} {
-    margin: 0 1.5rem;
-    margin-top: 1rem;
+    margin: 2rem;
   }
   ${theme.breakpoints.up('sm')} {
     margin: 2rem;
