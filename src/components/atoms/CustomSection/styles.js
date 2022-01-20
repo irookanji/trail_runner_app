@@ -6,9 +6,17 @@ export const ContentContainer = styled(Box)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
   align-items: center;
-  max-width: 65%;
+  ${theme.breakpoints.up('xs')} {
+    background: radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%);
+    margin: 4rem 0;
+    padding: 1rem;
+  }
+  ${theme.breakpoints.up('md')} {
+    background: none;
+    max-width: 65%;
+    margin: 0 auto;
+  }
 `;
 
 export const Title = styled(Typography)`

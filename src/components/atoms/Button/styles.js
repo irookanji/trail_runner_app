@@ -5,9 +5,9 @@ import theme from '../../../theme';
 const StyledButton = styled(Button)`
   background: ${(props) => props.bgColor || 'white'};
   border-radius: 2px;
-  margin-right: 24px;
-
-  // padding: ${(props) => props.paddingButton || '17px 34px'};
+  &:first-child {
+    margin-right: 24px;
+  }
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
