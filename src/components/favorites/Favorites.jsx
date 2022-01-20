@@ -50,7 +50,6 @@ export default function Favorites() {
     >
       {/* Title of the Tabs */}
       <Typography
-      
         variant="h6"
         noWrap
         component="div"

@@ -48,7 +48,7 @@ export default function CustomDrawer(props) {
   );
 
   return (
-    <div>
+    <>
       <React.Fragment key={props.drawerPosition}>
         <Button onClick={toggleDrawer(props.drawerPosition, true)} sx={{ my: 2, color: '#212A2F', display: 'block' }}>
           {props.buttonContent}
@@ -61,6 +61,6 @@ export default function CustomDrawer(props) {
           {list(props.drawerPosition)}
         </StyledDrawer>
       </React.Fragment>
-    </div>
+    </>
   );
 }

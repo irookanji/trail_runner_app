@@ -22,7 +22,7 @@ export const Title = styled(Typography)`
   color: #212a2f;
   ${theme.breakpoints.up('xs')} {
     margin-top: 1rem;
-    margin-left: orem;
+    margin-left: 0;
     font-size: 22px;
   }
   ${theme.breakpoints.up('sm')} {
@@ -38,9 +38,9 @@ export const Title = styled(Typography)`
 export const SubTitle = styled(Typography)`
   ${theme.breakpoints.up('xs')} {
     margin-top: 1rem;
-    font-size: 14px;
+    font-size: 16px;
   }
-  ${theme.breakpoints.up('md')} {
+  ${theme.breakpoints.up('lg')} {
     font-size: 20px;
   }
   font-weight: bold;
@@ -49,9 +49,9 @@ export const SubTitle = styled(Typography)`
 export const Description = styled(Typography)`
   ${theme.breakpoints.up('xs')} {
     margin-top: 1rem;
-    font-size: 10px;
+    font-size: 14px;
   }
-  ${theme.breakpoints.up('md')} {
+  ${theme.breakpoints.up('lg')} {
     font-size: 16px;
   }
   width: 85%;
