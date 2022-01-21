@@ -29,7 +29,8 @@ export default function CustomSection(props) {
 
         <ButtonContainer>
           <CustomButton
-            $customWidth={props.buttonWidth}
+            $xsCustomWidth={props.$xsCustomWidth}
+            $buttonWidth={props.$buttonWidth}
             $textColor="white"
             bgColor="#212A2F"
             $hoverColor="grey"
@@ -37,14 +38,7 @@ export default function CustomSection(props) {
             text={props.buttonText}
           />
           {props.renderSecondButton ? (
-            <CustomButton
-              $customWidth={props.buttonWidth}
-              $textColor="white"
-              bgColor="#212A2F"
-              $hoverColor="grey"
-              link="/women"
-              text="Shop Women"
-            />
+            <CustomButton $textColor="white" bgColor="#212A2F" $hoverColor="grey" link="/women" text="Shop Women" />
           ) : null}
         </ButtonContainer>
       </ContentContainer>

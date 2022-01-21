@@ -55,7 +55,7 @@ const FourthSection = () => {
           }}
         >
           <CustomButton
-            $customWidth="210px"
+            $buttonWidth="210px"
             $textColor="white"
             bgColor="#212A2F"
             $hoverColor="grey"
@@ -138,7 +138,7 @@ const FourthSection = () => {
             $textColor="white"
             bgColor="#212A2F"
             $hoverColor="grey"
-            $customWidth="384px"
+            $buttonWidth="384px"
             link="/"
             text="OUR SUSTAINABLE PRACTICES"
           />

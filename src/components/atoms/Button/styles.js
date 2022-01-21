@@ -25,7 +25,7 @@ const StyledButton = styled(Button)`
     color: white;
   }
   ${theme.breakpoints.up('xs')} {
-    width: ${(props) => props.$customWidth || '111px'};
+    width: ${(props) => props.$xsCustomWidth || '111px'};
     margin-top: ${(props) => props.$mTop || 0};
     margin-bottom: ${(props) => props.$mBottom || 0};
   }

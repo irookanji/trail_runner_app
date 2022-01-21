@@ -5,7 +5,8 @@ export default function CustomButton(props) {
   return (
     <StyledButton
       $textColor={props.$textColor}
-      $customWidth={props.$customWidth}
+      $xsCustomWidth={props.$xsCustomWidth}
+      $customWidth={props.$buttonWidth}
       $mTop={props.$mTop}
       $mBottom={props.$mBottom}
       bgColor={props.bgColor}

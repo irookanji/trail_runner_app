@@ -33,6 +33,8 @@ const Home = () => {
       <CustomSection
         coverImage={thirdSectionCoverImage}
         renderSecondButton={false}
+        $xsCustomWidth="210px"
+        $buttonWidth="384px"
         $fontSizeTitle="2rem"
         $fontWeightSubTitle="normal"
         $lineHeightTitle="4rem"
