@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FourthSection, HeaderMUI, LastSection } from '../containers';
+import { HeaderMUI, LastSection } from '../containers';
 import { Favorites } from '../components';
 import { slidesCollections } from '../components/atoms/Carousel/CarouselData/CollectionsData';
 import { slidesNewArrival } from '../components/atoms/Carousel/CarouselData/NewArrivalsData';
@@ -9,6 +9,7 @@ import CustomCarousel from '../components/atoms/Carousel/CustomCarousel';
 import CustomSection from '../components/atoms/CustomSection/CustomSection';
 import secondSectionCoverImage from '../assets/SecondCover.jpg';
 import thirdSectionCoverImage from '../assets/ThirdCover.jpg';
+import fourthSectionCoverImage from '../assets/FourthCover.jpg';
 
 const Home = () => {
   return (
@@ -46,7 +47,22 @@ const Home = () => {
         best chance for a sustainable future."
       />
       <CustomCarousel slides={slidesNewArrival} titleText="New Arrivals" />
-      <FourthSection />
+
+      <CustomSection
+        coverImage={fourthSectionCoverImage}
+        renderSecondButton={false}
+        $xsCustomWidth="210px"
+        $buttonWidth="384px"
+        $fontSizeTitle="2rem"
+        $fontWeightSubTitle="normal"
+        $lineHeightTitle="4rem"
+        $fontSizeSubTitle="1.5rem"
+        $lineHeightSubTitle="2.5rem"
+        buttonText="OUR SUSTAINABLE PRACTICES"
+        titleText="Reversing Climate Change Through Better Business"
+        subTitleText="Reducing our environmental impact has been a top priority since day one. But now, we’re taking things further.
+        Explore our overall sustainability approach, our progress thus far, and our bold list of commitments for 2025."
+      />
       <CustomCarousel slides={slidesStories} titleText="Stories" />
       <LastSection />
     </>
