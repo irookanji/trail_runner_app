@@ -64,6 +64,17 @@ const ResponsiveAppBar = () => {
     setAnchorElNav(null);
   };
 
+  const [drawer, setDrawer] = React.useState({
+    top: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    setDrawer({ ...drawer, [anchor]: open });
+  };
+
+  const drawerPosition = 'top';
+
   return (
     <AppBar
       position="sticky"
@@ -86,7 +97,7 @@ const ResponsiveAppBar = () => {
             }}
           >
             {pages.map(({ name, link }) => (
-              <Link to={link} key={name}>
+              <Link onClick={toggleDrawer(drawerPosition, false)} to={link} key={name}>
                 <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: '#212A2F', display: 'block' }}>
                   {name}
                 </Button>
@@ -95,7 +106,9 @@ const ResponsiveAppBar = () => {
 
             {/* Drawer for this elememt */}
             <CustomDrawer
-              drawerPosition="top"
+              drawer={drawer}
+              setDrawer={setDrawer}
+              drawerPosition={drawerPosition}
               buttonContent="New Arrivals"
               drawerData={newArrivalsDrawerData}
             ></CustomDrawer>
@@ -131,17 +144,16 @@ const ResponsiveAppBar = () => {
             ))}
 
             <Tooltip title="SIGN IN">
-              <Link to="/sign-in">
+              <Link onClick={toggleDrawer(drawerPosition, false)} to="/sign-in">
                 <PersonOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer' }} style={{ fontSize: 30 }} />
               </Link>
             </Tooltip>
 
             <Tooltip title="ABOUT">
-              <Link to="/about">
+              <Link onClick={toggleDrawer(drawerPosition, false)} to="/about">
                 <HelpOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer' }} style={{ fontSize: 30 }} />
               </Link>
             </Tooltip>
-
             <Tooltip title="MY CART">
               <ShoppingCartOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer' }} style={{ fontSize: 30 }} />
             </Tooltip>

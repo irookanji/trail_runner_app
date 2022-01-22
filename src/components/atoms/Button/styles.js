@@ -5,9 +5,7 @@ import theme from '../../../theme';
 const StyledButton = styled(Button)`
   background: ${(props) => props.bgColor || 'white'};
   border-radius: 2px;
-  &:first-child {
-    margin-right: 24px;
-  }
+  margin: 12px;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;

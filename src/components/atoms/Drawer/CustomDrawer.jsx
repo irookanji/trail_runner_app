@@ -10,19 +10,9 @@ import ListItemText from '@mui/material/ListItemText';
 import { Icon } from '@iconify/react';
 
 export default function CustomDrawer(props) {
-  const [state, setState] = React.useState({
-    top: false,
-    right: false,
-  });
-
   const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-
-    setState({ ...state, [anchor]: open });
+    props.setDrawer({ ...props.drawer, [anchor]: open });
   };
-
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
@@ -55,7 +45,7 @@ export default function CustomDrawer(props) {
         </Button>
         <StyledDrawer
           anchor={props.drawerPosition}
-          open={state[props.drawerPosition]}
+          open={props.drawer[props.drawerPosition]}
           onClose={toggleDrawer(props.drawerPosition, false)}
         >
           {list(props.drawerPosition)}
