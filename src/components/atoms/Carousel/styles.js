@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Paper } from '@mui/material';
 import theme from '../../../theme';
 
 export const Container = styled(Box)`
@@ -7,9 +7,40 @@ export const Container = styled(Box)`
 `;
 
 export const SlideContainer = styled(Box)`
+  max-width: 396px;
   display: flex;
   flex-direction: column;
   margin: 1.5rem;
+  cursor: pointer;
+`;
+
+export const ImageContainer = styled(Box)`
+  overflow: hidden;
+
+  ${theme.breakpoints.up('xs')} {
+    width: 290px;
+    height: 290px;
+  }
+
+  ${theme.breakpoints.up('md')} {
+    width: 396px;
+    height: 396px;
+  }
+`;
+
+export const ImageCarousel = styled(Paper)`
+  display: flex;
+  position: relative;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  background-image: url(${(props) => props.$cover});
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 export const Title = styled(Typography)`

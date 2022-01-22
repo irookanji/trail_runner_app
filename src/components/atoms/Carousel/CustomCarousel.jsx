@@ -1,19 +1,10 @@
-import React from "react";
-import {
-  Container,
-  Title,
-  SubTitle,
-  Description,
-  SlideContainer,
-} from "./styles";
+import React from 'react';
+import { Container, Title, SubTitle, Description, SlideContainer, ImageContainer, ImageCarousel } from './styles';
 
-import arrowToRight from "../../../assets/arrow_right.svg";
-import arrowToLeft from "../../../assets/arrow_left.svg";
-import Carousel, {
-  slidesToShowPlugin,
-  arrowsPlugin,
-} from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
+import arrowToRight from '../../../assets/arrow_right.svg';
+import arrowToLeft from '../../../assets/arrow_left.svg';
+import Carousel, { slidesToShowPlugin, arrowsPlugin } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 
 export default function CustomCarousel(props) {
   return (
@@ -21,39 +12,31 @@ export default function CustomCarousel(props) {
       <Title>{props.titleText}</Title>
       <Carousel
         plugins={[
-          "centered",
-          "infinite",
+          'centered',
+          'infinite',
           {
             resolve: arrowsPlugin,
             options: {
               arrowLeft: (
                 <button
                   style={{
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
                   }}
                 >
-                  <img
-                    src={arrowToLeft}
-                    alt="Arrow To Left"
-                    name="angle-double-left"
-                  />
+                  <img src={arrowToLeft} alt="Arrow To Left" name="angle-double-left" />
                 </button>
               ),
               arrowRight: (
                 <button
                   style={{
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
                   }}
                 >
-                  <img
-                    src={arrowToRight}
-                    alt="Arrow To Right"
-                    name="angle-double-right"
-                  />
+                  <img src={arrowToRight} alt="Arrow To Right" name="angle-double-right" />
                 </button>
               ),
               addArrowClickHandler: true,
@@ -69,8 +52,8 @@ export default function CustomCarousel(props) {
         breakpoints={{
           640: {
             plugins: [
-              "centered",
-              "infinite",
+              'centered',
+              'infinite',
               {
                 resolve: slidesToShowPlugin,
                 options: {
@@ -81,39 +64,31 @@ export default function CustomCarousel(props) {
           },
           900: {
             plugins: [
-              "centered",
-              "infinite",
+              'centered',
+              'infinite',
               {
                 resolve: arrowsPlugin,
                 options: {
                   arrowLeft: (
                     <button
                       style={{
-                        background: "none",
-                        border: "none",
-                        cursor: "pointer",
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
                       }}
                     >
-                      <img
-                        src={arrowToLeft}
-                        alt="Arrow To Left"
-                        name="angle-double-left"
-                      />
+                      <img src={arrowToLeft} alt="Arrow To Left" name="angle-double-left" />
                     </button>
                   ),
                   arrowRight: (
                     <button
                       style={{
-                        background: "none",
-                        border: "none",
-                        cursor: "pointer",
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
                       }}
                     >
-                      <img
-                        src={arrowToRight}
-                        alt="Arrow To Right"
-                        name="angle-double-right"
-                      />
+                      <img src={arrowToRight} alt="Arrow To Right" name="angle-double-right" />
                     </button>
                   ),
                   addArrowClickHandler: true,
@@ -131,11 +106,10 @@ export default function CustomCarousel(props) {
       >
         {props.slides.map((slide, index) => (
           <SlideContainer key={Math.floor(Math.random() * 100) + 1}>
-            <img
-              className="collection_img"
-              src={slide.image}
-              alt={slide.info}
-            />
+            
+            <ImageContainer>
+              <ImageCarousel className="collection_img" $cover={slide.image} alt={slide.info} />
+            </ImageContainer>
 
             <SubTitle>{slide.title}</SubTitle>
 

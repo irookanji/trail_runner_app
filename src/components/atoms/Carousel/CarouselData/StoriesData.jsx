@@ -6,7 +6,7 @@ export const slidesStories = [
   {
     image: image1,
     title: "Planet-Friendly Activewear",
-    info: "The Natural Run Collection is made with sustainable materials that can stand up to your toughest workout.",
+    info: "Run Collection is made with sustainable materials that can stand up to your workout.",
   },
   {
     image: image2,

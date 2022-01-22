@@ -11,7 +11,7 @@ export const slidesCollections = [
   {
     image: image2,
     title: "Natural Run Collection",
-    info: "Looking for more sustainable ways to break a sweat? We’ve got you covered from head to toe.",
+    info: "Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe.",
   },
   {
     image: image3,
