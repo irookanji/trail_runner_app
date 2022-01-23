@@ -5,6 +5,8 @@ export const MenData = [
     title: "Men's Wool Runner Mizzles",
     info: 'Natural Grey (Cream Sole)',
     price: '€135',
+    material: 'Light & Breezy Tree',
+    color: 'Grey',
   },
   {
     image:
@@ -12,6 +14,8 @@ export const MenData = [
     title: "Men's Wool Dasher Mizzles",
     info: 'Denali (Light Blue Sole)',
     price: '€148',
+    material: 'Soft & Cosy Wool',
+    color: 'Blue',
   },
   {
     image:
@@ -19,6 +23,8 @@ export const MenData = [
     title: "Men's Wool Runner-up Mizzles",
     info: 'Mist (Grey Sole)',
     price: '€139',
+    material: 'Light & Breezy Tree',
+    color: 'Grey',
   },
   {
     image:
@@ -26,6 +32,8 @@ export const MenData = [
     title: "Men's Wool Dasher Mizzles",
     info: 'Sierra (Light Pink Sole)',
     price: '€144',
+    material: 'Soft & Cosy Wool',
+    color: 'Pink',
   },
   {
     image:
@@ -33,6 +41,8 @@ export const MenData = [
     title: "Men's Wool Dasher Mizzles",
     info: 'Terra (Tan Sole)',
     price: '€145',
+    material: 'Light & Breezy Tree',
+    color: 'Tan',
   },
   {
     image:
@@ -40,6 +50,8 @@ export const MenData = [
     title: "Men's Wool Runner Mizzles",
     info: 'Fuji (White Sole)',
     price: '€133',
+    material: 'Soft & Cosy Wool',
+    color: 'White',
   },
   {
     image:
@@ -47,6 +59,8 @@ export const MenData = [
     title: "Men's Wool Dasher Mizzles",
     info: 'Lyra (Light Grey Sole)',
     price: '€148',
+    material: 'Light & Breezy Tree',
+    color: 'Grey',
   },
   {
     image:
@@ -54,5 +68,7 @@ export const MenData = [
     title: "Men's Wool Runner-up Mizzles",
     info: 'Savanna Night (Navy Sole)',
     price: '€148',
+    material: 'Soft & Cosy Wool',
+    color: 'Navy',
   },
 ];
