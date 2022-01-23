@@ -87,7 +87,7 @@ export default function SignIn() {
                 item
                 xs
                 sx={{
-                  color: '#1976d2',
+                  color: '#212A2F',
                   '&:hover': {
                     textDecoration: 'underline',
                   },
@@ -100,7 +100,7 @@ export default function SignIn() {
               <Grid
                 item
                 sx={{
-                  color: '#1976d2',
+                  color: '#212A2F',
                   '&:hover': {
                     textDecoration: 'underline',
                   },

@@ -28,7 +28,7 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs" sx={{mb: "4rem"}}>
+      <Container component="main" maxWidth="xs" sx={{ mb: '4rem' }}>
         <CssBaseline />
         <Box
           sx={{
@@ -108,7 +108,7 @@ export default function SignUp() {
               <Grid
                 item
                 sx={{
-                  color: '#1976d2',
+                  color: '#212A2F',
                   '&:hover': {
                     textDecoration: 'underline',
                   },
