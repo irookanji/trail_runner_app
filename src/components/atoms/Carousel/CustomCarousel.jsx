@@ -1,5 +1,14 @@
 import React from 'react';
-import { Container, Title, SubTitle, Description, SlideContainer, ImageContainer, ImageCarousel } from './styles';
+import {
+  Container,
+  Title,
+  SubTitle,
+  Description,
+  SlideContainer,
+  ImageContainer,
+  ImageCarousel,
+  ArrowButton,
+} from './styles';
 
 import arrowToRight from '../../../assets/arrow_right.svg';
 import arrowToLeft from '../../../assets/arrow_left.svg';
@@ -18,26 +27,14 @@ export default function CustomCarousel(props) {
             resolve: arrowsPlugin,
             options: {
               arrowLeft: (
-                <button
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
+                <ArrowButton>
                   <img src={arrowToLeft} alt="Arrow To Left" name="angle-double-left" />
-                </button>
+                </ArrowButton>
               ),
               arrowRight: (
-                <button
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
+                <ArrowButton>
                   <img src={arrowToRight} alt="Arrow To Right" name="angle-double-right" />
-                </button>
+                </ArrowButton>
               ),
               addArrowClickHandler: true,
             },
@@ -106,7 +103,6 @@ export default function CustomCarousel(props) {
       >
         {props.slides.map((slide, index) => (
           <SlideContainer key={Math.floor(Math.random() * 100) + 1}>
-            
             <ImageContainer>
               <ImageCarousel className="collection_img" $cover={slide.image} alt={slide.info} />
             </ImageContainer>

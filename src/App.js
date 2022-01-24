@@ -6,6 +6,7 @@ import Women from './pages/Women/Women';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import About from './pages/About';
+import Product from './pages/Product';
 import NewArrivals from './pages/NewArrivals';
 import Footer from './containers/footer/Footer';
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/about" element={<About />} />
+        <Route path="/product/:productNumber" element={<Product />} />
       </Routes>
       <Footer />
     </div>

@@ -4,22 +4,27 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { MenData } from '../../../pages/Men/MenData';
 
 export default function MultiActionAreaCard(props) {
+  const productUrl = MenData.indexOf(props.cardInfo);
   return (
     <Card>
-      <CardActionArea>
-        <CardMedia component="img" height="150" image={props.cardInfo.image} alt="Shoes" />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {props.cardInfo.title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {props.cardInfo.info}
-          </Typography>
-          <Typography mt={2}>{props.cardInfo.price}</Typography>
-        </CardContent>
-      </CardActionArea>
+      <Link to={'/product/' + productUrl}>
+        <CardActionArea>
+          <CardMedia component="img" height="150" image={props.cardInfo.image} alt="Shoes" />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {props.cardInfo.title}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {props.cardInfo.info}
+            </Typography>
+            <Typography mt={2}>{props.cardInfo.price}</Typography>
+          </CardContent>
+        </CardActionArea>
+      </Link>
       <CardActions>
         <Button size="small" color="primary">
           Add To Cart

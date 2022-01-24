@@ -87,3 +87,9 @@ export const Description = styled(Typography)`
   }
   width: 85%;
 `;
+
+export const ArrowButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+`;
