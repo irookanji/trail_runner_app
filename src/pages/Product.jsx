@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Typography, Box } from '@mui/material';
+import { Container, Grid, Typography, Box, Paper } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { MenData } from '../pages/Men/MenData';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -11,10 +11,6 @@ export default function Product() {
   return (
     <Container
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        // alignItems: 'center',
-        // justifyContent: 'center',
         mt: '6rem',
       }}
     >
@@ -27,14 +23,18 @@ export default function Product() {
 
       <Grid container>
         <Grid xs={12} md={6} item>
-          <img src={product.image} alt={product.title} />
+          <Paper elevation={3} sx={{ maxWidth: '576px' }}>
+            <img src={product.image} alt={product.title} style={{ display: 'block', width: '100%' }} />
+          </Paper>
         </Grid>
         <Grid xs={12} md={6} item>
-          <Typography variant="h4">{product.title}</Typography>
-          <Typography>{product.info}</Typography>
-          <Typography>{product.material}</Typography>
-          <Typography>{product.color}</Typography>
-          <Typography sx={{ fontWeight: 'bolt', mt: '2rem' }}>{product.price}</Typography>
+          <Box sx={{ ml: '2rem' }}>
+            <Typography variant="h4">{product.title}</Typography>
+            <Typography>{product.info}</Typography>
+            <Typography>{product.material}</Typography>
+            <Typography>{product.color}</Typography>
+            <Typography sx={{ fontSize: '2rem', fontWeight: 'bolt', mt: '1rem' }}>{product.price}</Typography>
+          </Box>
         </Grid>
       </Grid>
     </Container>
