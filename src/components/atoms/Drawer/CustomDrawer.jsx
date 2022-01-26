@@ -15,7 +15,7 @@ export default function CustomDrawer(props) {
   };
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: anchor === props.drawerPosition || anchor === 'bottom' ? 'auto' : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -39,14 +39,16 @@ export default function CustomDrawer(props) {
 
   return (
     <>
-      <React.Fragment key={props.drawerPosition}>
+      <React.Fragment sx={{ position: 'absolute' }} key={props.drawerPosition}>
         <Button onClick={toggleDrawer(props.drawerPosition, true)} sx={{ my: 2, color: '#212A2F', display: 'block' }}>
-          {props.buttonContent}
+          {props.buttonContent ? props.buttonContent : props.children}
         </Button>
         <StyledDrawer
           anchor={props.drawerPosition}
           open={props.drawer[props.drawerPosition]}
           onClose={toggleDrawer(props.drawerPosition, false)}
+          $drawerWidth={props.$drawerWidth}
+          $drawerZindex={props.$drawerZindex}
         >
           {list(props.drawerPosition)}
         </StyledDrawer>

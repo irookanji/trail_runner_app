@@ -73,7 +73,8 @@ const ResponsiveAppBar = () => {
     setDrawer({ ...drawer, [anchor]: open });
   };
 
-  const drawerPosition = 'top';
+  const newArrivalsDrawerPosition = 'top';
+  const cartDrawerPosition = 'right';
 
   return (
     <AppBar
@@ -97,7 +98,7 @@ const ResponsiveAppBar = () => {
             }}
           >
             {pages.map(({ name, link }) => (
-              <Link onClick={toggleDrawer(drawerPosition, false)} to={link} key={name}>
+              <Link onClick={toggleDrawer(newArrivalsDrawerPosition, false)} to={link} key={name}>
                 <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: '#212A2F', display: 'block' }}>
                   {name}
                 </Button>
@@ -108,7 +109,7 @@ const ResponsiveAppBar = () => {
             <CustomDrawer
               drawer={drawer}
               setDrawer={setDrawer}
-              drawerPosition={drawerPosition}
+              drawerPosition={newArrivalsDrawerPosition}
               buttonContent="New Arrivals"
               drawerData={newArrivalsDrawerData}
             ></CustomDrawer>
@@ -144,19 +145,29 @@ const ResponsiveAppBar = () => {
             ))}
 
             <Tooltip title="SIGN IN">
-              <Link onClick={toggleDrawer(drawerPosition, false)} to="/sign-in">
-                <PersonOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer' }} style={{ fontSize: 30 }} />
+              <Link onClick={toggleDrawer(newArrivalsDrawerPosition, false)} to="/sign-in">
+                <PersonOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }} />
               </Link>
             </Tooltip>
 
             <Tooltip title="ABOUT">
-              <Link onClick={toggleDrawer(drawerPosition, false)} to="/about">
-                <HelpOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer' }} style={{ fontSize: 30 }} />
+              <Link onClick={toggleDrawer(newArrivalsDrawerPosition, false)} to="/about">
+                <HelpOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }} />
               </Link>
             </Tooltip>
-            <Tooltip title="MY CART">
-              <ShoppingCartOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer' }} style={{ fontSize: 30 }} />
-            </Tooltip>
+            {/* Right Drawer for Cart */}
+            <CustomDrawer
+              drawer={drawer}
+              setDrawer={setDrawer}
+              drawerPosition={cartDrawerPosition}
+              drawerData={newArrivalsDrawerData}
+              $drawerWidth="25rem"
+              $drawerZindex="-1"
+            >
+              <Tooltip title="MY CART">
+                <ShoppingCartOutlinedIcon sx={{ marginLeft: 1, cursor: 'pointer', fontSize: 30 }} />
+              </Tooltip>
+            </CustomDrawer>
           </Box>
 
           <Box
