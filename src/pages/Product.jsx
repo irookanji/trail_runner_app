@@ -46,7 +46,7 @@ export default function Product() {
             <Typography>{product.color}</Typography>
             <Typography>{product.description}</Typography>
             <Rating name="read-only" value={product.rating} readOnly />
-            <Typography sx={{ fontSize: '2rem', fontWeight: 'bolt', mt: '1rem' }}>
+            <Typography component="div" sx={{ fontSize: '2rem', fontWeight: 'bolt', mt: '1rem' }}>
               {product.discount === 0 ? (
                 <Box>{product.price}&euro;</Box>
               ) : (

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export default function MultiActionAreaCard(props) {
   return (
-    <Card>
+    <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '332px' }}>
       <Link to={'/product/' + props.cardInfo.id}>
         <CardActionArea>
           <CardMedia component="img" height="150" image={props.cardInfo.image} alt="Shoes" />
@@ -19,7 +19,9 @@ export default function MultiActionAreaCard(props) {
             <Typography variant="body2" color="text.secondary">
               {props.cardInfo.info}
             </Typography>
-            <Typography mt={2}>{props.cardInfo.price}&euro;</Typography>
+            <Typography component="p" mt={2}>
+              {props.cardInfo.price}&euro;
+            </Typography>
           </CardContent>
         </CardActionArea>
       </Link>
