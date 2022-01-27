@@ -1,14 +1,25 @@
-import React from 'react';
-import { Container, Grid, Typography, Box, Paper } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { Container, Grid, Typography, Box, Paper, Rating } from '@mui/material';
 import { useParams } from 'react-router-dom';
-import { MenData } from '../pages/Men/MenData';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Link } from 'react-router-dom';
+import { getProducts } from '../requests';
+import LinearProgress from '@mui/material/LinearProgress';
 
 export default function Product() {
   const { productNumber } = useParams();
-  const product = MenData[productNumber];
-  return (
+  const [products, setProducts] = useState([]);
+
+  const getAllProducts = async () => {
+    const response = await getProducts();
+    setProducts(response);
+  };
+
+  useEffect(() => {
+    getAllProducts();
+  }, []);
+  const product = products[productNumber];
+  return products.length !== 0 ? (
     <Container
       sx={{
         mt: '6rem',
@@ -33,10 +44,30 @@ export default function Product() {
             <Typography>{product.info}</Typography>
             <Typography>{product.material}</Typography>
             <Typography>{product.color}</Typography>
-            <Typography sx={{ fontSize: '2rem', fontWeight: 'bolt', mt: '1rem' }}>{product.price}</Typography>
+            <Typography>{product.description}</Typography>
+            <Rating name="read-only" value={product.rating} readOnly />
+            <Typography sx={{ fontSize: '2rem', fontWeight: 'bolt', mt: '1rem' }}>
+              {product.discount === 0 ? (
+                <Box>{product.price}&euro;</Box>
+              ) : (
+                <>
+                  <Box sx={{ textDecoration: 'line-through', display: 'inline', color: '#D3D3D3' }}>
+                    {product.price}&euro;
+                  </Box>
+                  <Box sx={{ display: 'inline' }}> {product.price - product.discount}&euro;</Box>
+                </>
+              )}
+            </Typography>
           </Box>
         </Grid>
       </Grid>
     </Container>
+  ) : (
+    <Box>
+      <Box sx={{ width: '100%' }}>
+        <LinearProgress />
+      </Box>
+      <Typography sx={{ mt: '2rem', ml: '2rem', fontSize: '2rem' }}>Loading...</Typography>
+    </Box>
   );
 }

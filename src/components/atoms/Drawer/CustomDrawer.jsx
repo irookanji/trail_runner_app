@@ -39,7 +39,7 @@ export default function CustomDrawer(props) {
 
   return (
     <>
-      <React.Fragment sx={{ position: 'absolute' }} key={props.drawerPosition}>
+      <React.Fragment key={props.drawerPosition}>
         <Button onClick={toggleDrawer(props.drawerPosition, true)} sx={{ my: 2, color: '#212A2F', display: 'block' }}>
           {props.buttonContent ? props.buttonContent : props.children}
         </Button>

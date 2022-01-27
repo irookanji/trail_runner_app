@@ -3,11 +3,11 @@ import Drawer from '@mui/material/Drawer';
 
 export const StyledDrawer = styled(Drawer)`
   .MuiPaper-root {
-    position: relative;
+    /* position: relative; */
     top: 68px;
     width: ${(props) => props.$drawerWidth || 'calc(100% - 15px)'};
     z-index: ${(props) => props.$drawerZindex || 'auto'};
-    left: 500px;
+    /* left: 500px; */
   }
 `;
 

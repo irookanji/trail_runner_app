@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Home from './pages/Home';
 import Men from './pages/Men/Men';
 import Women from './pages/Women/Women';
@@ -9,7 +8,6 @@ import About from './pages/About';
 import Product from './pages/Product';
 import NewArrivals from './pages/NewArrivals';
 import Footer from './containers/footer/Footer';
-
 import { Routes, Route } from 'react-router-dom';
 import { NavbarMUI } from './components';
 import './App.css';

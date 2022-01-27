@@ -162,7 +162,7 @@ const ResponsiveAppBar = () => {
               drawerPosition={cartDrawerPosition}
               drawerData={newArrivalsDrawerData}
               $drawerWidth="25rem"
-              $drawerZindex="-1"
+              $drawerZindex="1500"
             >
               <Tooltip title="MY CART">
                 <ShoppingCartOutlinedIcon sx={{ marginLeft: 1, cursor: 'pointer', fontSize: 30 }} />
