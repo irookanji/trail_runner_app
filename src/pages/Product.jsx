@@ -40,12 +40,14 @@ export default function Product() {
         </Grid>
         <Grid xs={12} md={6} item>
           <Box sx={{ ml: '2rem' }}>
-            <Typography variant="h4">{product.title}</Typography>
+            <Typography variant="h4" sx={{ my: '1rem' }}>
+              {product.title}
+            </Typography>
             <Typography>{product.info}</Typography>
             <Typography>{product.material}</Typography>
             <Typography>{product.color}</Typography>
             <Typography>{product.description}</Typography>
-            <Rating name="read-only" value={product.rating} readOnly />
+            <Rating sx={{ mt: '.3rem' }} name="read-only" value={product.rating} readOnly />
             <Typography component="div" sx={{ fontSize: '2rem', fontWeight: 'bolt', mt: '1rem' }}>
               {product.discount === 0 ? (
                 <Box>{product.price}&euro;</Box>

@@ -5,9 +5,9 @@ export const StyledDrawer = styled(Drawer)`
   .MuiPaper-root {
     /* position: relative; */
     top: 68px;
+    right: 15px;
     width: ${(props) => props.$drawerWidth || 'calc(100% - 15px)'};
     z-index: ${(props) => props.$drawerZindex || 'auto'};
-    /* left: 500px; */
   }
 `;
 
