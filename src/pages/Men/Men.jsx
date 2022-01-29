@@ -8,7 +8,10 @@ const Men = () => {
 
   const getAllProducts = async () => {
     const response = await getProducts();
-    setProducts(response);
+    const onlyManProducts = response.filter((product) => {
+      return product.men === true;
+    });
+    setProducts(onlyManProducts);
   };
 
   useEffect(() => {
