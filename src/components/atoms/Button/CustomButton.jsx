@@ -9,7 +9,7 @@ export default function CustomButton(props) {
       $customWidth={props.$buttonWidth}
       $mTop={props.$mTop}
       $mBottom={props.$mBottom}
-      bgColor={props.bgColor}
+      $bgColor={props.$bgColor}
       $hoverColor={props.$hoverColor}
     >
       {props.text}

@@ -38,7 +38,7 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: '#212A2F' }}>
+          <Avatar sx={{ m: 1, backgroundColor: '#212A2F' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -95,7 +95,7 @@ export default function SignUp() {
               sx={{
                 mt: 3,
                 mb: 2,
-                bgcolor: '#212A2F',
+                backgroundColor: '#212A2F',
                 '&:hover': {
                   backgroundColor: 'rgb(219, 215, 215)',
                   color: '#white',

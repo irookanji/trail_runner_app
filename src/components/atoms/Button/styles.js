@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import theme from '../../../theme';
 
 const StyledButton = styled(Button)`
-  background: ${(props) => props.bgColor || 'white'};
+  background: ${(props) => props.$bgColor || 'white'};
   border-radius: 2px;
   margin: 12px;
   font-weight: bold;
