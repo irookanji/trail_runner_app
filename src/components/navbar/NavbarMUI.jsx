@@ -21,6 +21,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import CustomDrawer from '../atoms/Drawer/CustomDrawer';
+import CartDrawer from './CartDrawer';
 
 import logo from '../../assets/logo.svg';
 
@@ -74,7 +75,6 @@ const ResponsiveAppBar = () => {
   };
 
   const newArrivalsDrawerPosition = 'top';
-  const cartDrawerPosition = 'right';
 
   return (
     <AppBar
@@ -156,18 +156,13 @@ const ResponsiveAppBar = () => {
               </Link>
             </Tooltip>
             {/* Right Drawer for Cart */}
-            <CustomDrawer
-              drawer={drawer}
-              setDrawer={setDrawer}
-              drawerPosition={cartDrawerPosition}
-              drawerData={newArrivalsDrawerData}
-              $drawerWidth="25rem"
-              $drawerZindex="1500"
-            >
-              <Tooltip title="MY CART">
-                <ShoppingCartOutlinedIcon sx={{ marginLeft: 1, cursor: 'pointer', fontSize: 30 }} />
-              </Tooltip>
-            </CustomDrawer>
+            <Tooltip title="MY CART">
+              <ShoppingCartOutlinedIcon
+                sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }}
+                onClick={toggleDrawer('right', true)}
+              />
+            </Tooltip>
+            <CartDrawer drawer={drawer} toggleDrawer={toggleDrawer} />
           </Box>
 
           <Box

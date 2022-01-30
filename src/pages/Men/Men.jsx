@@ -65,16 +65,17 @@ const Men = () => {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', ml: '3rem' }}>
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             width: '15%',
             position: 'fixed',
             top: '12vh',
+            mb: '1rem',
           }}
         >
           <FormLabel component="legend">Material</FormLabel>
@@ -95,7 +96,7 @@ const Men = () => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             width: '15%',
             position: 'fixed',
             top: '28vh',
