@@ -7,7 +7,7 @@ const Cart = (props) => {
     <Container>
       <Grid container justify="center" spacing={4} sx={{ mt: '1rem' }}>
         {props.cartData.map((slide) => (
-          <Grid key={Math.floor(Math.random() * 100) + 1} item xs={12} sm={6} md={3}>
+          <Grid key={slide.id} item xs={12} sm={6} md={3}>
             <CardItem cardInfo={slide} />
           </Grid>
         ))}

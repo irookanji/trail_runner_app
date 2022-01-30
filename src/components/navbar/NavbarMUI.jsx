@@ -82,7 +82,7 @@ const ResponsiveAppBar = () => {
       sx={{
         background: 'white',
         color: '#212A2F',
-        minheight: '60px',
+        minHeight: '60px',
         width: '100%',
         zIndex: 1300,
       }}
