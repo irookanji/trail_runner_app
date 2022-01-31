@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Grid, Typography, Box, Paper, Rating } from '@mui/material';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { getProducts } from '../requests';
 import LinearProgress from '@mui/material/LinearProgress';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 export default function Product() {
   const { productNumber } = useParams();
@@ -19,18 +20,17 @@ export default function Product() {
     getAllProducts();
   }, []);
   const product = products[productNumber];
+  const history = useNavigate();
   return products.length !== 0 ? (
     <Container
       sx={{
         mt: '6rem',
       }}
     >
-      <Link to="/men">
-        <Box sx={{ display: 'flex' }}>
-          <ArrowBackIcon />
-          <Typography>Go Back</Typography>
-        </Box>
-      </Link>
+      <Box onClick={() => history(-1)} sx={{ display: 'flex', cursor: 'pointer' }}>
+        <ArrowBackIcon />
+        <Typography>Go Back</Typography>
+      </Box>
 
       <Grid container>
         <Grid xs={12} md={6} item>
