@@ -20,12 +20,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
-import CustomDrawer from '../atoms/Drawer/CustomDrawer';
+import NewArrivalsDrawer from '../atoms/Drawer/NewArrivalsDrawer';
 import CartDrawer from './CartDrawer';
 
 import logo from '../../assets/logo.svg';
-
-const newArrivalsDrawerData = ['Rainy Days', 'Cold Weather', 'Warm Weather', 'Relaxing', 'Running'];
 
 const pages = [
   {
@@ -71,7 +69,7 @@ const ResponsiveAppBar = () => {
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
-    setDrawer({ ...drawer, [anchor]: open });
+    setDrawer(!drawer);
   };
 
   const newArrivalsDrawerPosition = 'top';
@@ -98,21 +96,15 @@ const ResponsiveAppBar = () => {
             }}
           >
             {pages.map(({ name, link }) => (
-              <Link onClick={toggleDrawer(newArrivalsDrawerPosition, false)} to={link} key={name}>
+              <Link onClick={toggleDrawer('top', false)} to={link} key={name}>
                 <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: '#212A2F', display: 'block' }}>
                   {name}
                 </Button>
               </Link>
             ))}
 
-            {/* Drawer for this elememt */}
-            <CustomDrawer
-              drawer={drawer}
-              setDrawer={setDrawer}
-              drawerPosition={newArrivalsDrawerPosition}
-              buttonContent="New Arrivals"
-              drawerData={newArrivalsDrawerData}
-            ></CustomDrawer>
+            {/* Drawer Top */}
+            <NewArrivalsDrawer>New Arrivals</NewArrivalsDrawer>
           </Box>
           <Link to="/">
             <Paper

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Drawer from '@mui/material/Drawer';
+import { Drawer, List, Button } from '@mui/material';
 
-export const StyledDrawer = styled(Drawer)`
+export const StyledNewArrivalsDrawer = styled(Drawer)`
   .MuiPaper-root {
     /* position: relative; */
     top: 68px;
@@ -11,4 +11,15 @@ export const StyledDrawer = styled(Drawer)`
   }
 `;
 
-// TODO To set Z-index (now doesn't work)
+export const StyledList = styled(List)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StyledButton = styled(Button)`
+  display: block;
+  margin: 2 0;
+  color: #212a2f;
+`;

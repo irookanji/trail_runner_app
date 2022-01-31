@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { StyledDrawer } from './cartDrawerStyles';
+import { StyledCart } from './cartDrawerStyles';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -38,7 +38,7 @@ export default function CartDrawer(props) {
 
   return (
     <>
-      <StyledDrawer
+      <StyledCart
         anchor={drawerPosition}
         open={props.drawer.right}
         onClose={props.toggleDrawer(drawerPosition, false)}
@@ -46,7 +46,7 @@ export default function CartDrawer(props) {
         $drawerZindex="1500"
       >
         {list(drawerPosition)}
-      </StyledDrawer>
+      </StyledCart>
     </>
   );
 }
