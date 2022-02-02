@@ -43,10 +43,6 @@ const iconText = [
     link: '/about',
   },
   {
-    name: 'MY CART',
-    link: '/cart',
-  },
-  {
     name: 'SIGN IN',
     link: '/sign-in',
   },
@@ -63,16 +59,8 @@ const ResponsiveAppBar = () => {
     setAnchorElNav(null);
   };
 
-  const [drawer, setDrawer] = React.useState({
-    top: false,
-    right: false,
-  });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    setDrawer(!drawer);
-  };
-
-  const newArrivalsDrawerPosition = 'top';
+  const [topDrawer, setTopDrawer] = React.useState(false);
+  const [rightDrawer, setRightDrawer] = React.useState(false);
 
   return (
     <AppBar
@@ -96,7 +84,7 @@ const ResponsiveAppBar = () => {
             }}
           >
             {pages.map(({ name, link }) => (
-              <Link onClick={toggleDrawer('top', false)} to={link} key={name}>
+              <Link onClick={() => setTopDrawer(false)} to={link} key={name}>
                 <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: '#212A2F', display: 'block' }}>
                   {name}
                 </Button>
@@ -137,28 +125,26 @@ const ResponsiveAppBar = () => {
             ))}
 
             <Tooltip title="SIGN IN">
-              <Link onClick={toggleDrawer(newArrivalsDrawerPosition, false)} to="/sign-in">
+              <Link onClick={() => setTopDrawer(false)} to="/sign-in">
                 <PersonOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }} />
               </Link>
             </Tooltip>
-
             <Tooltip title="ABOUT">
-              <Link onClick={toggleDrawer(newArrivalsDrawerPosition, false)} to="/about">
+              <Link onClick={() => setTopDrawer(false)} to="/about">
                 <HelpOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }} />
               </Link>
             </Tooltip>
 
             {/* Right Drawer for Cart */}
-            <CartDrawer>
+            <CartDrawer open={rightDrawer} setOpen={setRightDrawer}>
               <Tooltip title="MY CART">
                 <ShoppingCartOutlinedIcon
                   sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }}
-                  onClick={toggleDrawer('right', true)}
+                  onClick={() => setRightDrawer(true)}
                 />
               </Tooltip>
             </CartDrawer>
           </Box>
-
           <Box
             sx={{
               display: { xs: 'flex', md: 'none' },
@@ -194,10 +180,12 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography>{page.name}</Typography>
-                </MenuItem>
+              {pages.map(({ name, link }) => (
+                <Link to={link} key={name}>
+                  <MenuItem key={name} onClick={handleCloseNavMenu}>
+                    <Typography>{name}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
 
               {additionals.map((additional) => (
@@ -225,6 +213,10 @@ const ResponsiveAppBar = () => {
                 <img src={logo} alt="Logo" />
               </Paper>
             </Link>
+            <Box onClick={() => setRightDrawer(true)}>
+              <ShoppingCartOutlinedIcon />
+              <Box display="inline">1</Box>
+            </Box>
           </Box>
         </Toolbar>
       </Container>

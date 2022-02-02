@@ -60,7 +60,7 @@ const Men = () => {
   });
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', ml: '3rem' }}>
         <Box
           sx={{

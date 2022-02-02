@@ -7,16 +7,14 @@ import { Icon } from '@iconify/react';
 const cartDrawerData = ['Cart1', 'Cart2'];
 
 export default function CartDrawer(props) {
-  const [rightDrawer, setRightDrawer] = React.useState(false);
-
   return (
     <>
       <React.Fragment key="right">
-        <StyledButton onClick={() => setRightDrawer(!rightDrawer)}>{props.children}</StyledButton>
-        <StyledCart anchor="right" open={rightDrawer} onClose={() => setRightDrawer(false)}>
+        <StyledButton onClick={() => props.setOpen(!props.open)}>{props.children}</StyledButton>
+        <StyledCart anchor="right" open={props.open} onClose={() => props.setOpen(false)}>
           <StyledList>
             {cartDrawerData.map((text, index) => (
-              <ListItem button key={text} onClick={() => setRightDrawer(false)}>
+              <ListItem button key={text} onClick={() => props.setOpen(false)}>
                 <ListItemIcon>
                   {index % 2 === 0 ? (
                     <Icon icon="mdi:shoe-sneaker" width="30" height="30" />
