@@ -147,14 +147,16 @@ const ResponsiveAppBar = () => {
                 <HelpOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }} />
               </Link>
             </Tooltip>
+
             {/* Right Drawer for Cart */}
-            <Tooltip title="MY CART">
-              <ShoppingCartOutlinedIcon
-                sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }}
-                onClick={toggleDrawer('right', true)}
-              />
-            </Tooltip>
-            <CartDrawer drawer={drawer} toggleDrawer={toggleDrawer} />
+            <CartDrawer>
+              <Tooltip title="MY CART">
+                <ShoppingCartOutlinedIcon
+                  sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }}
+                  onClick={toggleDrawer('right', true)}
+                />
+              </Tooltip>
+            </CartDrawer>
           </Box>
 
           <Box

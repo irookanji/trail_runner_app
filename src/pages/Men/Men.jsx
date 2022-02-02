@@ -132,4 +132,4 @@ const Men = () => {
   );
 };
 
-export default Men;
+export default React.memo(Men);
