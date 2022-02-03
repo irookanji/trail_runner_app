@@ -35,7 +35,12 @@ export default function Product() {
       <Grid container>
         <Grid xs={12} md={6} item>
           <Paper elevation={3} sx={{ maxWidth: '576px' }}>
-            <img src={product.image} alt={product.title} style={{ display: 'block', width: '100%' }} />
+            <img
+              src={product.image}
+              alt={product.title}
+              style={{ display: 'block', width: '100%' }}
+              // onError={() => (this.img.src = '../../src/assets/Carousel_2_1.png')}
+            />
           </Paper>
         </Grid>
         <Grid xs={12} md={6} item>

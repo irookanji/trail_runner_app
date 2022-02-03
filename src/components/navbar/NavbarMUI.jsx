@@ -149,6 +149,7 @@ const ResponsiveAppBar = () => {
             sx={{
               display: { xs: 'flex', md: 'none' },
               justifyContent: 'space-between',
+              alignItems: 'center',
               width: '100%',
             }}
           >

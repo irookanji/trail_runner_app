@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { StyledCart, StyledList, StyledButton } from './cartDrawerStyles';
-import { ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { StyledCart, StyledList, StyledButton, StyledNavbar, StyledCloseButton } from './cartDrawerStyles';
+import { ListItem, ListItemIcon, ListItemText, Box, Typography } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import { Icon } from '@iconify/react';
 
@@ -12,6 +14,17 @@ export default function CartDrawer(props) {
       <React.Fragment key="right">
         <StyledButton onClick={() => props.setOpen(!props.open)}>{props.children}</StyledButton>
         <StyledCart anchor="right" open={props.open} onClose={() => props.setOpen(false)}>
+          <StyledNavbar>
+            <StyledCloseButton>
+              <CloseIcon sx={{ fontSize: '50px', fontWeight: 'bold', color: 'gray' }} />
+            </StyledCloseButton>
+            <Box sx={{ mt: '0.5rem', position: 'absolute', top: '1%', left: '32%' }}>
+              <ShoppingCartOutlinedIcon sx={{ fontSize: '35px', color: 'gray' }} />
+              <Box display="inline">1</Box>
+              <Typography sx={{ fontSize: '12px' }}>You're €50 away from free shipping!</Typography>
+            </Box>
+          </StyledNavbar>
+
           <StyledList>
             {cartDrawerData.map((text, index) => (
               <ListItem button key={text} onClick={() => props.setOpen(false)}>
