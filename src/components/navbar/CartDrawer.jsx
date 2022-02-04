@@ -15,7 +15,7 @@ export default function CartDrawer(props) {
         <StyledButton onClick={() => props.setOpen(!props.open)}>{props.children}</StyledButton>
         <StyledCart anchor="right" open={props.open} onClose={() => props.setOpen(false)}>
           <StyledNavbar>
-            <StyledCloseButton>
+            <StyledCloseButton onClick={() => props.setOpen(false)}>
               <CloseIcon sx={{ fontSize: '50px', fontWeight: 'bold', color: 'gray' }} />
             </StyledCloseButton>
             <Box sx={{ mt: '0.5rem', position: 'absolute', top: '1%', left: '32%' }}>
