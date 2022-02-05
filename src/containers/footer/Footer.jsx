@@ -225,7 +225,7 @@ const Footer = () => {
               mt: '5rem',
             }}
           >
-            © 2021 Allbirds, Inc. All Rights Reserved.Terms, Privacy & Accessibility
+            © 2022 Allbirds, Inc. All Rights Reserved.Terms, Privacy & Accessibility
           </Typography>
         </Grid>
       </Grid>

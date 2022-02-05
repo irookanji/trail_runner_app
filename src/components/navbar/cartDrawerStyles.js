@@ -31,8 +31,12 @@ export const StyledList = styled(List)`
 
 export const StyledButton = styled(Button)`
   display: block;
-  margin: 2 0;
+  height: 34px;
+  padding: 0;
   color: #212a2f;
+  &:hover {
+    background-color: #fff;
+  }
 `;
 
 export const StyledNavbar = styled(Box)`
