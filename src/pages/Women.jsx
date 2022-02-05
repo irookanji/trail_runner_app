@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Cart from '../../components/shoppingCart/card/Card';
+import Cart from '../components/shoppingCart/card/Card';
 import { Box, CircularProgress } from '@mui/material';
-import { getProducts } from '../../requests';
+import { getProducts } from '../requests';
 
 const Women = () => {
   const [products, setProducts] = useState([]);
@@ -40,4 +40,4 @@ const Women = () => {
   );
 };
 
-export default Women;
+export default React.memo(Women);

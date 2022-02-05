@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Cart from '../../components/shoppingCart/card/Card';
+import Cart from '../components/shoppingCart/card/Card';
 import { Box, CircularProgress, Checkbox, FormGroup, FormControlLabel, FormLabel } from '@mui/material';
-import { getProducts } from '../../requests';
+import { getProducts } from '../requests';
 
 const treeUIValue = 'Light & Breezy Tree';
 const woolUIValue = 'Soft & Cosy Wool';

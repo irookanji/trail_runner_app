@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Drawer, List, Button, Box } from '@mui/material';
+import { Drawer, List, Button, Box, AppBar } from '@mui/material';
 import theme from '../../theme';
 
 export const StyledCart = styled(Drawer)`
@@ -61,4 +61,24 @@ export const StyledCloseButton = styled.button`
     transform: rotate(45deg);
     transition: transform 250ms ease-in-out 0s;
   }
+`;
+
+// Navbar styles
+export const Navigation = styled(AppBar)`
+  background: white;
+  color: #212a2f;
+  min-height: 60px;
+  width: 100%;
+  z-index: 1300;
+`;
+
+export const LinksWrapper = styled(Box)`
+  flex-wrap: nowrap;
+  flex-grow: 0;
+  display: flex;
+`;
+
+export const NavigationItem = styled(Button)`
+  color: #212a2f;
+  display: block;
 `;

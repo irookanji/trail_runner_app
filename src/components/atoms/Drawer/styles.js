@@ -3,7 +3,7 @@ import { Drawer, List, Button } from '@mui/material';
 
 export const StyledNewArrivalsDrawer = styled(Drawer)`
   .MuiPaper-root {
-    top: 68px;
+    top: 60px;
     right: 15px;
     width: ${(props) => props.$drawerWidth || 'calc(100% - 15px)'};
   }

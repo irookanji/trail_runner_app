@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyledCart, StyledList, StyledButton, StyledNavbar, StyledCloseButton } from './cartDrawerStyles';
+import { StyledCart, StyledList, StyledNavbar, StyledCloseButton } from './cartDrawerStyles';
 import { ListItem, ListItemIcon, ListItemText, Box, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -12,7 +12,6 @@ export default function CartDrawer(props) {
   return (
     <>
       <React.Fragment key="right">
-        <StyledButton onClick={() => props.setOpen(!props.open)}>{props.children}</StyledButton>
         <StyledCart anchor="right" open={props.open} onClose={() => props.setOpen(false)}>
           <StyledNavbar>
             <StyledCloseButton onClick={() => props.setOpen(false)}>
