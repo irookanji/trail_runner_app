@@ -83,3 +83,17 @@ export const ImageCover = styled(Paper)`
     width: 100%;
   }
 `;
+
+export const VideoContainer = styled(Box)`
+  ${theme.breakpoints.up('xs')} {
+    display: none;
+  }
+  ${theme.breakpoints.up('md')} {
+    display: flex;
+    height: 542px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    margin-top: 6rem;
+  }
+`;

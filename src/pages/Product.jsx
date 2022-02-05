@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Grid, Typography, Box, Paper, Rating } from '@mui/material';
-// import { useParams } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-// import { Link } from 'react-router-dom';
 import { getProducts } from '../requests';
 import LinearProgress from '@mui/material/LinearProgress';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 export default function Product() {
   const { productNumber } = useParams();
@@ -35,12 +33,7 @@ export default function Product() {
       <Grid container>
         <Grid xs={12} md={6} item>
           <Paper elevation={3} sx={{ maxWidth: '576px' }}>
-            <img
-              src={product.image}
-              alt={product.title}
-              style={{ display: 'block', width: '100%' }}
-              // onError={() => (this.img.src = '../../src/assets/Carousel_2_1.png')}
-            />
+            <img src={product.image} alt={product.title} style={{ display: 'block', width: '100%' }} />
           </Paper>
         </Grid>
         <Grid xs={12} md={6} item>

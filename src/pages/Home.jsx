@@ -8,7 +8,6 @@ import { slidesStories } from '../components/atoms/Carousel/CarouselData/Stories
 import CustomCarousel from '../components/atoms/Carousel/CustomCarousel';
 import CustomSection from '../components/atoms/CustomSection/CustomSection';
 import secondSectionCoverImage from '../assets/SecondCover.jpg';
-import thirdSectionCoverImage from '../assets/ThirdCover.jpg';
 import fourthSectionCoverImage from '../assets/FourthCover.jpg';
 
 const Home = () => {
@@ -32,7 +31,6 @@ const Home = () => {
       <CustomCarousel slides={slidesCollections} titleText="Shop The Collections" />
 
       <CustomSection
-        coverImage={thirdSectionCoverImage}
         renderSecondButton={false}
         $xsCustomWidth="210px"
         $buttonWidth="384px"

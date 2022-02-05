@@ -1,11 +1,21 @@
 import React from 'react';
-import { ButtonContainer, Title, SubTitle, ImageCover, ContentContainer } from './styles';
+import { ButtonContainer, Title, SubTitle, ImageCover, ContentContainer, VideoContainer } from './styles';
 import CustomButton from '../Button/CustomButton.jsx';
+import backgroundVideo from '../../../assets/backgroundVideo.mp4';
 
 export default function CustomSection(props) {
   return (
     <>
-      <ImageCover $cover={props.coverImage} />
+      {props.coverImage ? (
+        <ImageCover $cover={props.coverImage} />
+      ) : (
+        <VideoContainer>
+          <video autoPlay loop muted id="video" style={{ height: '100%', width: '100%', objectFit: 'cover' }}>
+            <source src={backgroundVideo} preload="auto" type="video/mp4" />
+          </video>
+        </VideoContainer>
+      )}
+
       <ContentContainer>
         <Title
           $fontSizeTitle={props.$fontSizeTitle}

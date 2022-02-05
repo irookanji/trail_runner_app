@@ -17,11 +17,7 @@ const LastSection = () => {
         </Description>
         {signed ? (
           <Box sx={{ mt: '2rem' }}>
-            <StyledTextField
-              id="standard-basic"
-              label="Enter Your Email Address"
-              variant="standard"
-            />
+            <StyledTextField id="standard-basic" label="Enter Your Email Address" variant="standard" />
             <Link to="#" onClick={() => setSigned(false)}>
               <CustomButton
                 $textColor="white"
