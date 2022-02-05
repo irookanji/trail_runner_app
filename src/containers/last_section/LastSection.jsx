@@ -4,6 +4,8 @@ import CustomButton from '../../components/atoms/Button/CustomButton';
 import { Link } from 'react-router-dom';
 
 const LastSection = () => {
+  const [signed, setSigned] = React.useState(true);
+  const [emailTextField, setEmailTextField] = React.useState('');
   return (
     <>
       {/* Mobile view */}
@@ -80,6 +82,7 @@ const LastSection = () => {
       </Box>
 
       {/* Desktop Screen */}
+
       <Box
         sx={{
           display: { xs: 'none', md: 'flex' },
@@ -105,7 +108,6 @@ const LastSection = () => {
         >
           Want First Dibs?
         </Typography>
-
         <Typography
           variant="h5"
           sx={{
@@ -122,21 +124,30 @@ const LastSection = () => {
           Join our email list and be the first to know about new limited edition products, material innovations, and
           lots of other fun updates.
         </Typography>
-
-        <Box sx={{ mt: '2rem' }}>
-          <TextField id="standard-basic" label="Enter Your Email Address" variant="standard" sx={{ width: '588px' }} />
-
-          <Link to="/sign-in">
-            <CustomButton
-              $textColor="white"
-              $bgColor="#212A2F"
-              $hoverColor="grey"
-              $customWidth="111px"
-              link="/"
-              text="SIGN IN"
+        {signed ? (
+          <Box sx={{ mt: '2rem' }}>
+            <TextField
+              id="standard-basic"
+              label="Enter Your Email Address"
+              variant="standard"
+              sx={{ width: '588px' }}
             />
-          </Link>
-        </Box>
+            <Link to="#" onClick={() => setSigned(false)}>
+              <CustomButton
+                $textColor="white"
+                $bgColor="#212A2F"
+                $hoverColor="grey"
+                $customWidth="111px"
+                link="/"
+                text="SIGN IN"
+              />
+            </Link>
+          </Box>
+        ) : (
+          <Typography sx={{ m: '2rem', fontSize: '1.5rem', color: '#333333' }}>
+            You were successfully signed!
+          </Typography>
+        )}
         <Typography
           variant="h7"
           sx={{
