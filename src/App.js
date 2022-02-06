@@ -7,6 +7,7 @@ import SignIn from './pages/SignIn';
 import About from './pages/About';
 import Product from './pages/Product';
 import NewArrivals from './pages/NewArrivals';
+import NotFound from './pages/NotFound';
 import Footer from './containers/footer/Footer';
 import { Routes, Route } from 'react-router-dom';
 import { NavbarMUI } from './components';
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/about" element={<About />} />
         <Route path="/product/:productNumber" element={<Product />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

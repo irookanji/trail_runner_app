@@ -24,5 +24,4 @@ a {
   display: flex;
   flex-direction: column;
   min-width: 100%;
-  /* width: 100vw; */
 }
