@@ -3,6 +3,24 @@ import Cart from '../components/shoppingCart/card/Card';
 import ProductFilters from '../components/molecules/ProductFilters/ProductFilters';
 import { Box, CircularProgress } from '@mui/material';
 import { getProducts } from '../requests';
+import styled from 'styled-components';
+import theme from '../theme';
+
+export const Container = styled(Box)`
+  display: flex;
+  ${theme.breakpoints.up('xs')} {
+    flex-direction: column;
+  }
+  ${theme.breakpoints.up('md')} {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+`;
+
+export const Loader = styled(CircularProgress)`
+  margin: 100px auto;
+  color: inherit;
+`;
 
 const Men = () => {
   const [products, setProducts] = useState([]);
@@ -25,11 +43,16 @@ const Men = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start' }}>
+    <Container>
       <ProductFilters products={products} handleFiltering={handleFiltering} />
-      {filteredProducts.length !== 0 ? <Cart cartData={filteredProducts} /> : <Cart cartData={products} />}
-      {/* <CircularProgress sx={{ margin: '100px auto' }} color="inherit" /> */}
-    </Box>
+      {filteredProducts.length !== 0 ? (
+        <Cart cartData={filteredProducts} />
+      ) : products.length !== 0 ? (
+        <Cart cartData={products} />
+      ) : (
+        <Loader />
+      )}
+    </Container>
   );
 };
 
