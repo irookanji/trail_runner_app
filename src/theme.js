@@ -47,6 +47,9 @@ const theme = createTheme({
     primary: {
       main: colors.darkGrey,
     },
+    secondary: {
+      main: colors.azureBlue,
+    },
   },
   typography: {
     fontFamily: 'Roboto',

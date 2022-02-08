@@ -4,6 +4,7 @@ import {
   Toolbar,
   IconButton,
   Menu,
+  Badge,
   Container,
   Tooltip,
   MenuItem,
@@ -76,10 +77,12 @@ const ResponsiveAppBar = () => {
                   </MuiLink>
                 </Tooltip>
                 <Tooltip title="MY CART">
-                  <ShoppingCartOutlinedIcon
-                    sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }}
-                    onClick={() => setRightDrawer(true)}
-                  />
+                  <Badge badgeContent={4} color="secondary">
+                    <ShoppingCartOutlinedIcon
+                      sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }}
+                      onClick={() => setRightDrawer(true)}
+                    />
+                  </Badge>
                 </Tooltip>
               </LinksWrapper>
             </>
@@ -146,8 +149,9 @@ const ResponsiveAppBar = () => {
                 <img src={logo} alt="Logo" />
               </Link>
               <Box onClick={() => setRightDrawer(true)}>
-                <ShoppingCartOutlinedIcon />
-                <Box display="inline">1</Box>
+                <Badge badgeContent={4} color="secondary">
+                  <ShoppingCartOutlinedIcon />
+                </Badge>
               </Box>
             </>
           )}

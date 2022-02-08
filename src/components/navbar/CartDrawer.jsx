@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyledCart, StyledList, StyledNavbar, StyledCloseButton } from './cartDrawerStyles';
-import { ListItem, ListItemIcon, ListItemText, Box, Typography } from '@mui/material';
+import { ListItem, ListItemIcon, ListItemText, Box, Typography, Badge } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
@@ -18,8 +18,9 @@ export default function CartDrawer(props) {
               <CloseIcon sx={{ fontSize: '50px', fontWeight: 'bold', color: 'gray' }} />
             </StyledCloseButton>
             <Box sx={{ mt: '0.5rem', position: 'absolute', top: '1%', left: '32%' }}>
-              <ShoppingCartOutlinedIcon sx={{ fontSize: '35px', color: 'gray' }} />
-              <Box display="inline">1</Box>
+              <Badge badgeContent={4} color="secondary">
+                <ShoppingCartOutlinedIcon sx={{ fontSize: '35px', color: 'gray' }} />
+              </Badge>
               <Typography sx={{ fontSize: '12px' }}>You're €50 away from free shipping!</Typography>
             </Box>
           </StyledNavbar>
