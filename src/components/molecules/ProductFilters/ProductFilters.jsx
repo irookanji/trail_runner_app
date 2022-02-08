@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Box, CircularProgress, Checkbox, FormGroup, FormControlLabel, FormLabel } from '@mui/material';
+import { CircularProgress, Checkbox, FormGroup, FormControlLabel, FormLabel } from '@mui/material';
+import { Container, MaterialContainer } from './styles';
 
 const treeUIValue = 'Light & Breezy Tree';
 const woolUIValue = 'Soft & Cosy Wool';
@@ -53,19 +54,8 @@ const ProductFilters = (props) => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', ml: '3%', mt: '5%' }}>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          // justifyContent: 'center',
-          // alignItems: 'flex-start',
-          // width: '15%',
-          // position: 'fixed',
-          // top: '12vh',
-          mb: '1rem',
-        }}
-      >
+    <Container>
+      <MaterialContainer>
         <FormLabel component="legend">Material</FormLabel>
         <FormGroup>
           <FormControlLabel
@@ -77,7 +67,7 @@ const ProductFilters = (props) => {
             label="Soft & Cosy Wool"
           />
         </FormGroup>
-      </Box>
+      </MaterialContainer>
 
       {/* <Box
         sx={{
@@ -106,7 +96,7 @@ const ProductFilters = (props) => {
           />
         </FormGroup>
       </Box> */}
-    </Box>
+    </Container>
   );
 };
 
