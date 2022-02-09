@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyledNewArrivalsDrawer, StyledList, StyledButton } from './styles';
 import { ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import NewArrivalsContent from './NewArrivalsContent';
 
 import { Icon } from '@iconify/react';
 
@@ -14,7 +15,7 @@ export default function NewArrivalsDrawer(props) {
       <React.Fragment key="top">
         <StyledButton onClick={() => setTopDrawer(!topDrawer)}>{props.children}</StyledButton>
         <StyledNewArrivalsDrawer anchor="top" open={topDrawer} onClose={() => setTopDrawer(false)}>
-          <StyledList>
+          {/* <StyledList>
             {newArrivalsDrawerData.map((text, index) => (
               <ListItem button key={text} onClick={() => setTopDrawer(false)}>
                 <ListItemIcon>
@@ -27,7 +28,9 @@ export default function NewArrivalsDrawer(props) {
                 <ListItemText primary={text} />
               </ListItem>
             ))}
-          </StyledList>
+          </StyledList> */}
+
+          <NewArrivalsContent />
         </StyledNewArrivalsDrawer>
       </React.Fragment>
     </>

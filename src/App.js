@@ -6,7 +6,6 @@ import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import About from './pages/About';
 import Product from './pages/Product';
-import NewArrivals from './pages/NewArrivals';
 import NotFound from './pages/NotFound';
 import Footer from './containers/footer/Footer';
 import { Routes, Route } from 'react-router-dom';
@@ -21,7 +20,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
-        <Route path="/new-arrivals" element={<NewArrivals />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/about" element={<About />} />
