@@ -50,6 +50,7 @@ export const SectionsContainer = styled(Box)`
 export const SectionLink = styled(Typography)`
   margin-bottom: 0.6rem;
   white-space: nowrap;
+  cursor: pointer;
 `;
 
 export const FeaturedContainer = styled(Typography)`
@@ -58,12 +59,12 @@ export const FeaturedContainer = styled(Typography)`
   justify-content: center;
   height: 5rem;
   width: 18rem;
-  background-color: ${(props) => props.featuredBg || '#5e4b6a'};
+  background-color: ${(props) => props.$featuredBg || '#5e4b6a'};
   color: white;
   margin-bottom: 1rem;
   border-radius: 4px;
   &:hover {
-    box-shadow: ${(props) => props.hoverBoxShadow || '0px -9px 32px -8px rgba(34, 60, 80, 0.2)'};
+    box-shadow: ${(props) => props.$hoverBoxShadow || '0px -9px 32px -8px rgba(34, 60, 80, 0.2)'};
     cursor: pointer;
     text-decoration: underline;
   }
