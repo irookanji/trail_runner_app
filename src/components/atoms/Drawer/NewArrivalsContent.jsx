@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid } from '@mui/material';
 import { Container, Title, SectionsContainer, SectionLink, FeaturedContainer, FeaturedSectionLink } from './styles';
+import { v4 as uuidv4 } from 'uuid';
 
 const ShoesList = ['Running Shoes', 'Everyday Trainers', 'Flats', 'Rain Repellent Trainers', 'Slip-Ons', 'High Tops'];
 
@@ -25,7 +26,7 @@ const NewArrivalsContent = () => {
           <Title component="div">Shoes</Title>
           <SectionsContainer>
             {ShoesList.map((item) => (
-              <SectionLink key={Math.floor(Math.random() * 1000) + 1}>{item}</SectionLink>
+              <SectionLink key={uuidv4()}>{item}</SectionLink>
             ))}
           </SectionsContainer>
         </Grid>
@@ -34,7 +35,7 @@ const NewArrivalsContent = () => {
           <Title component="div">Apparel</Title>
           <SectionsContainer>
             {ApparelList.map((item) => (
-              <SectionLink key={Math.floor(Math.random() * 1000) + 1}>{item}</SectionLink>
+              <SectionLink key={uuidv4()}>{item}</SectionLink>
             ))}
           </SectionsContainer>
         </Grid>
@@ -43,7 +44,7 @@ const NewArrivalsContent = () => {
           <Title component="div">Accessories</Title>
           <SectionsContainer>
             {AccessorieslList.map((item) => (
-              <SectionLink key={Math.floor(Math.random() * 1000) + 1}>{item}</SectionLink>
+              <SectionLink key={uuidv4()}>{item}</SectionLink>
             ))}
           </SectionsContainer>
         </Grid>

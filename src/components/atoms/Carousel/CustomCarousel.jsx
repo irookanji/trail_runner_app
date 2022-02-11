@@ -14,6 +14,7 @@ import arrowToRight from '../../../assets/arrow_right.svg';
 import arrowToLeft from '../../../assets/arrow_left.svg';
 import Carousel, { slidesToShowPlugin, arrowsPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function CustomCarousel(props) {
   return (
@@ -102,7 +103,7 @@ export default function CustomCarousel(props) {
         }}
       >
         {props.slides.map((slide, index) => (
-          <SlideContainer key={Math.floor(Math.random() * 100) + 1}>
+          <SlideContainer key={uuidv4()}>
             <ImageContainer>
               <ImageCarousel className="collection_img" $cover={slide.image} alt={slide.info} />
             </ImageContainer>
