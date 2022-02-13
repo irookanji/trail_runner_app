@@ -33,7 +33,14 @@ function About() {
       <Typography variant="h6" gutterBottom sx={{ mb: '1.5rem' }}>
         help@allbirds.org.eu
       </Typography>
-      <CustomButton text="Get In Touch" $customWidth="260px" $bgColor="#212a2f" $textColor="white" $hoverColor="grey" />
+      <CustomButton
+        link="#"
+        text="Get In Touch"
+        $customWidth="260px"
+        $bgColor="#212a2f"
+        $textColor="white"
+        $hoverColor="grey"
+      />
       <Box sx={{ display: 'flex', my: '5rem' }}>
         <Typography gutterBottom sx={{ mr: '2rem' }}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus tempora natus blanditiis modi accusantium
