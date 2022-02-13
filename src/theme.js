@@ -36,7 +36,7 @@ export const colors = {
   logan: '#9190AC',
   apache: '#BC9D45',
   tosca: '#914146',
-  azureBlue: '#3A43D0',
+  azureBlue: '#6c63ff',
 };
 
 const theme = createTheme({
