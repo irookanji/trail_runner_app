@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Grid, Typography, Box, Paper, Rating } from '@mui/material';
+import { Container, Grid, Typography, Box, Paper, Rating, Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { getProducts } from '../requests';
 import LinearProgress from '@mui/material/LinearProgress';
@@ -46,7 +46,7 @@ export default function Product() {
             <Typography>{product.color}</Typography>
             <Typography>{product.description}</Typography>
             <Rating sx={{ mt: '.3rem' }} name="read-only" value={product.rating} readOnly />
-            <Typography component="div" sx={{ fontSize: '2rem', fontWeight: 'bolt', mt: '1rem' }}>
+            <Typography component="div" sx={{ fontSize: '2rem', fontWeight: 'bolt', my: '1rem' }}>
               {product.discount === 0 ? (
                 <Box>{product.price}&euro;</Box>
               ) : (
@@ -58,6 +58,7 @@ export default function Product() {
                 </>
               )}
             </Typography>
+            <Button sx={{ backgroundColor: '#cac7c7', width: '8rem' }}>Add To Cart</Button>
           </Box>
         </Grid>
       </Grid>
