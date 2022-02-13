@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Button } from '@mui/material';
 import theme from '../../../theme';
+import { Link } from 'react-router-dom';
 
-const StyledButton = styled(Button)`
+export const StyledButton = styled(Button)`
   background: ${(props) => props.$bgColor || 'white'};
   border-radius: 2px;
-  margin: 12px;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -35,4 +35,6 @@ const StyledButton = styled(Button)`
   }
 `;
 
-export default StyledButton;
+export const StyledLink = styled(Link)`
+  margin: 12px;
+`;

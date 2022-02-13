@@ -44,7 +44,7 @@ export default function CustomSection(props) {
             $textColor="white"
             $bgColor="#212A2F"
             $hoverColor="grey"
-            link="/men"
+            link={props.buttonLink ? props.buttonLink : '/men'}
             text={props.buttonText}
           />
           {props.renderSecondButton ? (

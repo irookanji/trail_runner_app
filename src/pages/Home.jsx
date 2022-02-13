@@ -40,6 +40,7 @@ const Home = () => {
         $fontSizeSubTitle="1.5rem"
         $lineHeightSubTitle="2.5rem"
         buttonText="See How"
+        buttonLink="/see-how"
         titleText="Made From Nature, For Nature"
         subTitleText="We craft with planet-friendly natural materials, like merino wool and eucalyptus trees, because they're our
         best chance for a sustainable future."
@@ -57,6 +58,7 @@ const Home = () => {
         $fontSizeSubTitle="1.5rem"
         $lineHeightSubTitle="2.5rem"
         buttonText="OUR SUSTAINABLE PRACTICES"
+        buttonLink="/sustainable-practices"
         titleText="Reversing Climate Change Through Better Business"
         subTitleText="Reducing our environmental impact has been a top priority since day one. But now, we’re taking things further.
         Explore our overall sustainability approach, our progress thus far, and our bold list of commitments for 2025."
