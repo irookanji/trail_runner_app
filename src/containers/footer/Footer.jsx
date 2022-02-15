@@ -9,7 +9,6 @@ const Footer = () => {
       position="static"
       sx={{
         background: '#212A2F',
-        mt: '2rem',
         pl: '54px',
         pt: '72px',
         pb: '90px',

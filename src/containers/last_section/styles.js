@@ -11,10 +11,10 @@ export const Container = styled(Box)`
   ${theme.breakpoints.up('xs')} {
     background: radial-gradient(circle at 38% 50%, rgba(183, 154, 145, 1) 0%, rgba(207, 157, 83, 1) 100%);
     padding: 1.5rem;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   ${theme.breakpoints.up('md')} {
-    background: none;
+    background: #f8f7f5;
     margin-top: 6rem;
     width: 850px;
     min-width: 100%;
