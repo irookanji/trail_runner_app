@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Drawer, List, Button, Box, AppBar } from '@mui/material';
+import { Drawer, List, Button, Box, AppBar, Typography } from '@mui/material';
 import theme from '../../theme';
 
 export const StyledCart = styled(Drawer)`
@@ -81,4 +81,48 @@ export const LinksWrapper = styled(Box)`
 export const NavigationItem = styled(Button)`
   color: #212a2f;
   display: block;
+`;
+
+// CartContent styles
+export const CartContentContainer = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+`;
+
+export const TitleEmptyCart = styled(Typography)`
+  color: rgb(33, 42, 47);
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0px 0px 24px;
+`;
+
+export const ButtonsEmptyCart = styled(Button)`
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: 2px solid rgb(33, 42, 47);
+  color: rgb(33, 42, 47);
+  font-size: 1rem;
+  padding: 13px 18px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  opacity: 1;
+  position: relative;
+  border-radius: 2px;
+  font-weight: 700;
+  &:hover {
+    background-color: rgb(33, 42, 47);
+    border-color: rgb(33, 42, 47);
+    color: rgb(255, 255, 255);
+  }
 `;

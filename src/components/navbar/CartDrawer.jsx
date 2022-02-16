@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { StyledCart, StyledList, StyledNavbar, StyledCloseButton } from './cartDrawerStyles';
-import { ListItem, ListItemIcon, ListItemText, Box, Typography, Badge } from '@mui/material';
+import { Box, Typography, Badge } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-
-import { Icon } from '@iconify/react';
-
-const cartDrawerData = ['Cart1', 'Cart2'];
+import CartContent from './CartContent';
 
 export default function CartDrawer({ products, total, onCheckoutClicked, open, setOpen }) {
   return (
@@ -26,19 +23,9 @@ export default function CartDrawer({ products, total, onCheckoutClicked, open, s
           </StyledNavbar>
 
           <StyledList>
-            <Typography>Total: {total}</Typography>
-            {/* {cartDrawerData.map((text, index) => (
-              <ListItem button key={text} onClick={() => props.setOpen(false)}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? (
-                    <Icon icon="mdi:shoe-sneaker" width="30" height="30" />
-                  ) : (
-                    <Icon icon="mdi:shoe-cleat" width="30" height="30" />
-                  )}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))} */}
+            <CartContent />
+            <Typography>Subtotal: {total}</Typography>
+            <Typography>Shipping FREE</Typography>
           </StyledList>
         </StyledCart>
       </React.Fragment>
