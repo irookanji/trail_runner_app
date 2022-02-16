@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Drawer, List, Button, Box, AppBar, Typography } from '@mui/material';
 import theme from '../../theme';
+import { Link } from 'react-router-dom';
 
 export const StyledCart = styled(Drawer)`
   z-index: 2000;
@@ -125,4 +126,8 @@ export const ButtonsEmptyCart = styled(Button)`
     border-color: rgb(33, 42, 47);
     color: rgb(255, 255, 255);
   }
+`;
+
+export const StyledLink = styled(Link)`
+  width: 100%;
 `;
