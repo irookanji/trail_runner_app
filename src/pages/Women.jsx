@@ -8,6 +8,7 @@ import theme from '../theme';
 
 export const Container = styled(Box)`
   display: flex;
+  margin-bottom: 4rem;
   ${theme.breakpoints.up('xs')} {
     flex-direction: column;
   }

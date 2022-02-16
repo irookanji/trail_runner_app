@@ -4,6 +4,52 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { getProducts } from '../requests';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useParams, useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+
+export const ProductContainer = styled(Container)`
+  margin: 6rem auto;
+`;
+
+export const ArrowBackContainer = styled(Box)`
+  display: flex;
+  margin: 1rem 0;
+  cursor: pointer;
+`;
+
+export const Title = styled(Typography)`
+  margin: 1rem 0;
+  font-size: 2.1rem;
+  font-weight: 400;
+  font-style: normal;
+`;
+
+export const ProductColor = styled(Typography)`
+  margin: 2% 0;
+  font-size: 0.9rem;
+  font-style: italic;
+`;
+
+export const Price = styled(Typography)`
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: bolt;
+`;
+
+export const Discount = styled(Box)`
+  display: inline;
+  text-decoration: line-through;
+  color: #d3d3d3;
+`;
+
+export const AddToCartBtn = styled(Button)`
+  background-color: #cac7c7;
+  width: 8rem;
+`;
+
+export const LoadingText = styled(Typography)`
+  margin: 2rem;
+  font-size: 2rem;
+`;
 
 export default function Product() {
   const { productNumber } = useParams();
@@ -20,15 +66,11 @@ export default function Product() {
   const product = products[productNumber];
   const history = useNavigate();
   return products.length !== 0 ? (
-    <Container
-      sx={{
-        mt: '6rem',
-      }}
-    >
-      <Box onClick={() => history(-1)} sx={{ display: 'flex', cursor: 'pointer' }}>
+    <ProductContainer>
+      <ArrowBackContainer onClick={() => history(-1)}>
         <ArrowBackIcon />
         <Typography>Go Back</Typography>
-      </Box>
+      </ArrowBackContainer>
 
       <Grid container>
         <Grid xs={12} md={6} item>
@@ -38,37 +80,32 @@ export default function Product() {
         </Grid>
         <Grid xs={12} md={6} item>
           <Box sx={{ ml: '2rem' }}>
-            <Typography variant="h4" sx={{ my: '1rem' }}>
-              {product.title}
-            </Typography>
-            <Typography>{product.info}</Typography>
+            <Title>{product.title}</Title>
             <Typography>{product.material}</Typography>
-            <Typography>{product.color}</Typography>
+            <ProductColor>{product.color}</ProductColor>
             <Typography>{product.description}</Typography>
             <Rating sx={{ mt: '.3rem' }} name="read-only" value={product.rating} readOnly />
-            <Typography component="div" sx={{ fontSize: '2rem', fontWeight: 'bolt', my: '1rem' }}>
+            <Price component="div">
               {product.discount === 0 ? (
                 <Box>{product.price}&euro;</Box>
               ) : (
                 <>
-                  <Box sx={{ textDecoration: 'line-through', display: 'inline', color: '#D3D3D3' }}>
-                    {product.price}&euro;
-                  </Box>
+                  <Discount>{product.price}&euro;</Discount>
                   <Box sx={{ display: 'inline' }}> {product.price - product.discount}&euro;</Box>
                 </>
               )}
-            </Typography>
-            <Button sx={{ backgroundColor: '#cac7c7', width: '8rem' }}>Add To Cart</Button>
+            </Price>
+            <AddToCartBtn>Add To Cart</AddToCartBtn>
           </Box>
         </Grid>
       </Grid>
-    </Container>
+    </ProductContainer>
   ) : (
     <Box>
       <Box sx={{ width: '100%' }}>
         <LinearProgress />
       </Box>
-      <Typography sx={{ mt: '2rem', ml: '2rem', fontSize: '2rem' }}>Loading...</Typography>
+      <LoadingText>Loading...</LoadingText>
     </Box>
   );
 }
