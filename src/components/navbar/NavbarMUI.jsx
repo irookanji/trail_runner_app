@@ -22,7 +22,10 @@ import CartDrawer from './CartDrawer';
 import logo from '../../assets/logo.svg';
 import { Navigation, LinksWrapper, NavigationItem } from './cartDrawerStyles';
 
-const ResponsiveAppBar = () => {
+import { connect } from 'react-redux';
+import { getTotal, getCartProducts } from '../../reducers';
+
+const Navbar = ({ products, total, checkout }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -155,10 +158,22 @@ const ResponsiveAppBar = () => {
               </Box>
             </>
           )}
-          <CartDrawer open={rightDrawer} setOpen={setRightDrawer} />
+          <CartDrawer
+            open={rightDrawer}
+            setOpen={setRightDrawer}
+            products={products}
+            total={total}
+            onCheckoutClicked={() => checkout(products)}
+          />
         </Toolbar>
       </Container>
     </Navigation>
   );
 };
-export default ResponsiveAppBar;
+
+const mapStateToProps = (state) => ({
+  products: getCartProducts(state),
+  total: getTotal(state),
+});
+
+export default connect(mapStateToProps)(Navbar);

@@ -201,7 +201,7 @@ const Footer = () => {
             }}
           >
             {footerData.map((item) => (
-              <Icon key={item.icon} sx={{ display: 'flex', mr: '1rem' }} style={{ fontSize: 30 }}>
+              <Icon key={item.icon} sx={{ display: 'flex', mr: '0.5rem', width: '1.8em', fontSize: 30 }}>
                 <img src={`${item.icon}`} srcSet={`${item.icon}`} alt={item.title} />
               </Icon>
             ))}

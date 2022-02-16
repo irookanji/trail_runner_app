@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Cart from '../components/shoppingCart/card/Card';
+import Card from '../components/shoppingCart/card/Card';
 import ProductFilters from '../components/molecules/ProductFilters/ProductFilters';
 import { Box, CircularProgress } from '@mui/material';
 import { getProducts } from '../requests';
@@ -46,9 +46,9 @@ const Men = () => {
     <Container>
       <ProductFilters products={products} handleFiltering={handleFiltering} />
       {filteredProducts.length !== 0 ? (
-        <Cart cartData={filteredProducts} />
+        <Card cartData={filteredProducts} />
       ) : products.length !== 0 ? (
-        <Cart cartData={products} />
+        <Card cartData={products} />
       ) : (
         <Loader />
       )}

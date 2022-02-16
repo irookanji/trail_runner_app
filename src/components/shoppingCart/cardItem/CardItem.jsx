@@ -6,27 +6,27 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-export default function MultiActionAreaCard(props) {
+export default function CardItem({ product, onAddToCartClicked, cardInfo }) {
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '332px' }}>
-      <Link to={'/product/' + props.cardInfo.id}>
+      <Link to={'/product/' + cardInfo.id}>
         <CardActionArea>
-          <CardMedia component="img" height="150" image={props.cardInfo.image} alt="Shoes" />
+          <CardMedia component="img" height="150" image={cardInfo.image} alt="Shoes" />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {props.cardInfo.title}
+              {cardInfo.title}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {props.cardInfo.info}
+              {cardInfo.info}
             </Typography>
             <Typography component="p" mt={2}>
-              {props.cardInfo.price}&euro;
+              {cardInfo.price}&euro;
             </Typography>
           </CardContent>
         </CardActionArea>
       </Link>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" onClick={onAddToCartClicked}>
           Add To Cart
         </Button>
       </CardActions>
