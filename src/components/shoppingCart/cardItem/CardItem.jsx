@@ -5,8 +5,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { addToCart } from '../../../redux/cartReducer';
+import { useDispatch, useSelector } from 'react-redux';
 
-export default function CardItem({ product, onAddToCartClicked, cardInfo }) {
+export default function CardItem({ cardInfo }) {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cartState.cart);
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '332px' }}>
       <Link to={'/product/' + cardInfo.id}>
@@ -26,7 +30,27 @@ export default function CardItem({ product, onAddToCartClicked, cardInfo }) {
         </CardActionArea>
       </Link>
       <CardActions>
-        <Button size="small" color="primary" onClick={onAddToCartClicked}>
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => {
+            dispatch(
+              addToCart({
+                items: [
+                  {
+                    id: cardInfo.id,
+                    quantity: 5,
+                    title: cardInfo.title,
+                    info: cardInfo.info,
+                    price: cardInfo.price,
+                    image: cardInfo.image,
+                  },
+                ],
+                total: cart.total + cardInfo.price,
+              }),
+            );
+          }}
+        >
           Add To Cart
         </Button>
       </CardActions>

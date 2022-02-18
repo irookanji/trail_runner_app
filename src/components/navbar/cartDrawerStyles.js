@@ -104,10 +104,11 @@ export const TitleEmptyCart = styled(Typography)`
 `;
 
 export const ButtonsEmptyCart = styled(Button)`
+  display: block;
   margin-bottom: 12px;
   text-transform: uppercase;
+  white-space: nowrap;
   width: 100%;
-  display: block;
   background-color: transparent;
   border: 2px solid rgb(33, 42, 47);
   color: rgb(33, 42, 47);
@@ -130,4 +131,57 @@ export const ButtonsEmptyCart = styled(Button)`
 
 export const StyledLink = styled(Link)`
   width: 100%;
+`;
+
+export const CartItem = styled(Box)`
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  width: 90%;
+  img {
+    width: 100px;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+  }
+`;
+
+export const DetailesContainer = styled(Box)`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const DetailesPrice = styled(Typography)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+`;
+
+export const BottomContainer = styled(Box)`
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  position: fixed;
+  background-color: red;
+  border-top: 5px solid rgb(245, 245, 245);
+`;
+
+export const BottomBtn = styled(Button)`
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 13px 18px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: rgb(33, 42, 47);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(33, 42, 47);
+  text-align: center;
+  text-decoration: none;
+  opacity: 1;
+  border-radius: 2px;
+  font-weight: 700;
 `;

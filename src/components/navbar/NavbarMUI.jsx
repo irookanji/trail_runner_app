@@ -21,11 +21,10 @@ import NewArrivalsDrawer from '../atoms/Drawer/NewArrivalsDrawer';
 import CartDrawer from './CartDrawer';
 import logo from '../../assets/logo.svg';
 import { Navigation, LinksWrapper, NavigationItem } from './cartDrawerStyles';
-
-import { connect } from 'react-redux';
-import { getTotal, getCartProducts } from '../../reducers';
+import { useSelector } from 'react-redux';
 
 const Navbar = ({ products, total, checkout }) => {
+  const cartItems = useSelector((state) => state.cartState.cart.items);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -80,7 +79,7 @@ const Navbar = ({ products, total, checkout }) => {
                   </MuiLink>
                 </Tooltip>
                 <Tooltip title="MY CART">
-                  <Badge badgeContent={4} color="secondary">
+                  <Badge badgeContent={cartItems.length} color="secondary">
                     <ShoppingCartOutlinedIcon
                       sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }}
                       onClick={() => setRightDrawer(true)}
@@ -152,7 +151,7 @@ const Navbar = ({ products, total, checkout }) => {
                 <img src={logo} alt="Logo" />
               </Link>
               <Box onClick={() => setRightDrawer(true)}>
-                <Badge badgeContent={4} color="secondary">
+                <Badge badgeContent={cartItems.length} color="secondary">
                   <ShoppingCartOutlinedIcon />
                 </Badge>
               </Box>
@@ -171,9 +170,4 @@ const Navbar = ({ products, total, checkout }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  products: getCartProducts(state),
-  total: getTotal(state),
-});
-
-export default connect(mapStateToProps)(Navbar);
+export default Navbar;

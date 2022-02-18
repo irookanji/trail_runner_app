@@ -5,6 +5,8 @@ import { getProducts } from '../requests';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../redux/cartReducer';
 
 export const ProductContainer = styled(Container)`
   margin: 6rem auto;
@@ -54,6 +56,8 @@ export const LoadingText = styled(Typography)`
 export default function Product() {
   const { productNumber } = useParams();
   const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cartState.cart);
 
   const getAllProducts = async () => {
     const response = await getProducts();
@@ -95,7 +99,27 @@ export default function Product() {
                 </>
               )}
             </Price>
-            <AddToCartBtn>Add To Cart</AddToCartBtn>
+            <AddToCartBtn
+              onClick={() => {
+                dispatch(
+                  addToCart({
+                    items: [
+                      {
+                        id: product.id,
+                        quantity: 5,
+                        title: product.title,
+                        info: product.info,
+                        price: product.price,
+                        image: product.image,
+                      },
+                    ],
+                    total: cart.total + product.price,
+                  }),
+                );
+              }}
+            >
+              Add To Cart
+            </AddToCartBtn>
           </Box>
         </Grid>
       </Grid>
