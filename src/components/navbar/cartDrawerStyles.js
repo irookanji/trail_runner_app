@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { Drawer, List, Button, Box, AppBar, Typography } from '@mui/material';
+import { Drawer, List, Button, Box, AppBar, Typography, Divider } from '@mui/material';
 import theme from '../../theme';
 import { Link } from 'react-router-dom';
+import Recomended from '../../assets/Recomended.png';
 
 export const StyledCart = styled(Drawer)`
   z-index: 2000;
@@ -50,7 +51,6 @@ export const StyledNavbar = styled(Box)`
 `;
 
 export const StyledCloseButton = styled.button`
-  left: 2rem;
   top: 50%;
   left: 50%;
   height: 4rem;
@@ -134,11 +134,11 @@ export const StyledLink = styled(Link)`
 `;
 
 export const CartItem = styled(Box)`
-  flex-shrink: 0;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin-top: 1rem;
-  width: 90%;
+  width: 100%;
   img {
     width: 100px;
     margin-right: 1rem;
@@ -149,6 +149,7 @@ export const CartItem = styled(Box)`
 export const DetailesContainer = styled(Box)`
   display: flex;
   flex-direction: column;
+  margin-left: -1.5rem;
 `;
 
 export const DetailesPrice = styled(Typography)`
@@ -158,19 +159,26 @@ export const DetailesPrice = styled(Typography)`
   margin-top: 1rem;
 `;
 
+// Bottom aka footer
 export const BottomContainer = styled(Box)`
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   right: 0;
   bottom: 0;
-  padding: 10px;
-  position: fixed;
-  background-color: red;
-  border-top: 5px solid rgb(245, 245, 245);
+  padding: 20px;
+`;
+
+export const StyledDivider = styled(Divider)`
+  border-top: 1px solid rgb(211, 212, 213);
+  margin: 1rem 0;
 `;
 
 export const BottomBtn = styled(Button)`
   width: 100%;
   display: block;
+  margin: 0.5rem 0;
   text-transform: uppercase;
   font-size: 14px;
   padding: 13px 18px;
@@ -184,4 +192,66 @@ export const BottomBtn = styled(Button)`
   opacity: 1;
   border-radius: 2px;
   font-weight: 700;
+  &:hover {
+    background-color: gray;
+    border: 2px solid gray;
+  }
+`;
+
+export const ProductContainer = styled(Box)`
+  width: 90%;
+  height: 50vh;
+  margin: 0 1rem;
+`;
+
+export const Subtotal = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+export const Shipping = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+export const BottomTitle = styled(Typography)`
+  color: rgb(33, 42, 47);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+`;
+
+export const MiniCloseButton = styled.button`
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  background-color: inherit;
+  font-weight: bold;
+  color: gray;
+  cursor: pointer;
+  &:hover {
+    transform-origin: center;
+    transform: rotate(45deg);
+    transition: transform 250ms ease-in-out 0s;
+  }
+`;
+
+export const SenaryHeader = styled(Typography)`
+  margin: 0.6rem 0;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.75;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  color: rgb(33, 42, 47);
+  padding: 0px;
+`;
+
+export const BottomImg = styled.img.attrs({
+  src: `${Recomended}`,
+})`
+  width: 100%;
+  overflow-x: hidden;
 `;
