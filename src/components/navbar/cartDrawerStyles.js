@@ -199,9 +199,12 @@ export const BottomBtn = styled(Button)`
 `;
 
 export const ProductContainer = styled(Box)`
+  display: flex;
+  flex-direction: column;
   width: 90%;
   height: 50vh;
   margin: 0 1rem;
+  overflow-x: hidden;
 `;
 
 export const Subtotal = styled(Box)`
@@ -254,4 +257,5 @@ export const BottomImg = styled.img.attrs({
 })`
   width: 100%;
   overflow-x: hidden;
+  cursor: pointer;
 `;

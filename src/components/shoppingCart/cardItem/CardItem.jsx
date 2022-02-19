@@ -36,17 +36,12 @@ export default function CardItem({ cardInfo }) {
           onClick={() => {
             dispatch(
               addToCart({
-                items: [
-                  {
-                    id: cardInfo.id,
-                    quantity: 5,
-                    title: cardInfo.title,
-                    info: cardInfo.info,
-                    price: cardInfo.price,
-                    image: cardInfo.image,
-                  },
-                ],
-                total: cart.total + cardInfo.price,
+                id: cardInfo.id,
+                quantity: 5,
+                title: cardInfo.title,
+                info: cardInfo.info,
+                price: cardInfo.price,
+                image: cardInfo.image,
               }),
             );
           }}

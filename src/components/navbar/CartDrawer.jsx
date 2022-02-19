@@ -21,10 +21,12 @@ import {
 import { Box, Typography, Badge } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteFromCart } from '../../redux/cartReducer';
 import CartContent from './CartContent';
 
 export default function CartDrawer({ open, setOpen }) {
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cartState.cart);
   const cartItems = cart.items;
   return (
@@ -47,37 +49,43 @@ export default function CartDrawer({ open, setOpen }) {
 
           <StyledList>
             {cartItems.length !== 0 ? (
-              cartItems.map((item) => (
-                <Box key={Math.floor(Math.random() * 100) + 1}>
-                  <ProductContainer>
-                    <CartItem key={item.id}>
-                      <img alt="item.title" src={item.image} />
-                      <DetailesContainer>
-                        <Typography>{item.title}</Typography>
-                        <DetailesPrice>{item.price} &euro;</DetailesPrice>
-                      </DetailesContainer>
-                      <MiniCloseButton>
-                        <CloseIcon />
-                      </MiniCloseButton>
-                    </CartItem>
-                    <StyledDivider />
-                  </ProductContainer>
-                  <BottomContainer>
-                    <StyledDivider />
-                    <Subtotal>
-                      <BottomTitle>Subtotal</BottomTitle>
-                      <Typography>&euro; {cart.total},00 EUR INCL. VAT</Typography>
-                    </Subtotal>
-                    <Shipping>
-                      <BottomTitle>Shipping</BottomTitle>
-                      <Typography>FREE</Typography>
-                    </Shipping>
-                    <BottomBtn>Proceed to checkout</BottomBtn>
-                    <SenaryHeader>You might also like</SenaryHeader>
-                    <BottomImg />
-                  </BottomContainer>
-                </Box>
-              ))
+              <>
+                <ProductContainer>
+                  {cartItems.map((item) => (
+                    <Box key={Math.floor(Math.random() * 100) + 1}>
+                      <CartItem key={item.id}>
+                        <img alt="item.title" src={item.image} />
+                        <DetailesContainer>
+                          <Typography>{item.title}</Typography>
+                          <DetailesPrice>{item.price} &euro;</DetailesPrice>
+                        </DetailesContainer>
+                        <MiniCloseButton>
+                          <CloseIcon
+                            onClick={() => {
+                              dispatch(deleteFromCart(item.id));
+                            }}
+                          />
+                        </MiniCloseButton>
+                      </CartItem>
+                      <StyledDivider />
+                    </Box>
+                  ))}
+                </ProductContainer>
+                <BottomContainer>
+                  <StyledDivider />
+                  <Subtotal>
+                    <BottomTitle>Subtotal</BottomTitle>
+                    <Typography>&euro; {cart.total},00 EUR INCL. VAT</Typography>
+                  </Subtotal>
+                  <Shipping>
+                    <BottomTitle>Shipping</BottomTitle>
+                    <Typography>FREE</Typography>
+                  </Shipping>
+                  <BottomBtn>Proceed to checkout</BottomBtn>
+                  <SenaryHeader>You might also like</SenaryHeader>
+                  <BottomImg />
+                </BottomContainer>
+              </>
             ) : (
               <CartContent />
             )}
