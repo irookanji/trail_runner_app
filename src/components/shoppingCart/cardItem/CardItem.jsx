@@ -37,7 +37,7 @@ export default function CardItem({ cardInfo }) {
             dispatch(
               addToCart({
                 id: cardInfo.id,
-                quantity: 5,
+                quantity: 1,
                 title: cardInfo.title,
                 info: cardInfo.info,
                 price: cardInfo.price,

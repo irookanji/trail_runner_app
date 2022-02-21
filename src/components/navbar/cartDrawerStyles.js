@@ -139,6 +139,7 @@ export const CartItem = styled(Box)`
   justify-content: space-between;
   margin-top: 1rem;
   width: 100%;
+  cursor: pointer;
   img {
     width: 100px;
     margin-right: 1rem;
