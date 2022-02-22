@@ -24,6 +24,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteFromCart } from '../../redux/cartReducer';
 import CartContent from './CartContent';
+import Recomended from '../../assets/Recomended.png';
 
 export default function CartDrawer({ open, setOpen }) {
   const dispatch = useDispatch();
@@ -83,7 +84,7 @@ export default function CartDrawer({ open, setOpen }) {
                   </Shipping>
                   <BottomBtn>Proceed to checkout</BottomBtn>
                   <SenaryHeader>You might also like</SenaryHeader>
-                  <BottomImg />
+                  <BottomImg src={Recomended} alt="bottom-img" />
                 </BottomContainer>
               </>
             ) : (

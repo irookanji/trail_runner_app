@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Drawer, List, Button, Box, AppBar, Typography, Divider } from '@mui/material';
 import theme from '../../theme';
 import { Link } from 'react-router-dom';
-import Recomended from '../../assets/Recomended.png';
 
 export const StyledCart = styled(Drawer)`
   z-index: 2000;
@@ -256,9 +255,7 @@ export const SenaryHeader = styled(Typography)`
   padding: 0px;
 `;
 
-export const BottomImg = styled.img.attrs({
-  src: `${Recomended}`,
-})`
+export const BottomImg = styled.img`
   width: 100%;
   overflow-x: hidden;
   cursor: pointer;
