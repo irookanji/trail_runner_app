@@ -58,9 +58,11 @@ export const StyledCloseButton = styled.button`
   border: none;
   background-color: inherit;
   cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 250ms ease-in-out 0ms;
   &:hover {
-    transform: rotate(45deg);
-    transition: transform 250ms ease-in-out 0s;
+    transform-origin: center;
+    transform: rotate(90deg);
   }
 `;
 
@@ -235,10 +237,11 @@ export const MiniCloseButton = styled.button`
   font-weight: bold;
   color: gray;
   cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 250ms ease-in-out 0ms;
   &:hover {
     transform-origin: center;
-    transform: rotate(45deg);
-    transition: transform 250ms ease-in-out 0s;
+    transform: rotate(90deg);
   }
 `;
 
