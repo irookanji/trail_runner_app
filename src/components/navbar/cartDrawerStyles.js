@@ -2,22 +2,23 @@ import styled from 'styled-components';
 import { Drawer, List, Button, Box, AppBar, Typography, Divider } from '@mui/material';
 import theme from '../../theme';
 import { Link } from 'react-router-dom';
+import Recomended from '../../assets/Recomended.png';
 
 export const StyledCart = styled(Drawer)`
   z-index: 2000;
 
   ${theme.breakpoints.up('xs')} {
-    .MuiPaper-root {
+    .MuiDrawer-paper {
       width: 100%;
     }
   }
   ${theme.breakpoints.up('md')} {
-    .MuiPaper-root {
+    .MuiDrawer-paper {
       width: 40%;
     }
   }
   ${theme.breakpoints.up('lg')} {
-    .MuiPaper-root {
+    .MuiDrawer-paper {
       width: 27%;
     }
   }
@@ -57,11 +58,9 @@ export const StyledCloseButton = styled.button`
   border: none;
   background-color: inherit;
   cursor: pointer;
-  transform: rotate(0deg);
-  transition: transform 250ms ease-in-out 0ms;
   &:hover {
-    transform-origin: center;
-    transform: rotate(90deg);
+    transform: rotate(45deg);
+    transition: transform 250ms ease-in-out 0s;
   }
 `;
 
@@ -143,6 +142,7 @@ export const CartItem = styled(Box)`
   cursor: pointer;
   img {
     width: 100px;
+    height: 100px;
     margin-right: 1rem;
     border-radius: 0.5rem;
   }
@@ -155,9 +155,9 @@ export const DetailesContainer = styled(Box)`
 `;
 
 export const DetailesPrice = styled(Typography)`
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   margin-top: 1rem;
 `;
 
@@ -236,11 +236,10 @@ export const MiniCloseButton = styled.button`
   font-weight: bold;
   color: gray;
   cursor: pointer;
-  transform: rotate(0deg);
-  transition: transform 250ms ease-in-out 0ms;
   &:hover {
     transform-origin: center;
-    transform: rotate(90deg);
+    transform: rotate(45deg);
+    transition: transform 250ms ease-in-out 0s;
   }
 `;
 
@@ -259,4 +258,43 @@ export const BottomImg = styled.img`
   width: 100%;
   overflow-x: hidden;
   cursor: pointer;
+`;
+
+export const QuantitySelector = styled(Box)`
+  width: fit-content;
+  border: 2px solid #d3d4d5;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const Steper = styled(Button)`
+  cursor: pointer;
+  padding: 0px;
+  min-width: 32.5px;
+  text-align: center;
+  font-weight: bold;
+  color: #d3d4d5;
+  transition: color 2s;
+  &:hover {
+    color: black;
+  }
+`;
+
+export const Quantity = styled(Box)`
+  padding: 5px;
+  width: 100%;
+  min-width: 20px;
+  text-align: center;
+  user-select: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: #212a2f;
+`;
+
+export const PriceContainer = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0.5rem;
 `;

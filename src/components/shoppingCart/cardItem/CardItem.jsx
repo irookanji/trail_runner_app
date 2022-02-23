@@ -42,6 +42,10 @@ export default function CardItem({ cardInfo }) {
                 info: cardInfo.info,
                 price: cardInfo.price,
                 image: cardInfo.image,
+                size: cardInfo.size,
+                color: cardInfo.color,
+                discount: cardInfo.discount,
+                inventory: cardInfo.inventory,
               }),
             );
           }}

@@ -17,12 +17,16 @@ import {
   StyledDivider,
   SenaryHeader,
   BottomImg,
+  QuantitySelector,
+  Quantity,
+  Steper,
+  PriceContainer,
 } from './cartDrawerStyles';
-import { Box, Typography, Badge } from '@mui/material';
+import { Box, Typography, Badge, Alert } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteFromCart } from '../../redux/cartReducer';
+import { deleteFromCart, incrementQuantity, decrementQuantity } from '../../redux/cartReducer';
 import CartContent from './CartContent';
 import Recomended from '../../assets/Recomended.png';
 
@@ -30,6 +34,7 @@ export default function CartDrawer({ open, setOpen }) {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cartState.cart);
   const cartItems = cart.items;
+  const total = cartItems.reduce((total, product) => total + (product.price - product.discount) * product.quantity, 0);
   return (
     <>
       <React.Fragment key="right">
@@ -43,7 +48,9 @@ export default function CartDrawer({ open, setOpen }) {
                 <ShoppingCartOutlinedIcon sx={{ fontSize: '35px', color: 'gray' }} />
               </Badge>
               <Typography sx={{ fontSize: '12px' }}>
-                {cart.total >= 50 ? 'Congrats! You get free standard shipping.' : 'Youre 50 away from free shipping!'}
+                {total >= 200
+                  ? 'Congrats! You get free standard shipping.'
+                  : `You're ${200 - total} away from free shipping!`}
               </Typography>
             </Box>
           </StyledNavbar>
@@ -58,17 +65,56 @@ export default function CartDrawer({ open, setOpen }) {
                         <img alt="item.title" src={item.image} />
                         <DetailesContainer>
                           <Typography>{item.title}</Typography>
-                          <DetailesPrice>{item.price} &euro;</DetailesPrice>
+                          <Typography>{item.color}</Typography>
+                          <Typography>Size: {item.size}</Typography>
+                          <QuantitySelector>
+                            <Steper
+                              disabled={item.quantity === 0}
+                              variant="text"
+                              onClick={() => {
+                                dispatch(decrementQuantity(item));
+                              }}
+                            >
+                              {' '}
+                              &#8211;
+                            </Steper>
+                            <Quantity>{item.quantity}</Quantity>
+                            <Steper
+                              disabled={item.quantity === item.inventory}
+                              onClick={() => {
+                                dispatch(incrementQuantity(item));
+                              }}
+                            >
+                              +
+                            </Steper>
+                          </QuantitySelector>
+                          {item.quantity === item.inventory && (
+                            <Alert sx={{ width: '100%', marginTop: '10px' }} severity="info">
+                              Sorry, that's all that we have.
+                            </Alert>
+                          )}
                         </DetailesContainer>
-                        <MiniCloseButton>
-                          <CloseIcon
-                            onClick={() => {
-                              dispatch(deleteFromCart(item.id));
-                            }}
-                          />
-                        </MiniCloseButton>
+                        <PriceContainer>
+                          <MiniCloseButton>
+                            <CloseIcon
+                              onClick={() => {
+                                dispatch(deleteFromCart(item.id));
+                              }}
+                            />
+                          </MiniCloseButton>
+                          <DetailesPrice>
+                            {item.discount >= 1 ? (
+                              <Box display="inline">
+                                &euro;{item.price - item.discount}
+                                <Box sx={{ textDecoration: 'line-through', color: '#d3d4d5' }}>&euro;{item.price}</Box>
+                              </Box>
+                            ) : (
+                              <Box>&euro;{item.price}</Box>
+                            )}
+                          </DetailesPrice>
+                        </PriceContainer>
                       </CartItem>
-                      <StyledDivider />
+                      {cartItems.length >= 2 ? <StyledDivider /> : null}
                     </Box>
                   ))}
                 </ProductContainer>
@@ -76,11 +122,11 @@ export default function CartDrawer({ open, setOpen }) {
                   <StyledDivider />
                   <Subtotal>
                     <BottomTitle>Subtotal</BottomTitle>
-                    <Typography>&euro; {cart.total},00 EUR INCL. VAT</Typography>
+                    <Typography>&euro; {total},00 EUR INCL. VAT</Typography>
                   </Subtotal>
                   <Shipping>
                     <BottomTitle>Shipping</BottomTitle>
-                    <Typography>FREE</Typography>
+                    <Typography>{total >= 200 ? 'FREE' : '€15'}</Typography>
                   </Shipping>
                   <BottomBtn>Proceed to checkout</BottomBtn>
                   <SenaryHeader>You might also like</SenaryHeader>
