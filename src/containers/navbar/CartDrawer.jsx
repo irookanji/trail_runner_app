@@ -102,7 +102,7 @@ export default function CartDrawer({ open, setOpen }) {
                               }}
                             />
                           </MiniCloseButton>
-                          <DetailesPrice>
+                          <DetailesPrice component="div">
                             {item.discount >= 1 ? (
                               <Box display="inline">
                                 &euro;{item.price - item.discount}
@@ -122,7 +122,7 @@ export default function CartDrawer({ open, setOpen }) {
                   <StyledDivider />
                   <Subtotal>
                     <BottomTitle>Subtotal</BottomTitle>
-                    <Typography>&euro; {total},00 EUR INCL. VAT</Typography>
+                    <Typography component="div">&euro; {total},00 EUR INCL. VAT</Typography>
                   </Subtotal>
                   <Shipping>
                     <BottomTitle>Shipping</BottomTitle>

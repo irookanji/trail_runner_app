@@ -122,12 +122,8 @@ export default function Favorites() {
                     top: '25%',
                   }}
                 >
-                  <Link to="/men">
-                    <CustomButton link="/men" text="SHOP MEN" $customWidth="210px" />
-                  </Link>
-                  <Link to="/women">
-                    <CustomButton $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
-                  </Link>
+                  <CustomButton link="/men" text="SHOP MEN" $customWidth="210px" />
+                  <CustomButton $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
                 </Box>
 
                 {/* Image text */}
@@ -226,12 +222,8 @@ export default function Favorites() {
                       top: '25%',
                     }}
                   >
-                    <Link to="/men">
-                      <CustomButton link="/men" text="SHOP MEN" $customWidth="210px" />
-                    </Link>
-                    <Link to="/women">
-                      <CustomButton $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
-                    </Link>
+                    <CustomButton link="/men" text="SHOP MEN" $customWidth="210px" />
+                    <CustomButton $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
                   </Box>
 
                   {/* Image text */}
@@ -329,12 +321,8 @@ export default function Favorites() {
                     top: '25%',
                   }}
                 >
-                  <Link to="/men">
-                    <CustomButton link="/men" text="SHOP MEN" $customWidth="210px" />
-                  </Link>
-                  <Link to="/women">
-                    <CustomButton $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
-                  </Link>
+                  <CustomButton link="/men" text="SHOP MEN" $customWidth="210px" />
+                  <CustomButton $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
                 </Box>
 
                 {/* Image text */}

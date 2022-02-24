@@ -18,16 +18,18 @@ const LastSection = () => {
         {signed ? (
           <Box sx={{ mt: '2rem' }}>
             <StyledTextField id="standard-basic" label="Enter Your Email Address" variant="standard" />
-            <Link to="#" onClick={() => setSigned(false)}>
-              <CustomButton
-                $textColor="white"
-                $bgColor="#212A2F"
-                $hoverColor="grey"
-                $customWidth="111px"
-                link="/"
-                text="SIGN IN"
-              />
-            </Link>
+            {/* <Link to="#" onClick={() => setSigned(false)}> */}
+            <CustomButton
+              to="#"
+              onClick={() => setSigned(false)}
+              $textColor="white"
+              $bgColor="#212A2F"
+              $hoverColor="grey"
+              $customWidth="111px"
+              link="/"
+              text="SIGN IN"
+            />
+            {/* </Link> */}
           </Box>
         ) : (
           <SignedAlertText>You were successfully signed!</SignedAlertText>
