@@ -17,7 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
-import NewArrivalsDrawer from '../atoms/Drawer/NewArrivalsDrawer';
+import NewArrivalsDrawer from '../../components/NewArrivalsDrawer/NewArrivalsDrawer';
 import CartDrawer from './CartDrawer';
 import logo from '../../assets/logo.svg';
 import { Navigation, LinksWrapper, NavigationItem } from './cartDrawerStyles';

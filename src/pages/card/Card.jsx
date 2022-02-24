@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Container } from '@mui/material';
-import CardItem from '../cardItem/CardItem';
+import CardItem from './CardItem';
 
 const Card = ({ products, addToCart, cartData }) => {
   return (

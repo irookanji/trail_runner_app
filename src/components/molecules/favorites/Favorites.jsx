@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { itemData } from './FavoritesTabsData';
-import CustomButton from '../../components/atoms/Button/CustomButton';
+import CustomButton from '../../atoms/Button/CustomButton';
 import { Link } from 'react-router-dom';
 
 import { Tabs, Tab, Typography, Box, ImageList, ImageListItem, Icon } from '@mui/material';

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Card from '../components/shoppingCart/card/Card';
+import Card from './card/Card';
 import ProductFilters from '../components/molecules/ProductFilters/ProductFilters';
 import { Box, CircularProgress } from '@mui/material';
 import { getProducts } from '../requests';
