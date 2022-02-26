@@ -4,7 +4,7 @@ import theme from '../../../theme';
 import { Link } from 'react-router-dom';
 
 export const StyledButton = styled(Button)`
-  background: ${(props) => props.$bgColor || 'white'};
+  background: ${(props) => (props.white ? '#fff' : '#212a2f')};
   border-radius: 2px;
   font-weight: bold;
   font-size: 14px;
@@ -14,13 +14,14 @@ export const StyledButton = styled(Button)`
   text-transform: uppercase;
   width: ${(props) => props.$customWidth || '180px'};
   height: 48px;
-  color: ${(props) => props.$textColor || '#212A2F'};
-  border: 0;
+  color: ${(props) => (props.white ? '#212a2f' : '#fff')};
+  border: ${(props) => (props.white ? '#fff 2px solid' : '2px solid #212a2f')};
   outline: none;
   cursor: pointer;
   &:hover {
-    background: ${(props) => props.$hoverColor || 'rgb(219, 215, 215)'};
-    color: white;
+    background: ${(props) => (props.white ? '#212a2f' : '#fff')};
+    color: ${(props) => (props.white ? '#fff' : '#212a2f')};
+    border: ${(props) => (props.white ? '#212a2f 2px solid' : '2px solid #212a2f')};
   }
   ${theme.breakpoints.up('xs')} {
     width: ${(props) => props.$xsCustomWidth || '111px'};

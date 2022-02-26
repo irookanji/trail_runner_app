@@ -5,13 +5,11 @@ export default function CustomButton(props) {
   return (
     <StyledLink to={props.link}>
       <StyledButton
-        $textColor={props.$textColor}
         $xsCustomWidth={props.$xsCustomWidth}
         $customWidth={props.$buttonWidth}
         $mTop={props.$mTop}
         $mBottom={props.$mBottom}
-        $bgColor={props.$bgColor}
-        $hoverColor={props.$hoverColor}
+        white={props.white}
       >
         {props.text}
       </StyledButton>

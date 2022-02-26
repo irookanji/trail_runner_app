@@ -7,8 +7,8 @@ import SignIn from './pages/SignIn';
 import About from './pages/About';
 import Product from './pages/Product';
 import NotFound from './pages/NotFound';
-import NavbarMUI from './containers/navbar/NavbarMUI';
-import Footer from './containers/footer/Footer';
+import NavbarMUI from './templates/navbar/NavbarMUI';
+import Footer from './templates/footer/Footer';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 

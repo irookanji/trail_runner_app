@@ -2,7 +2,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { itemData } from './FavoritesTabsData';
 import CustomButton from '../../atoms/Button/CustomButton';
-import { Link } from 'react-router-dom';
 
 import { Tabs, Tab, Typography, Box, ImageList, ImageListItem, Icon } from '@mui/material';
 
@@ -122,8 +121,8 @@ export default function Favorites() {
                     top: '25%',
                   }}
                 >
-                  <CustomButton link="/men" text="SHOP MEN" $customWidth="210px" />
-                  <CustomButton $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
+                  <CustomButton white="true" link="/men" text="SHOP MEN" $customWidth="210px" />
+                  <CustomButton white="true" $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
                 </Box>
 
                 {/* Image text */}
@@ -222,8 +221,8 @@ export default function Favorites() {
                       top: '25%',
                     }}
                   >
-                    <CustomButton link="/men" text="SHOP MEN" $customWidth="210px" />
-                    <CustomButton $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
+                    <CustomButton white="true" link="/men" text="SHOP MEN" $customWidth="210px" />
+                    <CustomButton white="true" $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
                   </Box>
 
                   {/* Image text */}
@@ -321,8 +320,8 @@ export default function Favorites() {
                     top: '25%',
                   }}
                 >
-                  <CustomButton link="/men" text="SHOP MEN" $customWidth="210px" />
-                  <CustomButton $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
+                  <CustomButton white="true" link="/men" text="SHOP MEN" $customWidth="210px" />
+                  <CustomButton white="true" $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
                 </Box>
 
                 {/* Image text */}

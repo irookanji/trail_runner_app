@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Box, Typography, TextField } from '@mui/material';
-import theme from '../../theme';
+import theme from '../theme';
 
 export const Container = styled(Box)`
   display: flex;
