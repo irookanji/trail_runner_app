@@ -10,6 +10,7 @@ export default function CustomButton(props) {
         $mTop={props.$mTop}
         $mBottom={props.$mBottom}
         white={props.white}
+        onClick={props.onClick}
       >
         {props.text}
       </StyledButton>
