@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Card from './card/Card';
 import ProductFilters from '../components/molecules/ProductFilters/ProductFilters';
 import { Box, CircularProgress } from '@mui/material';
-import { getProducts } from '../requests';
 import styled from 'styled-components';
 import theme from '../theme';
+import { useSelector } from 'react-redux';
 
 export const Container = styled(Box)`
   display: flex;
@@ -24,20 +24,15 @@ export const Loader = styled(CircularProgress)`
 `;
 
 const Men = () => {
+  const productsState = useSelector((state) => state.productsState.products);
+  console.log(typeof productsState);
+  console.log(productsState);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-
-  const getAllProducts = async () => {
-    const response = await getProducts();
-    const onlyManProducts = response.filter((product) => {
-      return product.men === true;
-    });
-    setProducts(onlyManProducts);
-  };
-
-  useEffect(() => {
-    getAllProducts();
-  }, []);
+  const onlyMenProducts = productsState.filter((product) => {
+    return product.men === true;
+  });
+  setProducts(onlyMenProducts);
 
   const handleFiltering = (filteredProducts) => {
     setFilteredProducts(filteredProducts);
