@@ -8,10 +8,10 @@
 html,
 body {
   background: var(--color-bg);
+  font-family: Geograph, Helvetica, Arial, sans-serif;
   height: 100%;
   width: 100%;
   min-width: 100%;
-  font-family: Geograph, Helvetica, Arial, sans-serif;
 }
 
 a {

@@ -25,14 +25,11 @@ export const Loader = styled(CircularProgress)`
 
 const Men = () => {
   const productsState = useSelector((state) => state.productsState.products);
-  console.log(typeof productsState);
-  console.log(productsState);
-  const [products, setProducts] = useState([]);
+  const products = [];
   const [filteredProducts, setFilteredProducts] = useState([]);
   const onlyMenProducts = productsState.filter((product) => {
-    return product.men === true;
+    return product.men === true ? products.push(product) : null;
   });
-  setProducts(onlyMenProducts);
 
   const handleFiltering = (filteredProducts) => {
     setFilteredProducts(filteredProducts);
