@@ -12,6 +12,7 @@ import fourthSectionCoverImage from '../assets/FourthCover.jpg';
 import { Box } from '@mui/material';
 import CustomButton from '../components/atoms/Button/CustomButton';
 import { Container, Title, Description, StyledTextField, SignedAlertText, NotePolicyText } from '../pages/styles';
+import CustomCarouselNew from '../components/atoms/Carousel/CustomCarouselNew';
 
 const Home = () => {
   const [signed, setSigned] = React.useState(true);
@@ -32,7 +33,7 @@ const Home = () => {
         subTitleText="Soft and cozy wool shoes to keep you comfortable all year round."
       />
 
-      <CustomCarousel slides={slidesCollections} titleText="Shop The Collections" />
+      <CustomCarouselNew slides={slidesCollections} titleText="Shop The Collections" />
 
       <CustomSection
         renderSecondButton={false}

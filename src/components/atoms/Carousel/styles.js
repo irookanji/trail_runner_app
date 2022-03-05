@@ -7,11 +7,15 @@ export const Container = styled(Box)`
 `;
 
 export const SlideContainer = styled(Box)`
-  max-width: 396px;
+  max-width: 390px;
   display: flex;
   flex-direction: column;
   margin: 1.5rem;
   cursor: pointer;
+`;
+
+export const CommonContainer = styled(Box)`
+  position: relative;
 `;
 
 export const ImageContainer = styled(Box)`
@@ -88,8 +92,22 @@ export const Description = styled(Typography)`
   width: 85%;
 `;
 
-export const ArrowButton = styled.button`
+export const ArrowButtonLeft = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+  position: relative;
+  left: -30px;
+  top: 300px;
+  z-index: 100;
+`;
+
+export const ArrowButtonRight = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 100rem;
+  top: 300px;
+  z-index: 100;
 `;

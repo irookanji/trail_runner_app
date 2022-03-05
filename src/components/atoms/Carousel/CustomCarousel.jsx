@@ -7,7 +7,8 @@ import {
   SlideContainer,
   ImageContainer,
   ImageCarousel,
-  ArrowButton,
+  ArrowButtonRight,
+  ArrowButtonLeft
 } from './styles';
 
 import arrowToRight from '../../../assets/arrow_right.svg';
@@ -28,14 +29,14 @@ export default function CustomCarousel(props) {
             resolve: arrowsPlugin,
             options: {
               arrowLeft: (
-                <ArrowButton>
+                <ArrowButtonLeft>
                   <img src={arrowToLeft} alt="Arrow To Left" name="angle-double-left" />
-                </ArrowButton>
+                </ArrowButtonLeft>
               ),
               arrowRight: (
-                <ArrowButton>
+                <ArrowButtonRight>
                   <img src={arrowToRight} alt="Arrow To Right" name="angle-double-right" />
-                </ArrowButton>
+                </ArrowButtonRight>
               ),
               addArrowClickHandler: true,
             },

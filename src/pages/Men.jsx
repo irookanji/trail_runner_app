@@ -27,9 +27,7 @@ const Men = () => {
   const productsState = useSelector((state) => state.productsState.products);
   const products = [];
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const onlyMenProducts = productsState.filter((product) => {
-    return product.men === true ? products.push(product) : null;
-  });
+  productsState.filter((product) => (product.men === true ? products.push(product) : null));
 
   const handleFiltering = (filteredProducts) => {
     setFilteredProducts(filteredProducts);
