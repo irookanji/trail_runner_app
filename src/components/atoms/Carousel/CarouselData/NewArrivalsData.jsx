@@ -18,4 +18,19 @@ export const slidesNewArrival = [
     title: "Men's Trail Runner SWT",
     info: 'Limited Edition Color, Diablo',
   },
+  {
+    image: image1,
+    title: "Men's Trail Runner SWT",
+    info: 'Classic Color, Natural Black',
+  },
+  {
+    image: image2,
+    title: "Women's Trail Runner SWT",
+    info: 'Classic Color, Natural White',
+  },
+  {
+    image: image3,
+    title: "Men's Trail Runner SWT",
+    info: 'Limited Edition Color, Diablo',
+  },
 ];

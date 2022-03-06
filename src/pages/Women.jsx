@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import Card from './card/Card';
-import ProductFilters from '../components/molecules/ProductFilters/ProductFilters';
-import { Box, CircularProgress } from '@mui/material';
 import styled from 'styled-components';
 import theme from '../theme';
 import { useSelector } from 'react-redux';
+import {
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+  Box,
+  CircularProgress,
+  Slider,
+  Typography,
+} from '@mui/material';
 
 export const Container = styled(Box)`
   display: flex;
@@ -24,25 +32,57 @@ export const Loader = styled(CircularProgress)`
 `;
 
 const Women = () => {
+  const [filterPrice, setFilterPrice] = React.useState([0, 200]);
+  const [search, setNewSearch] = useState('');
   const productsState = useSelector((state) => state.productsState.products);
   const products = [];
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  productsState.filter((product) => (product.women === true ? products.push(product) : null));
+  productsState.filter((product) => {
+    return product.women === true ? products.push(product) : null;
+  });
 
-  const handleFiltering = (filteredProducts) => {
-    setFilteredProducts(filteredProducts);
+  const minPrice = Math.min(...products.map((product) => product.price));
+  const maxPrice = Math.max(...products.map((product) => product.price));
+
+  const handleChange = (event, newValue) => {
+    setFilterPrice(newValue);
   };
+
+  const filtered = products.filter((product) => {
+    return (
+      product.color.toLowerCase().includes(search.toLowerCase()) &&
+      product.price >= Math.min(...filterPrice) &&
+      product.price <= Math.max(...filterPrice)
+    );
+  });
 
   return (
     <Container>
-      <ProductFilters products={products} handleFiltering={handleFiltering} />
-      {filteredProducts.length !== 0 ? (
-        <Card cartData={filteredProducts} />
-      ) : products.length !== 0 ? (
-        <Card cartData={products} />
-      ) : (
-        <Loader />
-      )}
+      <FormControl sx={{ padding: '30px' }}>
+        <RadioGroup defaultValue="">
+          <FormControlLabel onClick={() => setNewSearch('')} value="" control={<Radio />} label="All" />
+          {products.map((product) => {
+            return (
+              <FormControlLabel
+                key={product.id}
+                onClick={() => setNewSearch(product.color)}
+                value={product.color}
+                control={<Radio />}
+                label={product.color}
+              />
+            );
+          })}
+        </RadioGroup>
+        <Typography sx={{ mt: '1rem' }}>Price</Typography>
+        <Slider
+          getAriaLabel={() => 'Temperature range'}
+          value={filterPrice}
+          onChange={handleChange}
+          valueLabelDisplay="auto"
+          min={minPrice}
+          max={maxPrice}
+        />
+      </FormControl>
+      {products.length !== 0 ? <Card cartData={filtered} /> : <Loader />}
     </Container>
   );
 };

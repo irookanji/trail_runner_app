@@ -8,9 +8,9 @@ import {
   SlideContainer,
   ImageContainer,
   ImageCarousel,
-  ArrowButtonLeft,
-  ArrowButtonRight,
+  ArrowButton,
   CommonContainer,
+  ArrowContainer,
 } from './styles';
 import arrowToRight from '../../../assets/arrow_right.svg';
 import arrowToLeft from '../../../assets/arrow_left.svg';
@@ -48,12 +48,14 @@ export default function CustomCarouselNew(props) {
       <Title>{props.titleText}</Title>
 
       <CommonContainer>
-        <ArrowButtonLeft onClick={sliderRef?.slickPrev}>
-          <img src={arrowToLeft} alt="Arrow To Left" name="angle-double-left" />
-        </ArrowButtonLeft>
-        <ArrowButtonRight onClick={sliderRef?.slickNext}>
-          <img src={arrowToRight} alt="Arrow To Left" name="angle-double-left" />
-        </ArrowButtonRight>
+        <ArrowContainer>
+          <ArrowButton onClick={sliderRef?.slickPrev}>
+            <img src={arrowToLeft} alt="Arrow To Left" name="angle-double-left" />
+          </ArrowButton>
+          <ArrowButton onClick={sliderRef?.slickNext}>
+            <img src={arrowToRight} alt="Arrow To Left" name="angle-double-left" />
+          </ArrowButton>
+        </ArrowContainer>
 
         <Slider ref={setSliderRef} {...sliderSettings}>
           {props.slides.map((slide, index) => (

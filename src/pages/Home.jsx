@@ -50,7 +50,8 @@ const Home = () => {
         subTitleText="We craft with planet-friendly natural materials, like merino wool and eucalyptus trees, because they're our
         best chance for a sustainable future."
       />
-      <CustomCarousel slides={slidesNewArrival} titleText="New Arrivals" />
+
+      <CustomCarouselNew slides={slidesNewArrival} titleText="New Arrivals" />
 
       <CustomSection
         coverImage={fourthSectionCoverImage}
@@ -68,7 +69,7 @@ const Home = () => {
         subTitleText="Reducing our environmental impact has been a top priority since day one. But now, we’re taking things further.
         Explore our overall sustainability approach, our progress thus far, and our bold list of commitments for 2025."
       />
-      <CustomCarousel slides={slidesStories} titleText="Stories" />
+      <CustomCarouselNew slides={slidesStories} titleText="Stories" />
       <Container>
         <Title variant="h2">Want First Dibs?</Title>
         <Description variant="h5">
