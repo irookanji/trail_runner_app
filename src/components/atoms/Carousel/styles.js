@@ -1,42 +1,15 @@
 import styled from 'styled-components';
 import { Box, Typography, Paper } from '@mui/material';
 import theme from '../../../theme';
-import Slider from 'react-slick';
 
 export const Container = styled(Box)`
   max-width: 100%;
   margin: 0 1rem;
 `;
 
-export const ArrowContainer = styled(Box)`
-  /* margin: 0 -2rem; */
-  max-width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-  top: 300px;
-  z-index: 100;
-  ${theme.breakpoints.down('sm')} {
-    top: 230px;
-    display: none;
-  }
-`;
-
-export const SlidersContainer = styled(Box)`
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0 2rem; */
-`;
-
-export const SlideContainer = styled(Box)`
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 2rem 3rem;
-  cursor: pointer;
+export const InfoCardContainer = styled(Box)`
+  padding: 0 2rem;
+  width: 100%;
 `;
 
 export const CommonContainer = styled(Box)`
@@ -44,16 +17,28 @@ export const CommonContainer = styled(Box)`
   max-width: 100%;
 `;
 
+export const SlideContainer = styled(Paper)`
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: 4px 4px 26px -7px rgba(34, 60, 80, 0.2);
+  min-height: 560px;
+  ${theme.breakpoints.down('sm')} {
+    min-height: 440px;
+  }
+`;
+
 export const ImageContainer = styled(Box)`
   overflow: hidden;
+  max-width: 100%;
 
   ${theme.breakpoints.up('xs')} {
-    width: 290px;
     height: 290px;
+    min-width: 100%;
   }
 
   ${theme.breakpoints.up('md')} {
-    width: 396px;
     height: 396px;
   }
 `;
@@ -77,13 +62,11 @@ export const Title = styled(Typography)`
   display: flex;
   justify-content: center;
   font-weight: bold;
-  /* margin-bottom: 2rem; */
   line-height: 42px;
   letter-spacing: 0.5px;
   color: #212a2f;
   ${theme.breakpoints.up('xs')} {
-    margin-top: 1rem;
-    margin-left: 0;
+    margin-bottom: 1.5rem;
     font-size: 22px;
   }
   ${theme.breakpoints.up('sm')} {
@@ -108,6 +91,7 @@ export const SubTitle = styled(Typography)`
 `;
 
 export const Description = styled(Typography)`
+  width: 85%;
   ${theme.breakpoints.up('xs')} {
     margin-top: 1rem;
     font-size: 14px;
@@ -115,11 +99,18 @@ export const Description = styled(Typography)`
   ${theme.breakpoints.up('lg')} {
     font-size: 16px;
   }
-  width: 85%;
 `;
 
-export const ArrowButton = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
+export const ArrowBtn = styled(Box)`
+  z-index: 1;
+  ${theme.breakpoints.up('xs')} {
+    img {
+      display: none;
+    }
+  }
+  ${theme.breakpoints.up('md')} {
+    img {
+      display: block;
+    }
+  }
 `;

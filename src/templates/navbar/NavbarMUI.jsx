@@ -35,7 +35,7 @@ const Navbar = ({ products, total, checkout }) => {
     setAnchorElNav(null);
   };
 
-  const [topDrawer, setTopDrawer] = React.useState(false);
+  const [, setTopDrawer] = React.useState(false);
   const [rightDrawer, setRightDrawer] = React.useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));

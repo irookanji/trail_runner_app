@@ -20,7 +20,6 @@ const App = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getAllProducts = async () => {
     const response = await getProducts();
-    console.log(response);
     dispatch(saveProducts(response));
   };
 

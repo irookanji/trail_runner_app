@@ -4,7 +4,6 @@ import Favorites from '../components/molecules/favorites/Favorites';
 import { slidesCollections } from '../components/atoms/Carousel/CarouselData/CollectionsData';
 import { slidesNewArrival } from '../components/atoms/Carousel/CarouselData/NewArrivalsData';
 import { slidesStories } from '../components/atoms/Carousel/CarouselData/StoriesData';
-import CustomCarousel from '../components/atoms/Carousel/CustomCarousel';
 import CustomSection from '../components/molecules/CustomSection/CustomSection';
 import secondSectionCoverImage from '../assets/SecondCover.jpg';
 import fourthSectionCoverImage from '../assets/FourthCover.jpg';
