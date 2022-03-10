@@ -4,13 +4,12 @@ Fully responsive e-commerce application selling sports shoes.
 
 Pet-project based on this [UI design](https://www.figma.com/file/mlPuSVMnEwfS1KzgwOd7FU/Allbirds) in Figma.
 
+
 ## Demo
+You can visit the site [here](https://epic-knuth-85b278.netlify.app/). It was deployed to _Netlify.com_ for demonstration purposes.
 
-Insert gif or link to demo (will be added soon)
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Demo](Allbirds_1.gif)
 
 ## Tech Stack
 
@@ -18,21 +17,14 @@ Insert gif or link to demo (will be added soon)
 
 **Server:** Mockachino
 
-## Installation
 
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
  
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/irookanji/trail_runner_app.git
 ```
 
 Go to the project directory
