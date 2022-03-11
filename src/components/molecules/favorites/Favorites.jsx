@@ -122,7 +122,7 @@ export default function Favorites() {
                   }}
                 >
                   <CustomButton white="true" link="/men" text="SHOP MEN" $customWidth="210px" />
-                  <CustomButton white="true" $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
+                  <CustomButton white="true" link="/women" text="SHOP WOMEN" $customWidth="210px" />
                 </Box>
 
                 {/* Image text */}
@@ -222,7 +222,7 @@ export default function Favorites() {
                     }}
                   >
                     <CustomButton white="true" link="/men" text="SHOP MEN" $customWidth="210px" />
-                    <CustomButton white="true" $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
+                    <CustomButton white="true" link="/women" text="SHOP WOMEN" $customWidth="210px" />
                   </Box>
 
                   {/* Image text */}
@@ -321,7 +321,7 @@ export default function Favorites() {
                   }}
                 >
                   <CustomButton white="true" link="/men" text="SHOP MEN" $customWidth="210px" />
-                  <CustomButton white="true" $mTop="1rem" link="/women" text="SHOP WOMEN" $customWidth="210px" />
+                  <CustomButton white="true" link="/women" text="SHOP WOMEN" $customWidth="210px" />
                 </Box>
 
                 {/* Image text */}
