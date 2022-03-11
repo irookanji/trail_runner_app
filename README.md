@@ -8,8 +8,13 @@ Pet-project based on this [UI design](https://www.figma.com/file/mlPuSVMnEwfS1Kz
 ## Demo
 You can visit the site [here](https://epic-knuth-85b278.netlify.app/). It was deployed to _Netlify.com_ for demonstration purposes.
 
+### Desktop view:
 
-![Demo](Allbirds_1.gif)
+![Desktop](Allbirds_1.gif) 
+
+### Mobile view:
+
+![Mobile](Allbirds_2.gif)
 
 ## Tech Stack
 
