@@ -12,10 +12,34 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const theme = createTheme();
 
 export default function SignIn() {
+  const badReq = () => {
+    axios
+      .post(
+        'https://www.mockachino.com/f74be42c-0725-47/bad-request',
+        {
+          username: 'api',
+          password: 'MY_PASSWORD',
+          grant_type: 'MY_GRANT_TYPE',
+        },
+        {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+          },
+        },
+      )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -67,6 +91,7 @@ export default function SignIn() {
             />
             <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
             <Button
+              onClick={badReq}
               type="submit"
               fullWidth
               variant="contained"
