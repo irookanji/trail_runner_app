@@ -18,7 +18,7 @@ You can visit the site [here](https://epic-knuth-85b278.netlify.app/). It was de
 
 ## Tech Stack
 
-**Client:** React, Redux, Axios, Material-UI, Styled Components
+**Client:** React, Redux, Axios, Material UI, Styled Components, Formik, Yup
 
 **Server:** Mockachino
 

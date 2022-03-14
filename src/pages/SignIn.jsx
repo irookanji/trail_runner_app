@@ -13,10 +13,31 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
 
 const theme = createTheme();
 
+const validationSchema = yup.object({
+  email: yup.string('Enter your email').email('Enter a valid email').required('Email is required'),
+  password: yup
+    .string('Enter your password')
+    .min(8, 'Password should be of minimum 8 characters length')
+    .required('Password is required'),
+});
+
 export default function SignIn() {
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
   const badReq = () => {
     axios
       .post(
@@ -42,6 +63,7 @@ export default function SignIn() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    formik.handleSubmit();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
     console.log({
@@ -68,26 +90,35 @@ export default function SignIn() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
+
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
               fullWidth
               id="email"
-              label="Email Address"
               name="email"
-              autoComplete="email"
+              label="Email Address"
               autoFocus
+              autoComplete="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+              helperText={formik.touched.email && formik.errors.email}
             />
             <TextField
               margin="normal"
               required
               fullWidth
+              id="password"
               name="password"
               label="Password"
               type="password"
-              id="password"
               autoComplete="current-password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              error={formik.touched.password && Boolean(formik.errors.password)}
+              helperText={formik.touched.password && formik.errors.password}
             />
             <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
             <Button
