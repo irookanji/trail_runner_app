@@ -14,17 +14,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useFormik } from 'formik';
-import * as yup from 'yup';
+import validationSchema from '../utils/validationSchema';
 
 const theme = createTheme();
-
-const validationSchema = yup.object({
-  email: yup.string('Enter your email').email('Enter a valid email').required('Email is required'),
-  password: yup
-    .string('Enter your password')
-    .min(8, 'Password should be of minimum 8 characters length')
-    .required('Password is required'),
-});
 
 export default function SignIn() {
   const formik = useFormik({
