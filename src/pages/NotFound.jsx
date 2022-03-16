@@ -6,9 +6,10 @@ import styled from 'styled-components';
 import theme from '../theme';
 
 export const Container = styled(Box)`
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
-  margin: 2% auto;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   ${theme.breakpoints.up('xs')} {
