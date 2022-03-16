@@ -11,7 +11,7 @@ import fourthSectionCoverImage from '../assets/FourthCover.jpg';
 import { Box } from '@mui/material';
 import CustomButton from '../components/atoms/Button/CustomButton';
 import { Container, Title, Description, StyledTextField, SignedAlertText, NotePolicyText } from '../pages/styles';
-import CustomCarouselNew from '../components/atoms/Carousel/CustomCarouselNew';
+import CustomCarousel from '../components/atoms/Carousel/CustomCarousel';
 
 const Home = () => {
   const [signed, setSigned] = React.useState(true);
@@ -32,7 +32,7 @@ const Home = () => {
         subTitleText="Soft and cozy wool shoes to keep you comfortable all year round."
       />
 
-      <CustomCarouselNew slides={slidesCollections} titleText="Shop The Collections" />
+      <CustomCarousel slides={slidesCollections} titleText="Shop The Collections" />
 
       <CustomSection
         renderSecondButton={false}
@@ -50,7 +50,7 @@ const Home = () => {
         best chance for a sustainable future."
       />
 
-      <CustomCarouselNew slides={slidesNewArrival} titleText="New Arrivals" />
+      <CustomCarousel slides={slidesNewArrival} titleText="New Arrivals" />
 
       <CustomSection
         coverImage={fourthSectionCoverImage}
@@ -68,7 +68,7 @@ const Home = () => {
         subTitleText="Reducing our environmental impact has been a top priority since day one. But now, we’re taking things further.
         Explore our overall sustainability approach, our progress thus far, and our bold list of commitments for 2025."
       />
-      <CustomCarouselNew slides={slidesStories} titleText="Stories" />
+      <CustomCarousel slides={slidesStories} titleText="Stories" />
       <Container>
         <Title variant="h2">Want First Dibs?</Title>
         <Description variant="h5">

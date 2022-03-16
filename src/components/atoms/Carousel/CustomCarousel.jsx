@@ -17,7 +17,7 @@ import arrowToLeft from '../../../assets/arrow_left.svg';
 import { v4 as uuidv4 } from 'uuid';
 import 'slick-carousel/slick/slick.css';
 
-export default function CustomCarouselNew(props) {
+export default function CustomCarousel(props) {
   const [, setSliderRef] = useState(null);
 
   const sliderSettings = {

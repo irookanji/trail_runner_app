@@ -1,0 +1,812 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel rendered as expected 1`] = `
+<div
+  className="sc-bdvvtL hTEDVR MuiBox-root css-0"
+>
+  <p
+    className="MuiTypography-root MuiTypography-body1 sc-gKclnd hXhoYV css-ahj2mt-MuiTypography-root"
+  >
+    Shop The Collections
+  </p>
+  <div
+    className="sc-dkPtRN cMUzjc MuiBox-root css-0"
+  >
+    <div
+      className="slick-slider slick-initialized"
+      dir="ltr"
+    >
+      <div
+        className="sc-pVTFL bpyTJM slick-arrow slick-prev MuiBox-root css-260zpl"
+        data-role="none"
+        onClick={[Function]}
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+      >
+        <img
+          alt="Arrow To Left"
+          name="angle-double-left"
+          src="arrow_left.svg"
+        />
+      </div>
+      <div
+        className="slick-list"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={null}
+        onMouseMove={null}
+        onMouseUp={[Function]}
+        onTouchCancel={null}
+        onTouchEnd={[Function]}
+        onTouchMove={null}
+        onTouchStart={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="slick-track"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+              "WebkitTransition": "",
+              "msTransform": "translateX(0px)",
+              "opacity": 1,
+              "transform": "translate3d(0px, 0px, 0px)",
+              "transition": "",
+            }
+          }
+        >
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={-3}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="The latest styles and limited edition colors that you can only find here (while they last, that is)."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg cxnBve collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    New Arrivals
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    The latest styles and limited edition colors that you can only find here (while they last, that is).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={-2}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg hgcquR collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Natural Run Collection
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={-1}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg fFUzik collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Fresh Long Sleeve
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active slick-current"
+            data-index={0}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="The latest styles and limited edition colors that you can only find here (while they last, that is)."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg cxnBve collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    New Arrivals
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    The latest styles and limited edition colors that you can only find here (while they last, that is).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active"
+            data-index={1}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg hgcquR collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Natural Run Collection
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active"
+            data-index={2}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg fFUzik collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Fresh Long Sleeve
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={3}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="The latest styles and limited edition colors that you can only find here (while they last, that is)."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg cxnBve collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    New Arrivals
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    The latest styles and limited edition colors that you can only find here (while they last, that is).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={4}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg hgcquR collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Natural Run Collection
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={5}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg fFUzik collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Fresh Long Sleeve
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={6}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="The latest styles and limited edition colors that you can only find here (while they last, that is)."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg cxnBve collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    New Arrivals
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    The latest styles and limited edition colors that you can only find here (while they last, that is).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={7}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg hgcquR collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Natural Run Collection
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={8}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg fFUzik collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Fresh Long Sleeve
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={9}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="The latest styles and limited edition colors that you can only find here (while they last, that is)."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg cxnBve collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    New Arrivals
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    The latest styles and limited edition colors that you can only find here (while they last, that is).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={10}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg hgcquR collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Natural Run Collection
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    Looking for sustainable ways to break a sweat? We’ve got you covered from head to toe.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={11}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-hKwDye fJeOmt css-1ps6pg7-MuiPaper-root"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="sc-eCImPb iKawao MuiBox-root css-0"
+                >
+                  <div
+                    alt="It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you."
+                    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-jRQBWg fFUzik collection_img css-1ps6pg7-MuiPaper-root"
+                  />
+                </div>
+                <div
+                  className="sc-gsDKAQ bvFUbt MuiBox-root css-0"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-iCfMLu buLcBz css-ahj2mt-MuiTypography-root"
+                  >
+                    Fresh Long Sleeve
+                  </p>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 sc-furwcr jcRKPK css-ahj2mt-MuiTypography-root"
+                  >
+                    It’s crisp, clean and ready for wherever the day takes you. And whenever the day takes you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-pVTFL bpyTJM slick-arrow slick-next MuiBox-root css-vcx38y"
+        data-role="none"
+        onClick={[Function]}
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+      >
+        <img
+          alt="Arrow To Right"
+          name="angle-double-right"
+          src="arrow_right.svg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
