@@ -17,7 +17,12 @@ import arrowToLeft from '../../../assets/arrow_left.svg';
 import { v4 as uuidv4 } from 'uuid';
 import 'slick-carousel/slick/slick.css';
 
-export default function CustomCarousel(props) {
+type Props = {
+  titleText: string,
+  slides: Array<Object>,
+};
+
+export default function CustomCarousel({ titleText, slides }: Props) {
   const [, setSliderRef] = useState(null);
 
   const sliderSettings = {
@@ -53,10 +58,10 @@ export default function CustomCarousel(props) {
 
   return (
     <Container>
-      <Title>{props.titleText}</Title>
+      <Title>{titleText}</Title>
       <CommonContainer>
         <Slider ref={setSliderRef} {...sliderSettings}>
-          {props.slides.map((slide, index) => (
+          {slides.map((slide, index) => (
             <SlideContainer key={uuidv4()}>
               <ImageContainer>
                 <ImageCarousel className="collection_img" $cover={slide.image} alt={slide.info} />
