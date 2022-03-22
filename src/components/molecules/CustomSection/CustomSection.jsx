@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonContainer, Title, SubTitle, ImageCover, ContentContainer, VideoContainer } from './styles';
-import CustomButton from '../../atoms/Button/CustomButton.jsx';
+import CustomButton from '../../atoms/Button/CustomButton.tsx';
 import backgroundVideo from '../../../assets/backgroundVideo.mp4';
 
 export default function CustomSection(props) {

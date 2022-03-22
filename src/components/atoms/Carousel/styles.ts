@@ -43,7 +43,10 @@ export const ImageContainer = styled(Box)`
   }
 `;
 
-export const ImageCarousel = styled(Paper)`
+export const ImageCarousel =
+  styled(Paper) <
+  { $cover: string } >
+  `
   display: flex;
   position: relative;
   background-size: cover;

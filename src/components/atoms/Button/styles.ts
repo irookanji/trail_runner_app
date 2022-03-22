@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import theme from '../../../theme';
 import { Link } from 'react-router-dom';
 
-export const StyledButton = styled(Button)`
+export const StyledButton = styled(Button)<{ white: boolean; $customWidth: string; $mTop: string; $xsCustomWidth: string; $mBottom: string; }>`
   background: ${(props) => (props.white ? '#fff' : '#212a2f')};
   border-radius: 2px;
   font-weight: bold;
