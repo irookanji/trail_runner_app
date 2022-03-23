@@ -38,12 +38,12 @@ export default function CustomCarousel({ titleText, slides }: Props) {
     infinite: true,
     prevArrow: (
       <ArrowBtn left={0}>
-        <img src={arrowToLeft} alt="Arrow To Left" name="angle-double-left" />
+        <img src={arrowToLeft} alt="Arrow To Left" />
       </ArrowBtn>
     ),
     nextArrow: (
       <ArrowBtn right="100px">
-        <img src={arrowToRight} alt="Arrow To Right" name="angle-double-right" />
+        <img src={arrowToRight} alt="Arrow To Right" />
       </ArrowBtn>
     ),
     responsive: [

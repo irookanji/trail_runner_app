@@ -1,18 +1,29 @@
 import React from 'react';
 import { StyledButton, StyledLink } from './styles';
 
-export default function CustomButton(props) {
+type Props = {
+  link: string; 
+  $xsCustomWidth: string; 
+  $buttonWidth: string;
+  $mTop: string;
+  $mBottom: string;
+  white: boolean;
+  onClick: () => void;
+  text: string;
+}
+
+export default function CustomButton({link, $xsCustomWidth, $buttonWidth, $mTop, $mBottom, white, onClick, text}: Props) {
   return (
-    <StyledLink to={props.link}>
+    <StyledLink to={link}>
       <StyledButton
-        $xsCustomWidth={props.$xsCustomWidth}
-        $customWidth={props.$buttonWidth}
-        $mTop={props.$mTop}
-        $mBottom={props.$mBottom}
-        white={props.white}
-        onClick={props.onClick}
+        $xsCustomWidth={$xsCustomWidth}
+        $customWidth={$buttonWidth}
+        $mTop={$mTop}
+        $mBottom={$mBottom}
+        white={white}
+        onClick={onClick}
       >
-        {props.text}
+        {text}
       </StyledButton>
     </StyledLink>
   );
