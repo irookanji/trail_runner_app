@@ -19,7 +19,7 @@ export const ContentContainer = styled(Box)`
   }
 `;
 
-export const Title = styled(Typography)`
+export const Title = styled(Typography)<{ $fontSizeTitle?: string; $lineHeightTitle?: string;}>`
   font-weight: bold;
   text-align: center;
   font-size: ${(props) => props.$fontSizeTitle || '1.5rem'};
@@ -30,7 +30,9 @@ export const Title = styled(Typography)`
   }
 `;
 
-export const SubTitle = styled(Typography)`
+export const SubTitle = styled(Typography)<{
+  $fontWeightSubTitle?: string; $fontSizeSubTitle?: string; $lineHeightSubTitle?: string;
+}>`
   font-weight: ${(props) => props.$fontWeightSubTitle || 'bold'};
   text-align: center;
   font-size: ${(props) => props.$fontSizeSubTitle || '1rem'};
@@ -53,7 +55,9 @@ export const ButtonContainer = styled(Box)`
   }
 `;
 
-export const ImageCover = styled(Paper)`
+export const ImageCover = styled(Paper)<{
+  $cover?: string;
+}>`
   display: flex;
   position: relative;
   background-size: cover;
@@ -71,10 +75,10 @@ export const ImageCover = styled(Paper)`
 
   ${theme.breakpoints.up('md')} {
     display: flex;
-    ${(props) =>
-      props.$cover
+    ${({$cover}) =>
+      $cover
         ? css`
-            background-image: url(${(props) => props.$cover});
+            background-image: url(${() => $cover});
           `
         : null}
     margin-top: 6rem;
