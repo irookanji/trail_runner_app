@@ -2,13 +2,17 @@ import * as React from 'react';
 import { StyledNewArrivalsDrawer, StyledButton } from './styles';
 import NewArrivalsContent from './NewArrivalsContent';
 
-export default function NewArrivalsDrawer(props) {
+type Props = {
+  children: string;
+}
+
+export default function NewArrivalsDrawer({children}: Props) {
   const [topDrawer, setTopDrawer] = React.useState(false);
 
   return (
     <>
       <React.Fragment key="top">
-        <StyledButton onClick={() => setTopDrawer(!topDrawer)}>{props.children}</StyledButton>
+        <StyledButton onClick={() => setTopDrawer(!topDrawer)}>{children}</StyledButton>
         <StyledNewArrivalsDrawer anchor="top" open={topDrawer} onClose={() => setTopDrawer(false)}>
           <NewArrivalsContent />
         </StyledNewArrivalsDrawer>

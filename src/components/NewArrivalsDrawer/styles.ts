@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Drawer, Button, Box, Typography } from '@mui/material';
 
-export const StyledNewArrivalsDrawer = styled(Drawer)`
+export const StyledNewArrivalsDrawer = styled(Drawer)<
+{ $drawerWidth?: string | number } >`
   .MuiPaper-root {
     top: 64px;
     right: 15px;
@@ -19,7 +20,7 @@ export const Container = styled(Box)`
   margin: 4rem auto;
 `;
 
-export const Title = styled(Typography)`
+export const Title = styled(Typography)<{component: any}>`
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
@@ -31,7 +32,7 @@ export const Title = styled(Typography)`
   color: inherit;
 `;
 
-export const SectionsContainer = styled(Box)`
+export const SectionsContainer = styled(Box)<{component?: any}>`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -46,7 +47,8 @@ export const SectionLink = styled(Typography)`
   cursor: pointer;
 `;
 
-export const FeaturedContainer = styled(Typography)`
+export const FeaturedContainer = styled(Typography)<
+{ $featuredBg?: string; $hoverBoxShadow?: string; component?: any} >`
   display: flex;
   align-items: center;
   justify-content: center;

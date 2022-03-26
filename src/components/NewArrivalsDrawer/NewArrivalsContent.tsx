@@ -4,9 +4,9 @@ import { Grid } from '@mui/material';
 import { Container, Title, SectionsContainer, SectionLink, FeaturedContainer, FeaturedSectionLink } from './styles';
 import { v4 as uuidv4 } from 'uuid';
 
-const ShoesList = ['Running Shoes', 'Everyday Trainers', 'Flats', 'Rain Repellent Trainers', 'Slip-Ons', 'High Tops'];
+const ShoesList: string[] = ['Running Shoes', 'Everyday Trainers', 'Flats', 'Rain Repellent Trainers', 'Slip-Ons', 'High Tops'];
 
-const ApparelList = [
+const ApparelList: string[] = [
   'Sweatshirts & Sweatpants',
   'Activewear',
   'Tees & Tops',
@@ -16,7 +16,7 @@ const ApparelList = [
   'Socks',
 ];
 
-const AccessorieslList = ['Hats & Scarves', 'Face Masks', 'Lace Kits', 'Insoles', 'Digital Gift Cards'];
+const AccessorieslList: string[] = ['Hats & Scarves', 'Face Masks', 'Lace Kits', 'Insoles', 'Digital Gift Cards'];
 
 const NewArrivalsContent = () => {
   return (
