@@ -4,9 +4,16 @@ import { itemData } from './FavoritesTabsData';
 import CustomButton from '../../atoms/Button/CustomButton';
 
 import { Tabs, Tab, Typography, Box, ImageList, ImageListItem, Icon } from '@mui/material';
+import { type } from 'os';
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+type Props = {
+  children?: React.ReactNode;
+  value: number;
+  index: number;
+}
+
+function TabPanel({ children, value, index, ...other }: Props) {
+  
 
   return (
     <div
@@ -25,16 +32,10 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
 export default function Favorites() {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event: React.SyntheticEvent, newValue: any) => {
     setValue(newValue);
   };
 

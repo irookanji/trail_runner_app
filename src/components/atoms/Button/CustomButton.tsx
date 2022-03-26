@@ -7,15 +7,16 @@ type Props = {
   $buttonWidth?: string;
   $mTop?: string;
   $mBottom?: string;
-  white?: boolean;
+  white?: boolean | string;
   onClick?: () => void;
-  text: string;
-  $textColor: string;
-  $bgColor: string;
-  $hoverColor: string;
+  text?: string;
+  $textColor?: string;
+  $bgColor?: string;
+  $hoverColor?: string;
+  $customWidth?: string;
 }
 
-export default function CustomButton({link, $xsCustomWidth, $buttonWidth, $mTop, $mBottom, white, onClick, text}: Props) {
+export default function CustomButton({link, $xsCustomWidth, $buttonWidth, $mTop, $mBottom, white, onClick, text, $customWidth}: Props) {
   return (
     <StyledLink to={link}>
       <StyledButton

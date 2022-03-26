@@ -5,7 +5,7 @@ import Cloud from '../../../assets/cloud.svg';
 import Breezy from '../../../assets/breezy.svg';
 import Rainy from '../../../assets/rainy.svg';
 
-export const itemData = [
+export const itemData: { img: string, title: string, icon: string, description: string }[] = [
   {
     img: Wool_Runner,
     title: 'Wool Runner',

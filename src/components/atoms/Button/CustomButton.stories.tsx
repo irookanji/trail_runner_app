@@ -13,7 +13,6 @@ export const Template = () => {
   return (
     <Router>
       <CustomButton
-        to="#"
         $textColor="white"
         $bgColor="#212A2F"
         $hoverColor="grey"

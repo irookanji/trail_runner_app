@@ -28,7 +28,6 @@ exports[`Carousel rendered as expected 1`] = `
       >
         <img
           alt="Arrow To Left"
-          name="angle-double-left"
           src="arrow_left.svg"
         />
       </div>
@@ -802,7 +801,6 @@ exports[`Carousel rendered as expected 1`] = `
       >
         <img
           alt="Arrow To Right"
-          name="angle-double-right"
           src="arrow_right.svg"
         />
       </div>

@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 test('Button rendered as expected', () => {
   const component = renderer.create(
     <Router>
-      <CustomButton link="/">Button text</CustomButton>
+      <CustomButton link="/" text="Button" />
     </Router>,
   );
   let tree = component.toJSON();

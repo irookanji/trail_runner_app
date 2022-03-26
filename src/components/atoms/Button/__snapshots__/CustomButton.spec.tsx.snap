@@ -23,7 +23,9 @@ exports[`Button rendered as expected 1`] = `
     onTouchStart={[Function]}
     tabIndex={0}
     type="button"
-  />
+  >
+    Button
+  </button>
 </a>
 `;
 
