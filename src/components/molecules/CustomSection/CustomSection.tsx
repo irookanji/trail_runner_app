@@ -27,7 +27,7 @@ export default function CustomSection({coverImage, $fontSizeTitle, $lineHeightTi
       ) : (
         <VideoContainer>
           <video autoPlay loop muted id="video" style={{ height: '100%', width: '100%', objectFit: 'cover' }}>
-            <source src={backgroundVideo} preload="auto" type="video/mp4" />
+            <source src={backgroundVideo} type="video/mp4" />
           </video>
         </VideoContainer>
       )}

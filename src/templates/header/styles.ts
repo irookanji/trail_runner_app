@@ -23,9 +23,6 @@ export const SubTitle = styled(Typography)`
   font-style: normal;
   font-weight: bold;
   color: white;
-  font-size: ${(props) => props.$fontSizeTitle || '1rem'};
-  line-height: ${(props) => props.$lineHeightTitle || '1.7rem'};
-  letter-spacing: ${(props) => props.letterSpacingTitle || 'normal'};
   margin: 0.5rem 0;
   ${theme.breakpoints.up('xs')} {
     margin-bottom: 1rem;
@@ -53,7 +50,9 @@ export const ButtonContainer = styled(Box)`
   }
 `;
 
-export const ImageCover = styled(Paper)`
+export const ImageCover = styled(Paper)<{
+  $cover: string;
+}>`
   display: flex;
   position: relative;
   background-size: cover;
