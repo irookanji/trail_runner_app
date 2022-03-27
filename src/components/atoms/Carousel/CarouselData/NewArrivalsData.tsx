@@ -2,7 +2,7 @@ import image1 from '../../../../assets/Carousel_2_1.png';
 import image2 from '../../../../assets/Carousel_2_2.png';
 import image3 from '../../../../assets/Carousel_2_3.png';
 
-export const slidesNewArrival = [
+export const slidesNewArrival: { image: string, title: string, info: string }[] = [
   {
     image: image1,
     title: "Men's Trail Runner SWT",

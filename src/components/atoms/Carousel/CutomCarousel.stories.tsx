@@ -1,7 +1,7 @@
 import { Story } from '@storybook/react';
 import React from 'react';
 import CustomCarousel from './CustomCarousel';
-import { slidesCollections } from '../../../components/atoms/Carousel/CarouselData/CollectionsData';
+import { slidesCollections } from './CarouselData/CollectionsData.jsx';
 
 export default {
   component: CustomCarousel,
