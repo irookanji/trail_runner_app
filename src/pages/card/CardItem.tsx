@@ -8,7 +8,23 @@ import { Link } from 'react-router-dom';
 import { addToCart } from '../../redux/cartReducer';
 import { useDispatch } from 'react-redux';
 
-export default function CardItem({ cardInfo }) {
+type Props = {
+  cardInfo: {
+    id: number;
+    quantity: number,
+    title: string,
+    info: string,
+    price: number,
+    image: string,
+    size: string,
+    color: string,
+    discount: number,
+    inventory: number,
+  };
+  onAddToCartClicked: () => void;
+}
+
+export default function CardItem({ cardInfo }: Props) {
   const dispatch = useDispatch();
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '332px' }}>
