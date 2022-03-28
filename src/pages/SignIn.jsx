@@ -14,7 +14,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import validationSchema from '../utils/validationSchema';
-import { badReq } from '../requests.js';
+import { badReq } from '../requests.ts';
 
 const theme = createTheme();
 
