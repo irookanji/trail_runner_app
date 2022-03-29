@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Container } from '@mui/material';
 import CardItem from './CardItem';
+import { addToCart } from '../../redux/cartReducer';
 
 type Props = {
   addToCart: {
@@ -14,6 +15,7 @@ type Props = {
     color: string,
     discount: number,
     inventory: number,
+    onAddToCartClicked: () => void;
   };
   cartData: {
     id: number;
@@ -29,10 +31,10 @@ type Props = {
   }[];
 }
 
-const Card = ({ addToCart, cartData }: Props) => {
+const Card = ({ cartData }: Props) => {
   return (
     <Container>
-      <Grid container justify="center" spacing={4} sx={{ mt: '1rem' }}>
+      <Grid container spacing={4} sx={{ mt: '1rem' }}>
         {cartData.map((product) => (
           <Grid key={product.id} item xs={12} sm={6} md={3}>
             <CardItem cardInfo={product} onAddToCartClicked={() => addToCart(product.id)} />

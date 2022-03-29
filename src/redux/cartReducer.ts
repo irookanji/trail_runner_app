@@ -47,11 +47,11 @@ const cartSlice = createSlice({
       };
     },
     incrementQuantity: (state, { payload }) => {
-      const item = state.cart.items.find((product) => product.id === payload.id);
+      const item: any = state.cart.items.find((product) => product.id === payload.id);
       item.quantity++;
     },
     decrementQuantity: (state, { payload }) => {
-      const item = state.cart.items.find((product) => product.id === payload.id);
+      const item: any = state.cart.items.find((product) => product.id === payload.id);
       item.quantity--;
     },
   },

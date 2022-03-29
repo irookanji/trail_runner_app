@@ -71,7 +71,7 @@ export const ImageCover = styled(Paper)<{
     ${(props) =>
       props.$cover
         ? css`
-            background-image: url(${(props) => props.$cover});
+            background-image: url(${props.$cover});
           `
         : null}
     justify-content: flex-end;
