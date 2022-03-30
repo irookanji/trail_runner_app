@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
@@ -114,7 +114,7 @@ export default function SignUp() {
                   },
                 }}
               >
-                <Link to="/sign-in" variant="body2">
+                <Link to="/sign-in">
                   Already have an account? Sign in
                 </Link>
               </Grid>

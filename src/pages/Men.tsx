@@ -31,19 +31,42 @@ export const Loader = styled(CircularProgress)`
   color: inherit;
 `;
 
-const Women = () => {
+const Men = () => {
   const [filterPrice, setFilterPrice] = React.useState([0, 200]);
   const [search, setNewSearch] = useState('');
   const productsState = useSelector((state) => state.productsState.products);
-  const products = [];
-  productsState.filter((product) => {
-    return product.women === true ? products.push(product) : null;
+  const products: {
+    id: number;
+    quantity: number,
+    title: string,
+    info: string,
+    price: number,
+    image: string,
+    size: string,
+    color: string,
+    discount: number,
+    inventory: number,
+  }[] = [];
+  productsState.filter((product: {
+    id: number;
+    quantity: number,
+    title: string,
+    info: string,
+    price: number,
+    image: string,
+    size: string,
+    color: string,
+    discount: number,
+    inventory: number,
+    men: boolean
+  }) => {
+    return product.men === true ? products.push(product) : null;
   });
 
   const minPrice = Math.min(...products.map((product) => product.price));
   const maxPrice = Math.max(...products.map((product) => product.price));
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event: Event, newValue: any) => {
     setFilterPrice(newValue);
   };
 
@@ -72,7 +95,7 @@ const Women = () => {
             );
           })}
         </RadioGroup>
-        <Typography sx={{ mt: '1rem' }}>Price</Typography>
+        <Typography sx={{mt: "1rem"}}>Price</Typography>
         <Slider
           getAriaLabel={() => 'Temperature range'}
           value={filterPrice}
@@ -87,4 +110,4 @@ const Women = () => {
   );
 };
 
-export default React.memo(Women);
+export default React.memo(Men);

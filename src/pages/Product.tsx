@@ -31,7 +31,7 @@ export const ProductColor = styled(Typography)`
   font-style: italic;
 `;
 
-export const Price = styled(Typography)`
+export const Price = styled(Typography)<{component: any}>`
   margin: 1rem 0;
   font-size: 2rem;
   font-weight: bolt;

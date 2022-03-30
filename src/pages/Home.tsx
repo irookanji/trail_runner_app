@@ -10,7 +10,7 @@ import fourthSectionCoverImage from '../assets/FourthCover.jpg';
 
 import { Box } from '@mui/material';
 import CustomButton from '../components/atoms/Button/CustomButton';
-import { Container, Title, Description, StyledTextField, SignedAlertText, NotePolicyText } from '../pages/styles';
+import { Container, Title, Description, StyledTextField, SignedAlertText, NotePolicyText } from './styles';
 import CustomCarousel from '../components/atoms/Carousel/CustomCarousel';
 
 const Home = () => {
@@ -29,8 +29,7 @@ const Home = () => {
         $lineHeightSubTitle="2.5rem"
         buttonText="Shop Men"
         titleText="Seasons Change. Your Shoes Don’t Have To."
-        subTitleText="Soft and cozy wool shoes to keep you comfortable all year round."
-      />
+        subTitleText="Soft and cozy wool shoes to keep you comfortable all year round." />
 
       <CustomCarousel slides={slidesCollections} titleText="Shop The Collections" />
 
@@ -79,7 +78,6 @@ const Home = () => {
           <Box sx={{ mt: '2rem' }}>
             <StyledTextField id="standard-basic" label="Enter Your Email Address" variant="standard" />
             <CustomButton
-              to="#"
               onClick={() => setSigned(false)}
               $textColor="white"
               $bgColor="#212A2F"
@@ -92,7 +90,7 @@ const Home = () => {
         ) : (
           <SignedAlertText>You were successfully signed!</SignedAlertText>
         )}
-        <NotePolicyText variant="h7">
+        <NotePolicyText>
           Note: You can opt-out at any time. See our Privacy Policy and Terms
         </NotePolicyText>
       </Container>

@@ -30,11 +30,27 @@ import { deleteFromCart, incrementQuantity, decrementQuantity } from '../../redu
 import CartContent from './CartContent';
 import Recomended from '../../assets/Recomended.png';
 
-export default function CartDrawer({ open, setOpen }) {
+type Props = {
+  open?: any;
+  setOpen?: any;
+}
+
+export default function CartDrawer({ open, setOpen }: Props) {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cartState.cart);
   const cartItems = cart.items;
-  const total = cartItems.reduce((total, product) => total + (product.price - product.discount) * product.quantity, 0);
+  const total = cartItems.reduce((total: number, product: {
+    id: number;
+    quantity: number,
+    title: string,
+    info: string,
+    price: number,
+    image: string,
+    size: string,
+    color: string,
+    discount: number,
+    inventory: number,
+  }) => total + (product.price - product.discount) * product.quantity, 0);
   return (
     <>
       <React.Fragment key="right">
@@ -59,7 +75,18 @@ export default function CartDrawer({ open, setOpen }) {
             {cartItems.length !== 0 ? (
               <>
                 <ProductContainer>
-                  {cartItems.map((item) => (
+                  {cartItems.map((item: {
+                      id: number;
+                      quantity: number,
+                      title: string,
+                      info: string,
+                      price: number,
+                      image: string,
+                      size: string,
+                      color: string,
+                      discount: number,
+                      inventory: number,
+                  }) => (
                     <Box key={Math.floor(Math.random() * 100) + 1}>
                       <CartItem key={item.id}>
                         <img alt="item.title" src={item.image} />

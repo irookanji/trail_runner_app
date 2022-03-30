@@ -14,7 +14,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import validationSchema from '../utils/validationSchema';
-import { badReq } from '../requests.ts';
+import { badReq } from '../requests';
 
 const theme = createTheme();
 
@@ -30,7 +30,7 @@ export default function SignIn() {
     },
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => {
     event.preventDefault();
     formik.handleSubmit();
     const data = new FormData(event.currentTarget);
@@ -118,7 +118,7 @@ export default function SignIn() {
                   },
                 }}
               >
-                <Link to="#" variant="body2">
+                <Link to="#" >
                   Forgot password?
                 </Link>
               </Grid>
@@ -131,7 +131,7 @@ export default function SignIn() {
                   },
                 }}
               >
-                <Link to="/sign-up" variant="body2">
+                <Link to="/sign-up" >
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

@@ -4,7 +4,7 @@ import CardItem from './CardItem';
 import { addToCart } from '../../redux/cartReducer';
 
 type Props = {
-  addToCart: {
+  addToCart?: {
     id: number;
     quantity: number,
     title: string,

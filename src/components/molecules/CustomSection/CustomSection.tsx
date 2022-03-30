@@ -4,19 +4,19 @@ import CustomButton from '../../atoms/Button/CustomButton';
 import backgroundVideo from '../../../assets/backgroundVideo.mp4';
 
 type Props = {
-  coverImage: string; 
+  coverImage?: string; 
   $fontSizeTitle: string; 
   $lineHeightTitle: string;  
   titleText: string; 
   $fontSizeSubTitle: string;
   $lineHeightSubTitle: string;
-  $fontWeightSubTitle: string; 
+  $fontWeightSubTitle?: string; 
   subTitleText: string;
-  $xsCustomWidth: string;
-  $buttonWidth: string; 
-  buttonLink: string;
+  $xsCustomWidth?: string;
+  $buttonWidth?: string; 
+  buttonLink?: string;
   buttonText: string;
-  renderSecondButton: string;
+  renderSecondButton: string | boolean;
 }
 
 export default function CustomSection({coverImage, $fontSizeTitle, $lineHeightTitle, titleText, $fontSizeSubTitle, $lineHeightSubTitle, $fontWeightSubTitle, subTitleText, $xsCustomWidth, $buttonWidth,  buttonLink, buttonText, renderSecondButton}: Props) {

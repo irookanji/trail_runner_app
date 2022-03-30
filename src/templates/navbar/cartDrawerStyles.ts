@@ -78,7 +78,7 @@ export const LinksWrapper = styled(Box)`
   display: flex;
 `;
 
-export const NavigationItem = styled(Button)`
+export const NavigationItem = styled(Button)<{target?: any; rel?: any}>`
   color: #212a2f;
   display: block;
 `;
@@ -153,7 +153,7 @@ export const DetailesContainer = styled(Box)`
   margin-left: -1.5rem;
 `;
 
-export const DetailesPrice = styled(Typography)`
+export const DetailesPrice = styled(Typography)<{component: any}>`
   /* display: flex;
   align-items: center;
   justify-content: center; */

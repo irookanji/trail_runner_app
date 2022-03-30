@@ -23,11 +23,17 @@ import logo from '../../assets/logo.svg';
 import { Navigation, LinksWrapper, NavigationItem } from './cartDrawerStyles';
 import { useSelector } from 'react-redux';
 
-const Navbar = ({ products, total, checkout }) => {
+type Props = {
+  products?: any;
+  total?: number;
+  checkout?: any;
+}
+
+const Navbar = ({ products, total, checkout }: Props) => {
   const cartItems = useSelector((state) => state.cartState.cart.items);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
+  const handleOpenNavMenu = (event: { currentTarget: React.SetStateAction<null>; }) => {
     setAnchorElNav(event.currentTarget);
   };
 
