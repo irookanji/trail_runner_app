@@ -34,7 +34,7 @@ export const Loader = styled(CircularProgress)`
 const Women = () => {
   const [filterPrice, setFilterPrice] = React.useState([0, 200]);
   const [search, setNewSearch] = useState('');
-  const productsState = useSelector((state) => state.productsState.products);
+  const productsState = useSelector((state: any) => state.productsState.products);
   const products: {
     id: number;
     quantity: number,

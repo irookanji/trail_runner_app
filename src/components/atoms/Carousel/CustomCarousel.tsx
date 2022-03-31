@@ -66,7 +66,7 @@ export default function CustomCarousel({ titleText, slides }: Props) {
     <Container>
       <Title>{titleText}</Title>
       <CommonContainer>
-        <Slider ref={setSliderRef} {...sliderSettings}>
+        <Slider {...sliderSettings}>
           {slides.map((slide, index) => (
             <SlideContainer key={uuidv4()}>
               <ImageContainer>

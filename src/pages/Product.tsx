@@ -53,11 +53,27 @@ export const LoadingText = styled(Typography)`
   font-size: 2rem;
 `;
 
+type products = {
+    id: number;
+    quantity: number,
+    title: string,
+    info: string,
+    price: number,
+    image: string,
+    size: string,
+    color: string,
+    discount: number,
+    inventory: number,
+    rating: number,
+    material: string,
+    description: string
+}
+
 export default function Product() {
-  const { productNumber } = useParams();
+  const { productNumber }: any = useParams();
   const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cartState.cart);
+  const cart = useSelector((state: any) => state.cartState.cart);
 
   const getAllProducts = async () => {
     const response = await getProducts();
@@ -67,7 +83,7 @@ export default function Product() {
   useEffect(() => {
     getAllProducts();
   }, []);
-  const product = products[productNumber];
+  const product: products = products[productNumber];
   const history = useNavigate();
   return products.length !== 0 ? (
     <ProductContainer>

@@ -30,7 +30,7 @@ type Props = {
 }
 
 const Navbar = ({ products, total, checkout }: Props) => {
-  const cartItems = useSelector((state) => state.cartState.cart.items);
+  const cartItems = useSelector((state: any) => state.cartState.cart.items);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event: { currentTarget: React.SetStateAction<null>; }) => {
@@ -48,7 +48,7 @@ const Navbar = ({ products, total, checkout }: Props) => {
 
   return (
     <Navigation position="sticky">
-      <Container maxWidth="100%">
+      <Container maxWidth={false}>
         <Toolbar disableGutters sx={{ justifyContent: 'space-between', width: '100%' }}>
           {!isMobile ? (
             <>
@@ -101,7 +101,7 @@ const Navbar = ({ products, total, checkout }: Props) => {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                onClick={handleOpenNavMenu}
+                onClick={() => handleOpenNavMenu}
                 color="inherit"
               >
                 <MenuIcon />
@@ -166,9 +166,6 @@ const Navbar = ({ products, total, checkout }: Props) => {
           <CartDrawer
             open={rightDrawer}
             setOpen={setRightDrawer}
-            products={products}
-            total={total}
-            onCheckoutClicked={() => checkout(products)}
           />
         </Toolbar>
       </Container>

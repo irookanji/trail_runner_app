@@ -37,7 +37,7 @@ type Props = {
 
 export default function CartDrawer({ open, setOpen }: Props) {
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cartState.cart);
+  const cart = useSelector((state: any) => state.cartState.cart);
   const cartItems = cart.items;
   const total = cartItems.reduce((total: number, product: {
     id: number;

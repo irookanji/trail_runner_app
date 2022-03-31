@@ -45,7 +45,7 @@ export const ImageContainer = styled(Box)`
 
 export const ImageCarousel =
   styled(Paper) <
-  { $cover: string } >
+  { $cover: string, alt: string } >
   `
   display: flex;
   position: relative;
