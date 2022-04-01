@@ -1,9 +1,14 @@
+/* eslint-disable max-len */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-filename-extension */
 import * as React from 'react';
 
-import { AppBar, Box, Typography, Grid, Icon } from '@mui/material';
+import {
+  AppBar, Box, Typography, Grid, Icon,
+} from '@mui/material';
 import { footerData } from './FooterData';
 
-const Footer = () => {
+function Footer() {
   return (
     <AppBar
       position="static"
@@ -150,7 +155,7 @@ const Footer = () => {
               letterSpacing: '2px',
               textTransform: 'uppercase',
             }}
-          ></Typography>
+          />
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography
@@ -201,7 +206,12 @@ const Footer = () => {
             }}
           >
             {footerData.map((item) => (
-              <Icon key={item.icon} sx={{ display: 'flex', mr: '0.5rem', width: '1.8em', fontSize: 30 }}>
+              <Icon
+                key={item.icon}
+                sx={{
+                  display: 'flex', mr: '0.5rem', width: '1.8em', fontSize: 30,
+                }}
+              >
                 <img src={`${item.icon}`} srcSet={`${item.icon}`} alt={item.title} />
               </Icon>
             ))}
@@ -224,12 +234,16 @@ const Footer = () => {
               mt: '5rem',
             }}
           >
-            © {new Date().getFullYear()} Allbirds, Inc. All Rights Reserved. Terms, Privacy & Accessibility
+            ©
+            {' '}
+            {new Date().getFullYear()}
+            {' '}
+            Allbirds, Inc. All Rights Reserved. Terms, Privacy & Accessibility
           </Typography>
         </Grid>
       </Grid>
     </AppBar>
   );
-};
+}
 
 export default Footer;

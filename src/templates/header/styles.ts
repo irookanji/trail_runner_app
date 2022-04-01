@@ -68,12 +68,11 @@ export const ImageCover = styled(Paper)<{
   }
 
   ${theme.breakpoints.up('md')} {
-    ${(props) =>
-      props.$cover
-        ? css`
+    ${(props) => (props.$cover
+    ? css`
             background-image: url(${props.$cover});
           `
-        : null}
+    : null)}
     justify-content: flex-end;
     padding: 3.5rem;
     height: 740px;

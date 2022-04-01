@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import { Drawer, List, Button, Box, AppBar, Typography, Divider } from '@mui/material';
-import theme from '../../theme';
+import {
+  Drawer, List, Button, Box, AppBar, Typography, Divider,
+} from '@mui/material';
 import { Link } from 'react-router-dom';
+import theme from '../../theme';
 
 export const StyledCart = styled(Drawer)`
   z-index: 2000;

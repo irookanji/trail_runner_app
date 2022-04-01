@@ -1,25 +1,32 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable max-len */
+/* eslint-disable react/require-default-props */
 import React from 'react';
-import { ButtonContainer, Title, SubTitle, ImageCover, ContentContainer, VideoContainer } from './styles';
+import {
+  ButtonContainer, Title, SubTitle, ImageCover, ContentContainer, VideoContainer,
+} from './styles';
 import CustomButton from '../../atoms/Button/CustomButton';
 import backgroundVideo from '../../../assets/backgroundVideo.mp4';
 
 type Props = {
-  coverImage?: string; 
-  $fontSizeTitle: string; 
-  $lineHeightTitle: string;  
-  titleText: string; 
+  coverImage?: string;
+  $fontSizeTitle: string;
+  $lineHeightTitle: string;
+  titleText: string;
   $fontSizeSubTitle: string;
   $lineHeightSubTitle: string;
-  $fontWeightSubTitle?: string; 
+  $fontWeightSubTitle?: string;
   subTitleText: string;
   $xsCustomWidth?: string;
-  $buttonWidth?: string; 
+  $buttonWidth?: string;
   buttonLink?: string;
   buttonText: string;
   renderSecondButton: string | boolean;
 }
 
-export default function CustomSection({coverImage, $fontSizeTitle, $lineHeightTitle, titleText, $fontSizeSubTitle, $lineHeightSubTitle, $fontWeightSubTitle, subTitleText, $xsCustomWidth, $buttonWidth,  buttonLink, buttonText, renderSecondButton}: Props) {
+export default function CustomSection({
+  coverImage, $fontSizeTitle, $lineHeightTitle, titleText, $fontSizeSubTitle, $lineHeightSubTitle, $fontWeightSubTitle, subTitleText, $xsCustomWidth, $buttonWidth, buttonLink, buttonText, renderSecondButton,
+}: Props) {
   return (
     <>
       {coverImage ? (
@@ -54,7 +61,7 @@ export default function CustomSection({coverImage, $fontSizeTitle, $lineHeightTi
             $textColor="white"
             $bgColor="#212A2F"
             $hoverColor="grey"
-            link={buttonLink ? buttonLink : '/men'}
+            link={buttonLink || '/men'}
             text={buttonText}
           />
           {renderSecondButton ? (

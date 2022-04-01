@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Button } from '@mui/material';
-import theme from '../../../theme';
 import { Link } from 'react-router-dom';
+import theme from '../../../theme';
 
 export const StyledButton = styled(Button)<{ white?: boolean | string; $customWidth?: string; $mTop?: string; $xsCustomWidth?: string; $mBottom?: string; }>`
   background: ${(props) => (props.white ? '#fff' : '#212a2f')};

@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import { Grid, Container } from '@mui/material';
 import CardItem from './CardItem';
@@ -31,7 +34,7 @@ type Props = {
   }[];
 }
 
-const Card = ({ cartData }: Props) => {
+function Card({ cartData }: Props) {
   return (
     <Container>
       <Grid container spacing={4} sx={{ mt: '1rem' }}>
@@ -43,6 +46,6 @@ const Card = ({ cartData }: Props) => {
       </Grid>
     </Container>
   );
-};
+}
 
 export default Card;

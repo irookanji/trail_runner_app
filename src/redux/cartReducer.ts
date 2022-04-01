@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 type cartType = {
@@ -21,13 +23,11 @@ cart: {
 };
 
 const initialState: initialStateType = {
-cart: {
-  items: [],
-  total: 0,
-},
+  cart: {
+    items: [],
+    total: 0,
+  },
 };
-
-
 
 const cartSlice = createSlice({
   name: 'cartSlice',
@@ -58,4 +58,6 @@ const cartSlice = createSlice({
 });
 
 export const cartReducer = cartSlice.reducer;
-export const { addToCart, deleteFromCart, incrementQuantity, decrementQuantity } = cartSlice.actions;
+export const {
+  addToCart, deleteFromCart, incrementQuantity, decrementQuantity,
+} = cartSlice.actions;

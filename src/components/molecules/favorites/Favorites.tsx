@@ -1,10 +1,14 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/require-default-props */
+/* eslint-disable no-unused-vars */
 import * as React from 'react';
-import PropTypes from 'prop-types';
+import {
+  Tabs, Tab, Typography, Box, ImageList, ImageListItem, Icon,
+} from '@mui/material';
+import { type } from 'os';
 import { itemData } from './FavoritesTabsData';
 import CustomButton from '../../atoms/Button/CustomButton';
-
-import { Tabs, Tab, Typography, Box, ImageList, ImageListItem, Icon } from '@mui/material';
-import { type } from 'os';
 
 type Props = {
   children?: React.ReactNode;
@@ -12,9 +16,9 @@ type Props = {
   index: number;
 }
 
-function TabPanel({ children, value, index, ...other }: Props) {
-  
-
+function TabPanel({
+  children, value, index, ...other
+}: Props) {
   return (
     <div
       role="tabpanel"
@@ -132,7 +136,9 @@ export default function Favorites() {
                     display: 'flex',
                     flexDirection: 'column',
                     ml: '2rem',
-                    mt: { xs: '1rem', sm: '7rem', md: '3rem', lg: '6.5rem' },
+                    mt: {
+                      xs: '1rem', sm: '7rem', md: '3rem', lg: '6.5rem',
+                    },
                     width: '100%',
                   }}
                 >
@@ -232,7 +238,9 @@ export default function Favorites() {
                       display: 'flex',
                       flexDirection: 'column',
                       ml: '2rem',
-                      mt: { xs: '1rem', sm: '7rem', md: '3rem', lg: '6.5rem' },
+                      mt: {
+                        xs: '1rem', sm: '7rem', md: '3rem', lg: '6.5rem',
+                      },
                       width: '100%',
                     }}
                   >
@@ -331,7 +339,9 @@ export default function Favorites() {
                     display: 'flex',
                     flexDirection: 'column',
                     ml: '2rem',
-                    mt: { xs: '1rem', sm: '7rem', md: '3rem', lg: '6.5rem' },
+                    mt: {
+                      xs: '1rem', sm: '7rem', md: '3rem', lg: '6.5rem',
+                    },
                     width: '100%',
                   }}
                 >

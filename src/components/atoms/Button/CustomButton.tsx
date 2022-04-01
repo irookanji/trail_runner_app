@@ -1,9 +1,12 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import { StyledButton, StyledLink } from './styles';
 
 type Props = {
-  link: string; 
-  $xsCustomWidth?: string; 
+  link: string;
+  $xsCustomWidth?: string;
   $buttonWidth?: string;
   $mTop?: string;
   $mBottom?: string;
@@ -13,10 +16,11 @@ type Props = {
   $textColor?: string;
   $bgColor?: string;
   $hoverColor?: string;
-  $customWidth?: string;
 }
 
-export default function CustomButton({link, $xsCustomWidth, $buttonWidth, $mTop, $mBottom, white, onClick, text, $customWidth}: Props) {
+export default function CustomButton({
+  link, $xsCustomWidth, $buttonWidth, $mTop, $mBottom, white, onClick, text,
+}: Props) {
   return (
     <StyledLink to={link}>
       <StyledButton

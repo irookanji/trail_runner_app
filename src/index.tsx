@@ -1,11 +1,12 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import theme from './theme';
 import App from './App';
-import store from './redux/store';
-import { Provider } from 'react-redux';
 
 ReactDom.render(
   <StyledEngineProvider injectFirst>

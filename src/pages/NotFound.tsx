@@ -1,8 +1,11 @@
+/* eslint-disable max-len */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-filename-extension */
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
-import NotFoundPic from '../assets/NotFoundPic.svg';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import NotFoundPic from '../assets/NotFoundPic.svg';
 import theme from '../theme';
 
 export const Container = styled(Box)`
@@ -48,7 +51,7 @@ export const Button = styled(Typography)`
   }
 `;
 
-const NotFound = () => {
+function NotFound() {
   return (
     <Container>
       <img src={NotFoundPic} alt="Page not found" />
@@ -62,6 +65,6 @@ const NotFound = () => {
       </Link>
     </Container>
   );
-};
+}
 
 export default NotFound;

@@ -1,8 +1,12 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable import/no-extraneous-dependencies */
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid } from '@mui/material';
-import { Container, Title, SectionsContainer, SectionLink, FeaturedContainer, FeaturedSectionLink } from './styles';
 import { v4 as uuidv4 } from 'uuid';
+import {
+  Container, Title, SectionsContainer, SectionLink, FeaturedContainer, FeaturedSectionLink,
+} from './styles';
 
 const ShoesList: string[] = ['Running Shoes', 'Everyday Trainers', 'Flats', 'Rain Repellent Trainers', 'Slip-Ons', 'High Tops'];
 
@@ -18,7 +22,7 @@ const ApparelList: string[] = [
 
 const AccessorieslList: string[] = ['Hats & Scarves', 'Face Masks', 'Lace Kits', 'Insoles', 'Digital Gift Cards'];
 
-const NewArrivalsContent = () => {
+function NewArrivalsContent() {
   return (
     <Container>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -71,6 +75,6 @@ const NewArrivalsContent = () => {
       </Grid>
     </Container>
   );
-};
+}
 
 export default NewArrivalsContent;

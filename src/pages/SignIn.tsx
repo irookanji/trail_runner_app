@@ -1,3 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable max-len */
+/* eslint-disable no-alert */
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -24,7 +29,7 @@ export default function SignIn() {
       email: '',
       password: '',
     },
-    validationSchema: validationSchema,
+    validationSchema,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
@@ -118,7 +123,7 @@ export default function SignIn() {
                   },
                 }}
               >
-                <Link to="#" >
+                <Link to="#">
                   Forgot password?
                 </Link>
               </Grid>
@@ -131,8 +136,8 @@ export default function SignIn() {
                   },
                 }}
               >
-                <Link to="/sign-up" >
-                  {"Don't have an account? Sign Up"}
+                <Link to="/sign-up">
+                  Don't have an account? Sign Up
                 </Link>
               </Grid>
             </Grid>

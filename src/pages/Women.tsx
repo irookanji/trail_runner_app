@@ -1,7 +1,6 @@
+/* eslint-disable react/jsx-filename-extension */
 import React, { useState } from 'react';
-import Card from './card/Card';
 import styled from 'styled-components';
-import theme from '../theme';
 import { useSelector } from 'react-redux';
 import {
   Radio,
@@ -13,6 +12,8 @@ import {
   Slider,
   Typography,
 } from '@mui/material';
+import theme from '../theme';
+import Card from './card/Card';
 
 export const Container = styled(Box)`
   display: flex;
@@ -31,7 +32,7 @@ export const Loader = styled(CircularProgress)`
   color: inherit;
 `;
 
-const Women = () => {
+function Women() {
   const [filterPrice, setFilterPrice] = React.useState([0, 200]);
   const [search, setNewSearch] = useState('');
   const productsState = useSelector((state: any) => state.productsState.products);
@@ -59,9 +60,7 @@ const Women = () => {
     discount: number,
     inventory: number,
     women: boolean
-  }) => {
-    return product.women === true ? products.push(product) : null;
-  });
+  }) => (product.women === true ? products.push(product) : null));
 
   const minPrice = Math.min(...products.map((product) => product.price));
   const maxPrice = Math.max(...products.map((product) => product.price));
@@ -70,30 +69,26 @@ const Women = () => {
     setFilterPrice(newValue);
   };
 
-  const filtered = products.filter((product) => {
-    return (
-      product.color.toLowerCase().includes(search.toLowerCase()) &&
-      product.price >= Math.min(...filterPrice) &&
-      product.price <= Math.max(...filterPrice)
-    );
-  });
+  const filtered = products.filter((product) => (
+    product.color.toLowerCase().includes(search.toLowerCase())
+      && product.price >= Math.min(...filterPrice)
+      && product.price <= Math.max(...filterPrice)
+  ));
 
   return (
     <Container>
       <FormControl sx={{ padding: '30px' }}>
         <RadioGroup defaultValue="">
           <FormControlLabel onClick={() => setNewSearch('')} value="" control={<Radio />} label="All" />
-          {products.map((product) => {
-            return (
-              <FormControlLabel
-                key={product.id}
-                onClick={() => setNewSearch(product.color)}
-                value={product.color}
-                control={<Radio />}
-                label={product.color}
-              />
-            );
-          })}
+          {products.map((product) => (
+            <FormControlLabel
+              key={product.id}
+              onClick={() => setNewSearch(product.color)}
+              value={product.color}
+              control={<Radio />}
+              label={product.color}
+            />
+          ))}
         </RadioGroup>
         <Typography sx={{ mt: '1rem' }}>Price</Typography>
         <Slider
@@ -108,6 +103,6 @@ const Women = () => {
       {products.length !== 0 ? <Card cartData={filtered} /> : <Loader />}
     </Container>
   );
-};
+}
 
 export default React.memo(Women);

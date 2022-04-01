@@ -1,5 +1,8 @@
+/* eslint-disable comma-dangle */
 import styled from 'styled-components';
-import { Drawer, Button, Box, Typography } from '@mui/material';
+import {
+  Drawer, Button, Box, Typography
+} from '@mui/material';
 
 export const StyledNewArrivalsDrawer = styled(Drawer)<
 { $drawerWidth?: string | number } >`

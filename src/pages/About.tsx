@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import CustomButton from '../components/atoms/Button/CustomButton';

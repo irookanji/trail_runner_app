@@ -1,5 +1,10 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useState } from 'react';
 import Slider from 'react-slick';
+import { v4 as uuidv4 } from 'uuid';
 import {
   Container,
   Title,
@@ -14,7 +19,6 @@ import {
 } from './styles';
 import arrowToRight from '../../../assets/arrow_right.svg';
 import arrowToLeft from '../../../assets/arrow_left.svg';
-import { v4 as uuidv4 } from 'uuid';
 import 'slick-carousel/slick/slick.css';
 
 type SlidesProps = {
@@ -67,7 +71,7 @@ export default function CustomCarousel({ titleText, slides }: Props) {
       <Title>{titleText}</Title>
       <CommonContainer>
         <Slider {...sliderSettings}>
-          {slides.map((slide, index) => (
+          {slides.map((slide) => (
             <SlideContainer key={uuidv4()}>
               <ImageContainer>
                 <ImageCarousel className="collection_img" $cover={slide.image} alt={slide.info} />

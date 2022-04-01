@@ -1,4 +1,7 @@
+/* eslint-disable max-len */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import { Box } from '@mui/material';
 import { HeaderMUI } from '../templates';
 import Favorites from '../components/molecules/favorites/Favorites';
 import { slidesCollections } from '../components/atoms/Carousel/CarouselData/CollectionsData';
@@ -8,12 +11,13 @@ import CustomSection from '../components/molecules/CustomSection/CustomSection';
 import secondSectionCoverImage from '../assets/SecondCover.jpg';
 import fourthSectionCoverImage from '../assets/FourthCover.jpg';
 
-import { Box } from '@mui/material';
 import CustomButton from '../components/atoms/Button/CustomButton';
-import { Container, Title, Description, StyledTextField, SignedAlertText, NotePolicyText } from './styles';
+import {
+  Container, Title, Description, StyledTextField, SignedAlertText, NotePolicyText,
+} from './styles';
 import CustomCarousel from '../components/atoms/Carousel/CustomCarousel';
 
-const Home = () => {
+function Home() {
   const [signed, setSigned] = React.useState(true);
   return (
     <>
@@ -22,14 +26,15 @@ const Home = () => {
 
       <CustomSection
         coverImage={secondSectionCoverImage}
-        renderSecondButton={true}
+        renderSecondButton
         $fontSizeTitle="2rem"
         $lineHeightTitle="4rem"
         $fontSizeSubTitle="1.5rem"
         $lineHeightSubTitle="2.5rem"
         buttonText="Shop Men"
         titleText="Seasons Change. Your Shoes Don’t Have To."
-        subTitleText="Soft and cozy wool shoes to keep you comfortable all year round." />
+        subTitleText="Soft and cozy wool shoes to keep you comfortable all year round."
+      />
 
       <CustomCarousel slides={slidesCollections} titleText="Shop The Collections" />
 
@@ -96,6 +101,6 @@ const Home = () => {
       </Container>
     </>
   );
-};
+}
 
 export default Home;

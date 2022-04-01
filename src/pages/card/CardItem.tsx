@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/no-unused-prop-types */
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -5,8 +7,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { addToCart } from '../../redux/cartReducer';
 import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartReducer';
 
 type Props = {
   cardInfo: {
@@ -27,8 +29,11 @@ type Props = {
 export default function CardItem({ cardInfo }: Props) {
   const dispatch = useDispatch();
   return (
-    <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '332px' }}>
-      <Link to={'/product/' + cardInfo.id}>
+    <Card sx={{
+      display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '332px',
+    }}
+    >
+      <Link to={`/product/${cardInfo.id}`}>
         <CardActionArea>
           <CardMedia component="img" height="150" image={cardInfo.image} alt="Shoes" />
           <CardContent>
@@ -39,7 +44,8 @@ export default function CardItem({ cardInfo }: Props) {
               {cardInfo.info}
             </Typography>
             <Typography component="p" mt={2}>
-              {cardInfo.price}&euro;
+              {cardInfo.price}
+              &euro;
             </Typography>
           </CardContent>
         </CardActionArea>

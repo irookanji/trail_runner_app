@@ -1,11 +1,16 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
-import { Container, Grid, Typography, Box, Paper, Rating, Button } from '@mui/material';
+import {
+  Container, Grid, Typography, Box, Paper, Rating, Button,
+} from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { getProducts } from '../requests';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
+import { getProducts } from '../requests';
 import { addToCart } from '../redux/cartReducer';
 
 export const ProductContainer = styled(Container)`
@@ -107,11 +112,21 @@ export default function Product() {
             <Rating sx={{ mt: '.3rem' }} name="read-only" value={product.rating} readOnly />
             <Price component="div">
               {product.discount === 0 ? (
-                <Box>{product.price}&euro;</Box>
+                <Box>
+                  {product.price}
+                  &euro;
+                </Box>
               ) : (
                 <>
-                  <Discount>{product.price}&euro;</Discount>
-                  <Box sx={{ display: 'inline' }}> {product.price - product.discount}&euro;</Box>
+                  <Discount>
+                    {product.price}
+                    &euro;
+                  </Discount>
+                  <Box sx={{ display: 'inline' }}>
+                    {' '}
+                    {product.price - product.discount}
+                    &euro;
+                  </Box>
                 </>
               )}
             </Price>

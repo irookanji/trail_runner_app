@@ -1,4 +1,5 @@
-import { Story } from '@storybook/react';
+/* eslint-disable react/jsx-filename-extension */
+// import { Story } from '@storybook/react';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import CustomButton from './CustomButton';
@@ -9,7 +10,7 @@ export default {
   argTypes: { clickHandler: { action: 'clicked' } },
 };
 
-export const Template = () => {
+export function Template() {
   return (
     <Router>
       <CustomButton
@@ -22,4 +23,4 @@ export const Template = () => {
       />
     </Router>
   );
-};
+}

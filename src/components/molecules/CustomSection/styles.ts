@@ -75,12 +75,11 @@ export const ImageCover = styled(Paper)<{
 
   ${theme.breakpoints.up('md')} {
     display: flex;
-    ${({$cover}) =>
-      $cover
-        ? css`
+    ${({ $cover }) => ($cover
+    ? css`
             background-image: url(${() => $cover});
           `
-        : null}
+    : null)}
     margin-top: 6rem;
     height: 542px;
     background-size: cover;
