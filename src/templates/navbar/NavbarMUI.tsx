@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable import/extensions */
 import * as React from 'react';
 import {
   Box,
@@ -17,19 +19,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import { useSelector } from 'react-redux';
 import NewArrivalsDrawer from '../../components/NewArrivalsDrawer/NewArrivalsDrawer';
 import CartDrawer from './CartDrawer';
 import logo from '../../assets/logo.svg';
 import { Navigation, LinksWrapper, NavigationItem } from './cartDrawerStyles';
-import { useSelector } from 'react-redux';
 
-type Props = {
-  products?: any;
-  total?: number;
-  checkout?: any;
-}
-
-const Navbar = ({ products, total, checkout }: Props) => {
+function Navbar() {
   const cartItems = useSelector((state: any) => state.cartState.cart.items);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -171,6 +167,6 @@ const Navbar = ({ products, total, checkout }: Props) => {
       </Container>
     </Navigation>
   );
-};
+}
 
 export default Navbar;

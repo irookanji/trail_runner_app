@@ -1,7 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import { CartContentContainer, TitleEmptyCart, ButtonsEmptyCart, StyledLink } from './cartDrawerStyles';
+import {
+  CartContentContainer, TitleEmptyCart, ButtonsEmptyCart, StyledLink,
+} from './cartDrawerStyles';
 
-const CartContent = () => {
+function CartContent() {
   return (
     <CartContentContainer>
       <TitleEmptyCart>Your Cart is Empty</TitleEmptyCart>
@@ -15,6 +19,6 @@ const CartContent = () => {
       <ButtonsEmptyCart>Shop laces</ButtonsEmptyCart>
     </CartContentContainer>
   );
-};
+}
 
 export default CartContent;

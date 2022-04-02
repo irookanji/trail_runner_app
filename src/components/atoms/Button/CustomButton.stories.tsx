@@ -17,7 +17,7 @@ export function Template() {
         $textColor="white"
         $bgColor="#212A2F"
         $hoverColor="grey"
-        $customWidth="111px"
+        $buttonWidth="111px"
         link="/"
         text="Button"
       />

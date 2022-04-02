@@ -1,8 +1,9 @@
+/* eslint-disable import/extensions */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useState } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import { v4 as uuidv4 } from 'uuid';
 import {
@@ -33,8 +34,6 @@ type Props = {
 };
 
 export default function CustomCarousel({ titleText, slides }: Props) {
-  const [, setSliderRef] = useState(null);
-
   const sliderSettings = {
     arrows: true,
     slidesToShow: 3,

@@ -126,8 +126,8 @@ export default function Favorites() {
                     top: '25%',
                   }}
                 >
-                  <CustomButton white="true" link="/men" text="SHOP MEN" $customWidth="210px" />
-                  <CustomButton white="true" link="/women" text="SHOP WOMEN" $customWidth="210px" />
+                  <CustomButton white="true" link="/men" text="SHOP MEN" $buttonWidth="210px" />
+                  <CustomButton white="true" link="/women" text="SHOP WOMEN" $buttonWidth="210px" />
                 </Box>
 
                 {/* Image text */}
@@ -228,8 +228,8 @@ export default function Favorites() {
                       top: '25%',
                     }}
                   >
-                    <CustomButton white="true" link="/men" text="SHOP MEN" $customWidth="210px" />
-                    <CustomButton white="true" link="/women" text="SHOP WOMEN" $customWidth="210px" />
+                    <CustomButton white="true" link="/men" text="SHOP MEN" $buttonWidth="210px" />
+                    <CustomButton white="true" link="/women" text="SHOP WOMEN" $buttonWidth="210px" />
                   </Box>
 
                   {/* Image text */}
@@ -329,8 +329,8 @@ export default function Favorites() {
                     top: '25%',
                   }}
                 >
-                  <CustomButton white="true" link="/men" text="SHOP MEN" $customWidth="210px" />
-                  <CustomButton white="true" link="/women" text="SHOP WOMEN" $customWidth="210px" />
+                  <CustomButton white="true" link="/men" text="SHOP MEN" $buttonWidth="210px" />
+                  <CustomButton white="true" link="/women" text="SHOP WOMEN" $buttonWidth="210px" />
                 </Box>
 
                 {/* Image text */}

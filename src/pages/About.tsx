@@ -38,7 +38,7 @@ function About() {
       <CustomButton
         link="#"
         text="Get In Touch"
-        $customWidth="260px"
+        $buttonWidth="260px"
         $bgColor="#212a2f"
         $textColor="white"
         $hoverColor="grey"

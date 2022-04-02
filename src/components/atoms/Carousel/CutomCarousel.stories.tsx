@@ -1,4 +1,6 @@
-import { Story } from '@storybook/react';
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable import/no-unresolved */
+// import { Story } from '@storybook/react';
 import React from 'react';
 import CustomCarousel from './CustomCarousel';
 import { slidesCollections } from './CarouselData/CollectionsData.jsx';
@@ -9,6 +11,6 @@ export default {
   argTypes: { clickHandler: { action: 'clicked' } },
 };
 
-export const Template = () => {
+export function Template() {
   return <CustomCarousel slides={slidesCollections} titleText="Shop The Collections" />;
-};
+}
