@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable camelcase */
 import Wool_Runner from '../../../assets/Wool_Runner.png';
 import Tree_Runner from '../../../assets/Tree_Runner.png';

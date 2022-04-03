@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import japan from '../../assets/japan.svg';
 import korea from '../../assets/korea.svg';
 
