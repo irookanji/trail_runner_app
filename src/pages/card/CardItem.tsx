@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/no-unused-prop-types */
 import * as React from 'react';
 import Card from '@mui/material/Card';

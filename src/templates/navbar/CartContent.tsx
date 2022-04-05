@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import {
   CartContentContainer, TitleEmptyCart, ButtonsEmptyCart, StyledLink,

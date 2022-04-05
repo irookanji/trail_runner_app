@@ -1,6 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/jsx-filename-extension */
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -55,9 +52,10 @@ function NotFound() {
   return (
     <Container>
       <img src={NotFoundPic} alt="Page not found" />
-      <Title>UH OH! You're lost. ⍨</Title>
+      <Title>UH OH! You&apos;re lost. ⍨</Title>
       <Description>
-        The page you are looking for does not exist. How you got here is a mystery. But you can click the button below
+        The page you are looking for does not exist.
+        How you got here is a mystery. But you can click the button below
         to go back to the homepage.
       </Description>
       <Link to="/">

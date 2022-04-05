@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 // import { Story } from '@storybook/react';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';

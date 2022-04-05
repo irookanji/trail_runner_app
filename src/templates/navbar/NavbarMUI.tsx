@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable import/extensions */
 import * as React from 'react';
 import {
   Box,

@@ -1,12 +1,8 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/require-default-props */
-/* eslint-disable no-unused-vars */
 import * as React from 'react';
 import {
   Tabs, Tab, Typography, Box, ImageList, ImageListItem, Icon,
 } from '@mui/material';
-import { type } from 'os';
 import { itemData } from './FavoritesTabsData';
 import CustomButton from '../../atoms/Button/CustomButton';
 
@@ -17,7 +13,7 @@ type Props = {
 }
 
 function TabPanel({
-  children, value, index, ...other
+  children, value, index,
 }: Props) {
   return (
     <div
@@ -25,7 +21,6 @@ function TabPanel({
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
-      {...other}
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
@@ -39,7 +34,7 @@ function TabPanel({
 export default function Favorites() {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: any) => {
+  const handleChange = (newValue: any) => {
     setValue(newValue);
   };
 

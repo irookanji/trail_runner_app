@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable import/no-extraneous-dependencies */
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid } from '@mui/material';

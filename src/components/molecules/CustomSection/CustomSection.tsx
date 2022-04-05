@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable max-len */
 /* eslint-disable react/require-default-props */
 import React from 'react';

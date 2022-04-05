@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
 import {
   Container, Grid, Typography, Box, Paper, Rating, Button,
@@ -9,7 +6,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getProducts } from '../requests';
 import { addToCart } from '../redux/cartReducer';
 
@@ -58,7 +55,7 @@ export const LoadingText = styled(Typography)`
   font-size: 2rem;
 `;
 
-type products = {
+type productsType = {
     id: number;
     quantity: number,
     title: string,
@@ -78,7 +75,6 @@ export default function Product() {
   const { productNumber }: any = useParams();
   const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
-  const cart = useSelector((state: any) => state.cartState.cart);
 
   const getAllProducts = async () => {
     const response = await getProducts();
@@ -88,7 +84,7 @@ export default function Product() {
   useEffect(() => {
     getAllProducts();
   }, []);
-  const product: products = products[productNumber];
+  const product: productsType = products[productNumber];
   const history = useNavigate();
   return products.length !== 0 ? (
     <ProductContainer>

@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable no-shadow */
 /* eslint-disable react/require-default-props */
 import * as React from 'react';

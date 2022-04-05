@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable max-len */
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -18,7 +16,9 @@ import { Link } from 'react-router-dom';
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => {
+  const handleSubmit = (event: {
+    preventDefault: () => void; currentTarget: HTMLFormElement | undefined;
+  }) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console

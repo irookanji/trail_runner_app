@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { Box } from '@mui/material';
 import { HeaderMUI } from '../templates';
@@ -76,7 +74,8 @@ function Home() {
       <Container>
         <Title variant="h2">Want First Dibs?</Title>
         <Description variant="h5">
-          Join our email list and be the first to know about new limited edition products, material innovations, and
+          Join our email list and be the first to know about new
+          limited edition products, material innovations, and
           lots of other fun updates.
         </Description>
         {signed ? (

@@ -1,6 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/jsx-filename-extension */
 import * as React from 'react';
 
 import {
@@ -90,10 +87,10 @@ function Footer() {
               mb: '1rem',
             }}
           >
-            <Typography>Men's Shoes</Typography>
-            <Typography>Women's Shoes</Typography>
-            <Typography>Men's Apparel</Typography>
-            <Typography>Women's Apparel</Typography>
+            <Typography>Men&apos;s Shoes</Typography>
+            <Typography>Women&apos;s Shoes</Typography>
+            <Typography>Men&apos;s Apparel</Typography>
+            <Typography>Women&apos;s Apparel</Typography>
             <Typography>Socks</Typography>
             <Typography>Gift Cards</Typography>
             <Typography>Download the Allbirds App</Typography>
@@ -190,7 +187,8 @@ function Footer() {
               width: '293px',
             }}
           >
-            Exclusive offers, a heads up on new things, and sightings of Allbirds in the wild. Oh, we have cute sheep,
+            Exclusive offers, a heads up on new things,
+            and sightings of Allbirds in the wild. Oh, we have cute sheep,
             too. #weareallbirds
           </Typography>
         </Grid>

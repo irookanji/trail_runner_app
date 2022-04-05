@@ -1,7 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable no-undef */
 import React from 'react';
 import renderer from 'react-test-renderer';
-import CustomButton from './CustomButton';
 import { BrowserRouter as Router } from 'react-router-dom';
+import CustomButton from './CustomButton';
 
 test('Button rendered as expected', () => {
   const component = renderer.create(
@@ -9,7 +12,7 @@ test('Button rendered as expected', () => {
       <CustomButton link="/" text="Button" />
     </Router>,
   );
-  let tree = component.toJSON();
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
 
@@ -23,6 +26,6 @@ test('Button rendered as expected with props params', () => {
       <CustomButton {...params}>Button text</CustomButton>
     </Router>,
   );
-  let tree = component.toJSON();
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });

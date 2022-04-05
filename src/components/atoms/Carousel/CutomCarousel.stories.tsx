@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable import/no-unresolved */
 // import { Story } from '@storybook/react';
 import React from 'react';
