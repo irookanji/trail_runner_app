@@ -74,9 +74,9 @@ function Navbar() {
                   </Link>
                 </Tooltip>
                 <Tooltip title="ABOUT">
-                  <MuiLink onClick={() => setTopDrawer(false)} href="/about">
+                  <Link onClick={() => setTopDrawer(false)} to="/about">
                     <HelpOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }} />
-                  </MuiLink>
+                  </Link>
                 </Tooltip>
                 <Tooltip title="MY CART">
                   <Badge badgeContent={cartItems.length} color="secondary">

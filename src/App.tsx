@@ -14,6 +14,10 @@ import Footer from './templates/footer/Footer';
 import './App.css';
 import { saveProducts } from './redux/productsReducer';
 import { getProducts } from './requests';
+import Admin from './pages/admin/Admin';
+import AddProduct from './pages/admin/AddProduct';
+import ListProducts from './pages/admin/ListProducts';
+import EditProduct from './pages/admin/EditProduct';
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +41,10 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/about" element={<About />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/edit-product/:productId" element={<EditProduct />} />
+        <Route path="/list-products" element={<ListProducts />} />
         <Route path="/product/:productNumber" element={<Product />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
