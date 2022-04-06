@@ -1,5 +1,4 @@
 /* eslint-disable no-plusplus */
-/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 type cartType = {

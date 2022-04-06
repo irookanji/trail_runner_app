@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import * as React from 'react';
 import {
   Tabs, Tab, Typography, Box, ImageList, ImageListItem, Icon,

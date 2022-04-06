@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-shadow */
-/* eslint-disable react/require-default-props */
 import * as React from 'react';
 import {
   Box, Typography, Badge, Alert,
@@ -127,7 +124,7 @@ export default function CartDrawer({ open, setOpen }: Props) {
                           </QuantitySelector>
                           {item.quantity === item.inventory && (
                             <Alert sx={{ width: '100%', marginTop: '10px' }} severity="info">
-                              Sorry, that's all that we have.
+                              Sorry, that&apos;s all that we have.
                             </Alert>
                           )}
                         </DetailesContainer>

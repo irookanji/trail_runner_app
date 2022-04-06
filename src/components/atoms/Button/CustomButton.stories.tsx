@@ -1,4 +1,3 @@
-// import { Story } from '@storybook/react';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import CustomButton from './CustomButton';

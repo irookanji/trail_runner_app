@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import {
   CartContentContainer, TitleEmptyCart, ButtonsEmptyCart, StyledLink,
@@ -9,10 +8,10 @@ function CartContent() {
     <CartContentContainer>
       <TitleEmptyCart>Your Cart is Empty</TitleEmptyCart>
       <StyledLink to="/men">
-        <ButtonsEmptyCart>Shop men's</ButtonsEmptyCart>
+        <ButtonsEmptyCart>Shop men&apos;s</ButtonsEmptyCart>
       </StyledLink>
       <StyledLink to="/women">
-        <ButtonsEmptyCart>Shop women's</ButtonsEmptyCart>
+        <ButtonsEmptyCart>Shop women&apos;s</ButtonsEmptyCart>
       </StyledLink>
       <ButtonsEmptyCart>Shop socks</ButtonsEmptyCart>
       <ButtonsEmptyCart>Shop laces</ButtonsEmptyCart>

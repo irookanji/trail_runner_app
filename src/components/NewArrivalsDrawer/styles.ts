@@ -1,7 +1,6 @@
-/* eslint-disable comma-dangle */
 import styled from 'styled-components';
 import {
-  Drawer, Button, Box, Typography
+  Drawer, Button, Box, Typography,
 } from '@mui/material';
 
 export const StyledNewArrivalsDrawer = styled(Drawer)<

@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import renderer from 'react-test-renderer';
 import CustomCarousel from './CustomCarousel';

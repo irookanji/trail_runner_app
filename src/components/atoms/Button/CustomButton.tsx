@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unused-prop-types */
-/* eslint-disable react/require-default-props */
 import React from 'react';
 import { StyledButton, StyledLink } from './styles';
 

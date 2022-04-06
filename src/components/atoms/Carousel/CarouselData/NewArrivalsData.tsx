@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import image1 from '../../../../assets/Carousel_2_1.png';
 import image2 from '../../../../assets/Carousel_2_2.png';
 import image3 from '../../../../assets/Carousel_2_3.png';

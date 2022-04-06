@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-// import { Story } from '@storybook/react';
 import React from 'react';
 import CustomCarousel from './CustomCarousel';
 import { slidesCollections } from './CarouselData/CollectionsData.jsx';

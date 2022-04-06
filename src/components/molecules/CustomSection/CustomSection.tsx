@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable react/require-default-props */
 import React from 'react';
 import {
   ButtonContainer, Title, SubTitle, ImageCover, ContentContainer, VideoContainer,
