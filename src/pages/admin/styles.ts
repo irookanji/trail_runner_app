@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Box } from '@mui/material';
 import { Field } from 'formik';
 
-// eslint-disable-next-line import/prefer-default-export
 export const FormWrapper = styled(Box)`
   width: 700px;
 `;

@@ -1,23 +1,9 @@
-/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import { Grid, Container } from '@mui/material';
 import CardItem from './CardItem';
 import { addToCart } from '../../redux/cartReducer';
 
 type Props = {
-  addToCart?: {
-    id: number;
-    quantity: number,
-    title: string,
-    info: string,
-    price: number,
-    image: string,
-    size: string,
-    color: string,
-    discount: number,
-    inventory: number,
-    onAddToCartClicked: () => void;
-  };
   cartData: {
     id: number;
     quantity: number,

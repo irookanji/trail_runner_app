@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import { StyledButton, StyledLink } from './styles';
 
@@ -11,9 +10,6 @@ type Props = {
   white?: boolean | string;
   onClick?: () => void;
   text?: string;
-  $textColor?: string;
-  $bgColor?: string;
-  $hoverColor?: string;
 }
 
 export default function CustomButton({

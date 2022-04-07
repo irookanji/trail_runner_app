@@ -12,9 +12,6 @@ export function Template() {
   return (
     <Router>
       <CustomButton
-        $textColor="white"
-        $bgColor="#212A2F"
-        $hoverColor="grey"
         $buttonWidth="111px"
         link="/"
         text="Button"

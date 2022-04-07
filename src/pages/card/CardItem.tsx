@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unused-prop-types */
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -22,6 +21,7 @@ type Props = {
     discount: number,
     inventory: number,
   };
+  // eslint-disable-next-line react/no-unused-prop-types
   onAddToCartClicked: () => void;
 }
 

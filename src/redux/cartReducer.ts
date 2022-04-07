@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 import { createSlice } from '@reduxjs/toolkit';
 
 type cartType = {
@@ -47,11 +46,11 @@ const cartSlice = createSlice({
     },
     incrementQuantity: (state, { payload }) => {
       const item: any = state.cart.items.find((product) => product.id === payload.id);
-      item.quantity++;
+      item.quantity += 1;
     },
     decrementQuantity: (state, { payload }) => {
       const item: any = state.cart.items.find((product) => product.id === payload.id);
-      item.quantity--;
+      item.quantity -= 1;
     },
   },
 });

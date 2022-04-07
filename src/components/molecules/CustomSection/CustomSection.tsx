@@ -55,14 +55,11 @@ export default function CustomSection({
           <CustomButton
             $xsCustomWidth={$xsCustomWidth}
             $buttonWidth={$buttonWidth}
-            $textColor="white"
-            $bgColor="#212A2F"
-            $hoverColor="grey"
             link={buttonLink || '/men'}
             text={buttonText}
           />
           {renderSecondButton ? (
-            <CustomButton $textColor="white" $bgColor="#212A2F" $hoverColor="grey" link="/women" text="Shop Women" />
+            <CustomButton link="/women" text="Shop Women" />
           ) : null}
         </ButtonContainer>
       </ContentContainer>

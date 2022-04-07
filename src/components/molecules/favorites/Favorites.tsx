@@ -33,8 +33,8 @@ function TabPanel({
 export default function Favorites() {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (newValue: any) => {
-    setValue(newValue);
+  const handleChange = (event: React.SyntheticEvent<Element, Event>, newValue: any) => {
+    setValue(Number(newValue));
   };
 
   return (

@@ -83,9 +83,6 @@ function Home() {
             <StyledTextField id="standard-basic" label="Enter Your Email Address" variant="standard" />
             <CustomButton
               onClick={() => setSigned(false)}
-              $textColor="white"
-              $bgColor="#212A2F"
-              $hoverColor="grey"
               $buttonWidth="111px"
               link="/"
               text="SIGN IN"

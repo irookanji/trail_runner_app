@@ -37,9 +37,6 @@ function About() {
         link="#"
         text="Get In Touch"
         $buttonWidth="260px"
-        $bgColor="#212a2f"
-        $textColor="white"
-        $hoverColor="grey"
       />
       <Box sx={{ display: 'flex', my: '5rem' }}>
         <Typography gutterBottom sx={{ mr: '2rem' }}>
