@@ -83,3 +83,40 @@ export const NotePolicyText = styled(Typography)`
   text-align: center;
   color: #74797c;
 `;
+
+// About
+export const GMCard = styled(Typography)`
+  font-size: 18px;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  cursor: pointer;
+  &:hover {
+    background-color: #F9FFFE;
+  }
+  ${theme.breakpoints.up('xs')} {
+    display: flex;
+    justify-content: center;
+    min-width: 160px;
+  }
+  ${theme.breakpoints.up('md')} {
+    background: #f8f7f5;
+    min-width: 210px;
+  }
+`;
+
+export const AboutSubTitle = styled(Typography)`
+  margin: 2.5rem 0 1.5rem 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 14px;
+  text-align: center;
+`;

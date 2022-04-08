@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Typography, Box } from '@mui/material';
+import { Container, Typography, Box, Stack } from '@mui/material';
 import CustomButton from '../components/atoms/Button/CustomButton';
+import { GMCard, AboutSubTitle } from './styles';
 
 function About() {
   return (
@@ -10,7 +11,7 @@ function About() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        mt: '6rem',
+        my: '6rem',
       }}
     >
       <Typography
@@ -31,41 +32,29 @@ function About() {
         Send us a message:
       </Typography>
       <Typography variant="h6" gutterBottom sx={{ mb: '1.5rem' }}>
-        help@allbirds.org.eu
+        irookanji@gmail.com
       </Typography>
       <CustomButton
         link="#"
         text="Get In Touch"
         $buttonWidth="260px"
       />
-      <Box sx={{ display: 'flex', my: '5rem' }}>
-        <Typography gutterBottom sx={{ mr: '2rem' }}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Ducimus tempora natus blanditiis modi accusantium nesciunt obcaecati non sunt.
-          Delectus tempore atque corporis eveniet, quibusdam asperiores distinctio.
-          Reiciendis amet blanditiis corporis consequatur perferendis in,
-          velit nulla fugit natus sunt aut distinctio officia error deserunt ullam
-          quos earum ut inventore enim quo sint obcaecati dolorum.
-          Velit ratione vel maxime animi quod sunt soluta repellat nihil consequuntur fugit.
-          Culpa et, sit aliquam itaque pariatur cumque qui in
-          magnam tempore ad, est minus natus quasi quidem perferendis rem
-          hic amet illo ullam dignissimos. Tenetur aspernatur impedit nostrum
-          iste architecto commodi animi! Ratione voluptatem suscipit asperiores.
-          Ea animi nobis deleniti sequi sint exercitationem neque quis excepturi repellat expedita?
-        </Typography>
-        <Typography gutterBottom>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Porro aliquam sed consequatur corporis impedit quia cumque omnis iusto quas.
-          Dolor labore fugiat commodi nemo, error veritatis recusandae accusantium
-          explicabo exercitationem numquam, maiores perspiciatis soluta nam ut?
-          Ipsum nemo eaque, sed vitae quia xercitationem minima doloremque repudiandae
-          ab assumenda saepe quo suscipit aliquam, voluptatibus iusto obcaecati atque
-          tenetur aspernatur impedit nostrum iste architecto commodi animi!
-          Ratione voluptatem suscipit asperiores commodi eos quibusdam aliquam?
-          Incidunt suscipit doloremque tempore iusto optio, adipisci expedita
-          hic asperiores ducimus similique ab laboriosam ipsa voluptatem illum
-          unde sit non facilis dolorem consequuntur reiciendis sunt quis? Veniam, repellat ad!
-        </Typography>
+      <AboutSubTitle>Technologies were used:</AboutSubTitle>
+      <Box sx={{ display: 'flex', mt: '1rem' }}>
+        <Stack spacing={2} sx={{ mr: '2rem' }}>
+          <GMCard>React JS</GMCard>
+          <GMCard>Redux (Redux-Toolkit)</GMCard>
+          <GMCard>Typescript</GMCard>
+          <GMCard>Axios</GMCard>
+          <GMCard>React Router Dom</GMCard>
+        </Stack>
+        <Stack spacing={2}>
+          <GMCard>Formik / Yup</GMCard>
+          <GMCard>MUI (Material UI)</GMCard>
+          <GMCard>Styled Components</GMCard>
+          <GMCard>Storybook</GMCard>
+          <GMCard>Jest</GMCard>
+        </Stack>
       </Box>
     </Container>
   );
