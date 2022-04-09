@@ -22,7 +22,7 @@ export default function Admin() {
   }, []);
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', height: 'calc(100vh - 64px)' }}>
       <CssBaseline />
       <AdminNavigation />
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>

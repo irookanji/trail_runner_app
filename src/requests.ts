@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export async function getProducts() {
-  const response = await axios.get('https://www.mockachino.com/f74be42c-0725-47/products');
-  return response.data.products;
+  const response = await axios.get('https://albrds.herokuapp.com/api/products');
+  return response.data;
 }
 
 export async function badReq() {

@@ -7,7 +7,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
-import { getProducts } from '../requests';
+import { getProduct } from '../requests';
 import { addToCart } from '../redux/cartReducer';
 
 export const ProductContainer = styled(Container)`
@@ -73,20 +73,19 @@ type productsType = {
 
 export default function Product() {
   const { productNumber }: any = useParams();
-  const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
+  const [product, setProduct] = useState<productsType>();
 
-  const getAllProducts = async () => {
-    const response = await getProducts();
-    setProducts(response);
+  const getProductById = async () => {
+    const response = await getProduct(productNumber);
+    setProduct(response);
   };
 
   useEffect(() => {
-    getAllProducts();
+    getProductById();
   }, []);
-  const product: productsType = products[productNumber];
   const history = useNavigate();
-  return products.length !== 0 ? (
+  return product ? (
     <ProductContainer>
       <ArrowBackContainer onClick={() => history(-1)}>
         <ArrowBackIcon />
