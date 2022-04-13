@@ -1,16 +1,17 @@
 # Allbirds Trail Runner App
 
-Fully responsive e-commerce application selling sports shoes. 
+Fully responsive e-commerce application selling sports shoes with the ability to administer products (add, edit and delete).
+The backend side is deployed on the heroku server.
 
 Pet-project based on this [UI design](https://www.figma.com/file/mlPuSVMnEwfS1KzgwOd7FU/Allbirds) in Figma.
 
 
 ## Demo
-You can visit the site [here](https://epic-knuth-85b278.netlify.app/). It was deployed to _Netlify.com_ for demonstration purposes.
+You can visit the site [here](https://beautiful-souffle-a72d80.netlify.app/). It was deployed to _Netlify.com_ for demonstration purposes.
 
 ### Desktop view:
 
-![Desktop](Allbirds_1.gif) 
+![Desktop](Allbirds_1.gif)
 
 ### Mobile view:
 
@@ -18,12 +19,12 @@ You can visit the site [here](https://epic-knuth-85b278.netlify.app/). It was de
 
 ## Tech Stack
 
-**Client:** React, Redux, Axios, Material UI, Styled Components, Formik, Yup
+**Client:** React, Typescript, Redux, Axios, Material UI, Styled Components, Formik, Yup, Jest, Storybook
 
-**Server:** Mockachino
+**Server:** Heroku, Nodejs, Express, MongoDB
 
 
- 
+
 ## Run Locally
 
 Clone the project

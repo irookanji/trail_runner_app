@@ -70,7 +70,7 @@ export default function ListProducts() {
                   </TableCell>
                   <TableCell align="right">
                     <Button
-                      sx={{ mb: '10px', minWidth: '82px' }}
+                      sx={{ mr: '10px', minWidth: '82px' }}
                       onClick={() => history(`/edit-product/${product.id}`)}
                       variant="contained"
                       color="info"
