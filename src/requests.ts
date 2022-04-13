@@ -1,54 +1,53 @@
 import axios from 'axios';
 
+const url = 'https://albrds.herokuapp.com';
+// const url = 'http://localhost:8080';
+
 export async function getProducts() {
-  const response = await axios.get('https://albrds.herokuapp.com/api/products');
+  const response = await axios.get(`${url}/api/products`);
   return response.data;
 }
 
-export async function badReq() {
-  await axios
-    .post(
-      'https://www.mockachino.com/f74be42c-0725-47/bad-request',
-      {
-        username: 'api',
-        password: 'MY_PASSWORD',
-        grant_type: 'MY_GRANT_TYPE',
-      },
-      {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        },
-      },
-    )
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error) => {
-      console.log(error.response);
-    });
-}
-
 export async function addProduct(data: any) {
-  const response = await axios.post('https://albrds.herokuapp.com/api/products', data);
+  const response = await axios.post(`${url}/api/products`, data);
   return response.data;
 }
 
 export async function getAllProducts() {
-  const response = await axios.get('https://albrds.herokuapp.com/api/products');
+  const response = await axios.get(`${url}/api/products`);
   return response.data;
 }
 
 export async function deleteProduct(data: any) {
-  const response = await axios.delete(`https://albrds.herokuapp.com/api/products/${data}`);
+  const response = await axios.delete(`${url}/api/products/${data}`);
   return response.data;
 }
 
 export async function getProduct(data: any) {
-  const response = await axios.get(`https://albrds.herokuapp.com/api/products/${data}`);
+  const response = await axios.get(`${url}/api/products/${data}`);
   return response.data;
 }
 
 export async function updateProduct(id: string | undefined, data: any) {
-  const response = await axios.put(`https://albrds.herokuapp.com/api/products/${id}`, data);
+  const response = await axios.put(`${url}/api/products/${id}`, data);
+  return response.data;
+}
+
+export async function login(username: string, password: string) {
+  const response = await axios.post(`${url}/api/user/login`, { username, password });
+  return response.data;
+}
+
+export async function getUserData() {
+  const response = await axios.get(`${url}/api/user/getUsername`, {
+    headers: {
+      'x-access-token': localStorage.getItem('token') as any,
+    },
+  });
+  return response.data;
+}
+
+export async function addNewUser(data: any) {
+  const response = await axios.post(`${url}/api/user/register`, data);
   return response.data;
 }

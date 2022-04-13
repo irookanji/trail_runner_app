@@ -18,9 +18,11 @@ import Admin from './pages/admin/Admin';
 import AddProduct from './pages/admin/AddProduct';
 import ListProducts from './pages/admin/ListProducts';
 import EditProduct from './pages/admin/EditProduct';
+import Profile from './pages/user/Profile';
 
 function App() {
   const dispatch = useDispatch();
+  const location = useLocation().pathname;
   const getAllProducts = async () => {
     const response = await getProducts();
     dispatch(saveProducts(response));
@@ -46,9 +48,10 @@ function App() {
         <Route path="/edit-product/:productId" element={<EditProduct />} />
         <Route path="/list-products" element={<ListProducts />} />
         <Route path="/product/:productNumber" element={<Product />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
+      {!(location === '/list-products' || location === '/admin' || location === '/add-product') && <Footer /> }
     </div>
   );
 }

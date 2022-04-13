@@ -84,6 +84,10 @@ export const NotePolicyText = styled(Typography)`
   color: #74797c;
 `;
 
+export const Thumbnail = styled.img`
+   width: 100px;
+   height: 100px;
+   `;
 // About
 export const GMCard = styled(Typography)`
   font-size: 18px;

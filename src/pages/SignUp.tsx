@@ -12,20 +12,38 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import { useFormik } from 'formik';
+import { useState } from 'react';
+import { Alert } from '@mui/material';
+import { addNewUser } from '../requests';
 
 const theme = createTheme();
 
 export default function SignUp() {
+  const [status, setStatus] = useState('');
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      username: '',
+      password: '',
+      firstname: '',
+      lastname: '',
+    },
+    onSubmit: (values) => {
+      addNewUser(values).then(response => {
+        setStatus(response.message);
+        if (response.message === 'Success') {
+          formik.resetForm();
+        }
+      });
+    },
+  });
+
   const handleSubmit = (event: {
     preventDefault: () => void; currentTarget: HTMLFormElement | undefined;
   }) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    formik.handleSubmit();
   };
 
   return (
@@ -46,16 +64,20 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
+          {status === 'Success' && <Alert severity="success">Good job! You registered!</Alert>}
+          {status === 'Username or email has already been taken' && <Alert severity="error">{status}</Alert>}
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="firstname"
                   required
                   fullWidth
-                  id="firstName"
+                  id="firstname"
                   label="First Name"
+                  value={formik.values.firstname}
+                  onChange={formik.handleChange}
                   autoFocus
                 />
               </Grid>
@@ -63,14 +85,37 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
+                  id="lastname"
                   label="Last Name"
-                  name="lastName"
+                  name="lastname"
                   autoComplete="family-name"
+                  value={formik.values.lastname}
+                  onChange={formik.handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
-                <TextField required fullWidth id="email" label="Email Address" name="email" autoComplete="email" />
+                <TextField
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  value={formik.values.username}
+                  onChange={formik.handleChange}
+                  required
+                  fullWidth
+                  id="username"
+                  label="Username"
+                  name="username"
+                  autoComplete="username"
+                />
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -81,6 +126,8 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  value={formik.values.password}
+                  onChange={formik.handleChange}
                 />
               </Grid>
               <Grid item xs={12}>

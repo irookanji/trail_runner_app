@@ -16,8 +16,11 @@ import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+// import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
+import LoginIcon from '@mui/icons-material/Login';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 import NewArrivalsDrawer from '../../components/NewArrivalsDrawer/NewArrivalsDrawer';
 import CartDrawer from './CartDrawer';
 import logo from '../../assets/logo.svg';
@@ -25,9 +28,10 @@ import { Navigation, LinksWrapper, NavigationItem } from './cartDrawerStyles';
 
 function Navbar() {
   const cartItems = useSelector((state: any) => state.cartState.cart.items);
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const user = useSelector((state: any) => state.userState.user);
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
-  const handleOpenNavMenu = (event: { currentTarget: React.SetStateAction<null>; }) => {
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
 
@@ -35,8 +39,8 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
-  const [, setTopDrawer] = React.useState(false);
-  const [rightDrawer, setRightDrawer] = React.useState(false);
+  const [, setTopDrawer] = useState(false);
+  const [rightDrawer, setRightDrawer] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -67,10 +71,13 @@ function Navbar() {
                 <NavigationItem target="_blank" rel="noreferrer" href="https://www.allbirds.eu/pages/stores">
                   STORE
                 </NavigationItem>
-
-                <Tooltip title="SIGN IN">
-                  <Link onClick={() => setTopDrawer(false)} to="/sign-in">
-                    <PersonOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }} />
+                <Tooltip title={user.isLoggedIn ? 'PROFILE' : 'SIGN IN'}>
+                  <Link onClick={() => setTopDrawer(false)} to={user.isLoggedIn ? '/profile' : 'sign-in'}>
+                    {user.isLoggedIn ? (
+                      <PersonOutlineOutlinedIcon sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }} />
+                    ) : (
+                      <LoginIcon sx={{ marginLeft: 3, cursor: 'pointer', fontSize: 30 }} />
+                    )}
                   </Link>
                 </Tooltip>
                 <Tooltip title="ABOUT">
@@ -95,7 +102,7 @@ function Navbar() {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                onClick={() => handleOpenNavMenu}
+                onClick={handleOpenNavMenu}
                 color="inherit"
               >
                 <MenuIcon />

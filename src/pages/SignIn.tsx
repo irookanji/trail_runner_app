@@ -11,22 +11,45 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { Alert } from '@mui/material';
 import validationSchema from '../utils/validationSchema';
-import { badReq } from '../requests';
+import { getUserData, login } from '../requests';
+import { saveUser } from '../redux/userReducer';
 
 const theme = createTheme();
 
 export default function SignIn() {
+  const history = useNavigate();
+  const dispatch = useDispatch();
+  const [status, setStatus] = useState('');
+  function get() {
+    getUserData().then(user => {
+      if (user.isLoggedIn) {
+        dispatch(saveUser({ user }));
+        history('/profile');
+      }
+    });
+  }
   const formik = useFormik({
     initialValues: {
-      email: '',
+      username: '',
       password: '',
     },
     validationSchema,
     onSubmit: (values) => {
       JSON.stringify(values, null, 2);
+      login(values.username, values.password)
+      .then((data: { token: string; message: string }) => {
+        if (data.message === 'Invalid Username or Password') {
+          setStatus('Invalid Username or Password');
+        }
+        localStorage.setItem('token', data.token);
+        get();
+      });
     },
   });
 
@@ -35,12 +58,6 @@ export default function SignIn() {
   }) => {
     event.preventDefault();
     formik.handleSubmit();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
   };
 
   return (
@@ -61,21 +78,21 @@ export default function SignIn() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-
+          {status === 'Invalid Username or Password' && <Alert severity="error">{status}</Alert>}
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
               fullWidth
-              id="email"
-              name="email"
-              label="Email Address"
+              id="username"
+              name="username"
+              label="Username"
               autoFocus
-              autoComplete="email"
-              value={formik.values.email}
+              autoComplete="username"
+              value={formik.values.username}
               onChange={formik.handleChange}
-              error={formik.touched.email && Boolean(formik.errors.email)}
-              helperText={formik.touched.email && formik.errors.email}
+              error={formik.touched.username && Boolean(formik.errors.username)}
+              helperText={formik.touched.username && formik.errors.username}
             />
             <TextField
               margin="normal"
@@ -93,7 +110,6 @@ export default function SignIn() {
             />
             <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
             <Button
-              onClick={badReq}
               type="submit"
               fullWidth
               variant="contained"
