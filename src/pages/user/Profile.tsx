@@ -19,7 +19,7 @@ export default function Profile() {
     history(0);
   }
   return (
-    <Container>
+    <Container sx={{ height: '50rem', padding: '2rem' }}>
       PROFILE
       <Typography>Username: {user.username}</Typography>
       <Typography>Email: {user.email}</Typography>
