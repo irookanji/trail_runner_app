@@ -7,7 +7,7 @@ Pet-project based on this [UI design](https://www.figma.com/file/mlPuSVMnEwfS1Kz
 
 
 ## Demo
-You can visit the site [here](https://ephemeral-pastelito-6f1f7d.netlify.app/). It was deployed to _Netlify.com_ for demonstration purposes.
+You can visit the site [here](https://trail-running-app.netlify.app/). It was deployed to _Netlify.com_ for demonstration purposes.
 
 ### Desktop view:
 
