@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const url = 'https://albrds.herokuapp.com';
 // const url = 'http://localhost:8080';
+// const url = 'https://www.mockachino.com/f74be42c-0725-47/products'
 
 export async function getProducts() {
   const response = await axios.get(`${url}/api/products`);
